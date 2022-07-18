@@ -2,9 +2,11 @@ package com.alvin.cases;
 
 import java.io.IOException;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
 
 public class RegisterCase {
@@ -31,7 +33,13 @@ public class RegisterCase {
 	
 	
 	@DataProvider
-	public Object[][] datas() {
+	public Object[][] datas() throws Exception, IOException, Exception {
+		Object[][] datas = ExcelUtils.read();
+		return datas;
+	}
+	
+	@DataProvider
+	public Object[][] datas2() {
 		
 		Object[][] datas= {
 				{"http://api.lemonban.com/futureloan/member/register",
