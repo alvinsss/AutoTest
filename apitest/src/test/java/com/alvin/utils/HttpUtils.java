@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
+import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
 import org.apache.http.StatusLine;
@@ -21,13 +22,14 @@ public class HttpUtils {
 	private void HttpUtils() {}
 	/**
 	 * 静态方法这工具类的作用：方便调用 直接使用类名点的方法调用 不需要创建对象
+	 * 静态:共享
 	 * @param args
 	 * @throws IOException
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws IOException, Exception {
-//		get("http://api.lemonban.com/futureloan/member/1/info");
-		post("http://api.lemonban.com/futureloan/member/login","{\"mobile_phone\": \"13221400113\",\"pwd\": \"12345678\"}");
+		get("http://api.lemonban.com/futureloan/member/1/info");
+//		post("http://api.lemonban.com/futureloan/member/login","{\"mobile_phone\": \"13221400113\",\"pwd\": \"12345678\"}");
 //		formPost("http://test.lemonban.com/futureloan/mvc/api/member/login","mobile_phone=13221400113&pwd=12345678");
 	}
 	
@@ -42,6 +44,8 @@ public class HttpUtils {
 		HttpGet get = new HttpGet(url);
 		get.setHeader("X-Lemonban-Media-Type","lemonban.v1");
 		HttpClient client = HttpClients.createDefault();
+//		HttpHost proxy = new HttpHost("127.0.0.1", 8888);
+//		HttpResponse response = client.execute(proxy,get);
 		HttpResponse response = client.execute(get);
 		printRespAndReturnBody(response);
 	}
