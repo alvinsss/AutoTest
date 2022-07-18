@@ -12,7 +12,7 @@ import com.alvin.utils.HttpUtils;
 public class RegisterCase {
 
 	@Test(dataProvider="datas")
-	public void test(String url ,String method,String params) {
+	public void test(String url ,String method,String params,String contentType) {
 
 			try {
 				if (method.equalsIgnoreCase("post")) {
