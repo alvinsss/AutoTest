@@ -3,19 +3,16 @@ package com.alvin.utils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
-import org.w3c.dom.svg.SVGForeignObjectElement;
 
 import com.alvin.constants.Constants;
 import com.alvin.pojo.API;
@@ -25,7 +22,12 @@ import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
 
 public class ExcelUtils {
-
+	
+	//所有的API集合
+	public static List<API> apiList;
+	//所有的Case集合
+	public static List<Case> caseList;
+	
 	public static void main(String[] args) throws Exception {
 
 //		Object[][] datas = read_v1();
@@ -37,38 +39,41 @@ public class ExcelUtils {
 //		for (API data : excelDatas) {
 //			System.out.println(data);
 //		}
-		Object[][] a = getAPIAndCaseByApiId("1");
-		for (Object[] objects : a) {
-			System.out.println(Arrays.toString(objects));
-		}
+//		Object[][] a = getAPIAndCaseByApiId("1");
+//		for (Object[] objects : a) {
+//			System.out.println(Arrays.toString(objects));
+//		}
 	}
 	
-	public static Object[][] getAPIAndCaseByApiId(String apiId){
-		List<API> apilist = readExcel(0, 1,API.class);
-		List<Case> caselist = readExcel(1, 1,Case.class);
+	public static Object[][] getAPIAndCaseByApiId(String apiId) {
+		//需要的一个API
 		API wantAPI = null;
-		List<Case> wantList =  new ArrayList<Case>();
-		for (API api : apilist) {
-			if (apiId.equals( api.getId() )) {
+		//需要的多个Case集合
+		List<Case> wantList = new ArrayList<Case>();
+		//遍历集合找到符合的API
+		for (API api : apiList) {
+			//找到符合要求的API对象(apiId相等)
+			if(apiId.equals(api.getId())) {
 				wantAPI = api;
 				break;
 			}
 		}
-		for (Case c : caselist) {
-			if (apiId.equals( c.getApiId())) {
+		//遍历集合找到符合Case
+		for(Case c : caseList) {
+			//找到符合要求的Case对象(apiId相等)
+			if(apiId.equals(c.getApiId())) {
 				wantList.add(c);
-			} 
+			}
 		}
-		
+		//wantList和wantAPI有值了。
+		//API和Case装到Object[apiId对应的Case个数][2个参数]
 		Object[][] datas = new Object[wantList.size()][2];
-		for ( int i =0;i< datas.length;i++) {
+		for (int i = 0; i < datas.length; i++) {
 			datas[i][0] = wantAPI;
 			datas[i][1] = wantList.get(i);
 		}
 		return datas;
-
-		
-	}
+	} 
 	
 	/**
 	 * getCase和getAPI 方法抽取 ，使用泛型代替和返回list
@@ -79,7 +84,7 @@ public class ExcelUtils {
 	 * @param clazz			实体类型的字节码对象
 	 * @return				List<实体类型>的集合
 	 */
-	private static<T> List<T> readExcel(int setStartSheetIndex,int setSheetNum,Class<T> clazz) {
+	public static<T> List<T> readExcel(int setStartSheetIndex,int setSheetNum,Class<T> clazz) {
 		FileInputStream fis = null;
 		List<T> list = null;
 		try {

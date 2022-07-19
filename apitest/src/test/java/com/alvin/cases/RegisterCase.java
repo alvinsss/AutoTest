@@ -1,5 +1,7 @@
 package com.alvin.cases;
 
+import java.util.Arrays;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -38,7 +40,11 @@ public class RegisterCase {
 	public Object[][] datas() {
 //		Object[][] datas = ExcelUtils.read();
 //		return datas;
-		Object[][] datas = ExcelUtils.getAPIAndCaseByApiId("2");
+		System.out.println("RegisterCase datas:");
+		Object[][] datas = ExcelUtils.getAPIAndCaseByApiId("1");
+		for (Object[] objects : datas) {
+			System.out.println(Arrays.toString(objects));
+		}
 		return datas;
 	}
 	

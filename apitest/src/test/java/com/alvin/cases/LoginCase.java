@@ -1,5 +1,8 @@
 package com.alvin.cases;
 
+import java.util.Arrays;
+
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -38,9 +41,19 @@ public class LoginCase {
 	public Object[][] datas() {
 //		Object[][] datas = ExcelUtils.read();
 //		return datas;
-		Object[][] datas = ExcelUtils.getAPIAndCaseByApiId("1");
+		Object[][] datas = ExcelUtils.getAPIAndCaseByApiId("2");
+		System.out.println("LoginCase datas:");
+		for (Object[] objects : datas) {
+			System.out.println(Arrays.toString(objects));
+		}
 		return datas;
 	}
 	
-	
+	//所以代码最先执行 初始化静态数据做准备
+	@BeforeSuite
+	public void init() {
+		ExcelUtils.apiList = ExcelUtils.readExcel(0,1,API.class);
+		ExcelUtils.caseList = ExcelUtils.readExcel(1,1,Case.class);
+ 
+	}
 }
