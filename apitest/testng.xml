@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="xxx项目" parallel="false">  <!--  -->
+  <test name="用户模块">
+    <classes>
+      <class name="com.alvin.cases.RegisterCase"/>
+      <class name="com.alvin.cases.LoginCase"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

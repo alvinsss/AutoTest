@@ -8,7 +8,7 @@ import com.alvin.pojo.Case;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
 
-public class RegisterCase {
+public class LoginCase {
 	
 	
 	/**
@@ -38,7 +38,7 @@ public class RegisterCase {
 	public Object[][] datas() {
 //		Object[][] datas = ExcelUtils.read();
 //		return datas;
-		Object[][] datas = ExcelUtils.getAPIAndCaseByApiId("2");
+		Object[][] datas = ExcelUtils.getAPIAndCaseByApiId("1");
 		return datas;
 	}
 	
