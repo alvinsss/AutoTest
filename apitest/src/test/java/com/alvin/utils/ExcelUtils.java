@@ -3,6 +3,7 @@ package com.alvin.utils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,8 +31,31 @@ public class ExcelUtils {
 //			System.out.println(Arrays.toString(objects));
 //		}
 		
-		getAPI();
+		List<API> excelData = getExcelData(0, 1, API.class);
+		for (API api : excelData) {
+			System.out.println(api);
+		}
 		
+	}
+	/**
+	 * getCase和getAPI 方法抽取 ，使用泛型代替和返回list
+	 * @param <T>
+	 * @param setStartSheetIndex
+	 * @param setSheetNum
+	 * @param clazz
+	 * @return
+	 * @throws FileNotFoundException
+	 * @throws Exception
+	 */
+	private static<T> List<T> getExcelData(int setStartSheetIndex,int setSheetNum,Class<T> clazz) throws FileNotFoundException, Exception {
+		FileInputStream fis = new FileInputStream("src/test/resources/cases_v3.xlsx");
+		//导入参数设置类
+		ImportParams params = new ImportParams();
+		params.setStartSheetIndex(setStartSheetIndex);
+		params.setSheetNum(setSheetNum);
+		//导入验证
+		List<T> importExcelList = ExcelImportUtil.importExcel(fis, clazz, params);
+		return importExcelList;
 	}
 	
 	private static void getCase() throws FileNotFoundException, Exception {
@@ -39,6 +63,7 @@ public class ExcelUtils {
 		//导入参数设置类
 		ImportParams params = new ImportParams();
 		params.setStartSheetIndex(1);
+		params.setSheetNum(0);
 		//导入验证
 //		params.setNeedVerify(true);
 		List<Case> importExcel = ExcelImportUtil.importExcel(fis, Case.class, params);
@@ -52,6 +77,8 @@ public class ExcelUtils {
 		//导入参数设置类
 		ImportParams params = new ImportParams();
 		params.setStartSheetIndex(0);
+		params.setSheetNum(1);
+
 		//导入验证
 //		params.setNeedVerify(true);
 		List<API> importExcel = ExcelImportUtil.importExcel(fis, API.class, params);
