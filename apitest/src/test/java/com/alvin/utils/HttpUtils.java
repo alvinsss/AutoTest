@@ -45,7 +45,7 @@ public class HttpUtils {
 			if (method.equalsIgnoreCase("post")) {
 				if ("form".equalsIgnoreCase(contentType)) {
 					params = jsonToKeyValue(params);
-					System.out.println(params);
+//					System.out.println(params);
 					HttpUtils.formPost(url, params);
 				} else if ("json".equalsIgnoreCase(contentType)) {
 					HttpUtils.post(url, params);
@@ -86,7 +86,7 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	public static void get(String url) throws Exception, IOException {
+	private static void get(String url) throws Exception, IOException {
 
 		HttpGet get = new HttpGet(url);
 		get.setHeader("X-Lemonban-Media-Type", "lemonban.v1");
@@ -105,7 +105,7 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	public static void post(String url, String jsonParams) throws Exception, IOException {
+	private static void post(String url, String jsonParams) throws Exception, IOException {
 		HttpPost post = new HttpPost(url);
 		post.setHeader("X-Lemonban-Media-Type", "lemonban.v1");
 		post.setHeader("Content-Type", "application/json");
@@ -124,7 +124,7 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	public static void formPost(String url, String formParams) throws Exception, IOException {
+	private static void formPost(String url, String formParams) throws Exception, IOException {
 		HttpPost post = new HttpPost(url);
 		post.setHeader("Content-Type", "application/x-www-form-urlencodeed");
 		post.setEntity(new StringEntity(formParams, "utf-8"));
@@ -142,7 +142,7 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	public static void patch(String url, String jsonParams) throws Exception, IOException {
+	private static void patch(String url, String jsonParams) throws Exception, IOException {
 		HttpPatch patch = new HttpPatch(url);
 		patch.setHeader("X-Lemonban-Media-Type", "lemonban.v1");
 		patch.setHeader("Content-Type", "application/json");
