@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,8 +15,9 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
+import org.w3c.dom.svg.SVGForeignObjectElement;
 
-
+import com.alvin.constants.Constants;
 import com.alvin.pojo.API;
 import com.alvin.pojo.Case;
 
@@ -31,35 +33,79 @@ public class ExcelUtils {
 //			System.out.println(Arrays.toString(objects));
 //		}
 		
-		List<API> excelData = getExcelData(0, 1, API.class);
-		for (API api : excelData) {
-			System.out.println(api);
+//		List<API> excelDatas = readExcel(0, 1, API.class);
+//		for (API data : excelDatas) {
+//			System.out.println(data);
+//		}
+		Object[][] a = getAPIAndCaseByApiId("1");
+		for (Object[] objects : a) {
+			System.out.println(Arrays.toString(objects));
+		}
+	}
+	
+	public static Object[][] getAPIAndCaseByApiId(String apiId){
+		List<API> apilist = readExcel(0, 1,API.class);
+		List<Case> caselist = readExcel(1, 1,Case.class);
+		API wantAPI = null;
+		List<Case> wantList =  new ArrayList<Case>();
+		for (API api : apilist) {
+			if (apiId.equals( api.getId() )) {
+				wantAPI = api;
+				break;
+			}
+		}
+		for (Case c : caselist) {
+			if (apiId.equals( c.getApiId())) {
+				wantList.add(c);
+			} 
 		}
 		
+		Object[][] datas = new Object[wantList.size()][2];
+		for ( int i =0;i< datas.length;i++) {
+			datas[i][0] = wantAPI;
+			datas[i][1] = wantList.get(i);
+		}
+		return datas;
+
+		
 	}
+	
 	/**
 	 * getCase和getAPI 方法抽取 ，使用泛型代替和返回list
-	 * @param <T>
-	 * @param setStartSheetIndex
-	 * @param setSheetNum
-	 * @param clazz
-	 * @return
+	 * 读取excel中的sheet转成对象的List集合
+	 * @param <T>			实体类型				
+	 * @param sheetIndex	sheet开始索引
+	 * @param sheetNum		读取几个sheet
+	 * @param clazz			实体类型的字节码对象
+	 * @return				List<实体类型>的集合
+	 */
+	private static<T> List<T> readExcel(int setStartSheetIndex,int setSheetNum,Class<T> clazz) {
+		FileInputStream fis = null;
+		List<T> list = null;
+		try {
+			fis = new FileInputStream(Constants.EXCEL_PATH);
+			//导入参数设置类
+			ImportParams params = new ImportParams();
+			params.setStartSheetIndex(setStartSheetIndex);
+			params.setSheetNum(setSheetNum);
+			//导入验证
+			list = ExcelImportUtil.importExcel(fis, clazz, params);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return list;
+	}
+	/**
+	 * 废弃 
 	 * @throws FileNotFoundException
 	 * @throws Exception
 	 */
-	private static<T> List<T> getExcelData(int setStartSheetIndex,int setSheetNum,Class<T> clazz) throws FileNotFoundException, Exception {
-		FileInputStream fis = new FileInputStream("src/test/resources/cases_v3.xlsx");
-		//导入参数设置类
-		ImportParams params = new ImportParams();
-		params.setStartSheetIndex(setStartSheetIndex);
-		params.setSheetNum(setSheetNum);
-		//导入验证
-		List<T> importExcelList = ExcelImportUtil.importExcel(fis, clazz, params);
-		return importExcelList;
-	}
-	
 	private static void getCase() throws FileNotFoundException, Exception {
-		FileInputStream fis = new FileInputStream("src/test/resources/cases_v3.xlsx");
+		FileInputStream fis = new FileInputStream(Constants.EXCEL_PATH);
 		//导入参数设置类
 		ImportParams params = new ImportParams();
 		params.setStartSheetIndex(1);
@@ -71,9 +117,14 @@ public class ExcelUtils {
 			System.out.println(c);
 		}
 	}
-
+	
+	/**
+	 * 废弃 
+	 * @throws FileNotFoundException
+	 * @throws Exception
+	 */
 	private static void getAPI() throws FileNotFoundException, Exception {
-		FileInputStream fis = new FileInputStream("src/test/resources/cases_v3.xlsx");
+		FileInputStream fis = new FileInputStream(Constants.EXCEL_PATH);
 		//导入参数设置类
 		ImportParams params = new ImportParams();
 		params.setStartSheetIndex(0);
@@ -87,7 +138,12 @@ public class ExcelUtils {
 		}
 	}
 	
-//		poi
+		/**
+		 * poi读取excel全部行的指定列数据
+		 * @return Object[][]
+		 * @throws IOException
+		 */
+ 
 		public static Object[][] read_v1() throws IOException  {
 	//      1.打开文件excel （流读）
 			FileInputStream fis = new FileInputStream("src/test/resources/cases_v1.xls");

@@ -3,6 +3,8 @@ package com.alvin.cases;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.alvin.pojo.API;
+import com.alvin.pojo.Case;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
 
@@ -17,11 +19,11 @@ public class RegisterCase {
 	 * @param contentType	接口类型
 	 */
 	@Test(dataProvider = "datas")
-	public void test(String url,String method,String params,String contentType) {
+	public void test(API api,Case c) {
 //		1、参数化替换
 //		2、数据库前置查询结果(数据断言必须在接口执行前后都查询)
 //		3、调用接口
-		HttpUtils.call(url, method, params, contentType);
+		HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType());
 //		4、断言响应结果
 //		5、添加接口响应回写内容
 //		6、数据库后置查询结果
@@ -36,7 +38,8 @@ public class RegisterCase {
 	public Object[][] datas() {
 //		Object[][] datas = ExcelUtils.read();
 //		return datas;
-		return null;
+		Object[][] datas = ExcelUtils.getAPIAndCaseByApiId("1");
+		return datas;
 	}
 	
 	
