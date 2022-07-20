@@ -50,6 +50,7 @@ public class HttpUtils {
 					boby=HttpUtils.formPost(url, params,headers);
 				} else if ("json".equalsIgnoreCase(contentType)) {
 					boby=HttpUtils.post(url, params,headers);
+					System.out.println("call boby --------:"+boby);
 				}
 			} else if (method.equalsIgnoreCase("patch")) {
 				boby=HttpUtils.get(url,headers);

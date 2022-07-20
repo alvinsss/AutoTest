@@ -8,11 +8,13 @@ import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.alvin.constants.Constants;
 import com.alvin.pojo.API;
 import com.alvin.pojo.Case;
 import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
+import com.alvin.utils.WriteBackData;
 
 public class RegisterCase  extends BaseCase{
 	
@@ -25,13 +27,14 @@ public class RegisterCase  extends BaseCase{
 	 * @param contentType	接口类型
 	 */
 	@Test(dataProvider = "datas")
-	public void test(API api,Case c) {
+	public void test_RegisterCase(API api,Case c) {
  
 		Map<String, String> headers = new HashMap<String,String>();
 		setDefaultHeaders(headers);
 		getTokenToHeader(headers);
-		HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
- 
+		String body = HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
+		addWriteBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
+
 	}
 
 	

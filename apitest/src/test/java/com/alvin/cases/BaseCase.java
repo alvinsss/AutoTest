@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.alibaba.fastjson.JSONPath;
@@ -12,6 +14,7 @@ import com.alvin.pojo.API;
 import com.alvin.pojo.Case;
 import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
+import com.alvin.utils.WriteBackData;
 
 public class BaseCase {
 	
@@ -49,12 +52,29 @@ public class BaseCase {
 		}
 	}
 	
+	/**
+	 * 添加wbd回写对象到wbdList集合中。
+	 * @param sheetIndex		回写sheetIndex
+	 * @param rowNum			回写行号
+	 * @param cellNum			回写列号
+	 * @param content			回写内容
+	 */
+	public void addWriteBackData(int sheetIndex,int rowNum,int cellNum, String content) {
+		WriteBackData wbd = new WriteBackData(sheetIndex, rowNum, cellNum, content);
+		ExcelUtils.wbdList.add(wbd);
+	}
+	
 	//所以代码最先执行 初始化静态数据做准备,testng的注解属性特性
 	@BeforeSuite
 	public void init() {
-		System.out.println("================ 项目初始化BeforeSuite============ ");
-		ExcelUtils.apiList = ExcelUtils.readExcel(0,1,API.class);
-		ExcelUtils.caseList = ExcelUtils.readExcel(1,1,Case.class);
+		System.out.println("=======================项目初始化============================");
+		ExcelUtils.apiList = ExcelUtils.readExcel(0, 1, API.class);
+		ExcelUtils.caseList = ExcelUtils.readExcel(1, 1, Case.class);
 	}
 	
+	@AfterSuite
+	public void finish() {		
+		System.out.println("=======================项目结束============================");
+		ExcelUtils.batchWrite();
+	}
 }

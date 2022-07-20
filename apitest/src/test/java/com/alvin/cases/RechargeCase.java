@@ -9,11 +9,13 @@ import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.alvin.constants.Constants;
 import com.alvin.pojo.API;
 import com.alvin.pojo.Case;
 import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
+import com.alvin.utils.WriteBackData;
 import com.ctc.wstx.util.StringUtil;
 
 public class RechargeCase  extends BaseCase{
@@ -27,20 +29,20 @@ public class RechargeCase  extends BaseCase{
 	 * @param contentType	接口类型
 	 */
 	@Test(dataProvider = "datas")
-	public void test(API api,Case c) {
+	public void test_RechargeCase(API api,Case c) {
 
 		Map<String, String> headers = new HashMap<String,String>();
 		setDefaultHeaders(headers);
 		getTokenToHeader(headers);
-		Set<String> keySet = headers.keySet();
-		for (String key : keySet) {
-			String v = headers.get(key);
-			System.out.println(key +"->"+v);
-		}
-		HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
-
+//		Set<String> keySet = headers.keySet();
+//		for (String key : keySet) {
+//			String v = headers.get(key);
+//			System.out.println(key +"->"+v);
+//		}
+		String body= HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
+		System.out.println(" re c.getId() :"+c.getId() );
+		addWriteBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
 	}
-
 	
 	@DataProvider
 	public Object[][] datas() {

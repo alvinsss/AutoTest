@@ -15,15 +15,23 @@ public class Case {
 	// 接口编号
 	@Excel(name = "接口编号")
 	private String apiId;
+	// 期望响应数据
+	@Excel(name = "期望响应数据")
+	private String expect;
 
-	public Case(int id, String desc, String params, String apiId) {
+	public Case() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Case(int id, String desc, String params, String apiId, String expect) {
 		super();
 		this.id = id;
 		this.desc = desc;
 		this.params = params;
 		this.apiId = apiId;
+		this.expect = expect;
 	}
-
 
 	public int getId() {
 		return id;
@@ -57,7 +65,18 @@ public class Case {
 		this.apiId = apiId;
 	}
 
-	public Case() {
-		super();
+	public String getExpect() {
+		return expect;
 	}
+
+	public void setExpect(String expect) {
+		this.expect = expect;
+	}
+
+	@Override
+	public String toString() {
+		return "Case [id=" + id + ", desc=" + desc + ", params=" + params + ", apiId=" + apiId + ", expect=" + expect
+				+ "]";
+	}
+
 }

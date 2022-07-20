@@ -38,7 +38,7 @@ public class LoginCase  extends BaseCase{
 	 * @param contentType	接口类型
 	 */
 	@Test(dataProvider = "datas")
-	public void test(API api,Case c) {
+	public void test_LoginCase(API api,Case c) {
 //		1、参数化替换
 //		2、数据库前置查询结果(数据断言必须在接口执行前后都查询)
 //		3、调用接口
@@ -55,10 +55,10 @@ public class LoginCase  extends BaseCase{
 		setVariableInEnv(body,"$.data.id","${member_id}");
 
 //		4、添加接口响应回写内容
-		WriteBackData wbd = new WriteBackData(1,c.getId(),Constants.ACTUAL_RESPONSE_CELLNUM,body);
-		System.out.println(wbd);
-		//局部变量需要存起来 要不然会消失
-		ExcelUtils.wbdList.add(wbd);
+		System.out.println("login c.getId() :"+c.getId() );
+
+		addWriteBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
+
 //		5、断言响应结果
 //		6、数据库后置查询结果
 //		7、据库断言
