@@ -8,5 +8,5 @@ public class Constants {
 	// 常量只能赋值一次 基本类型不能改变 引用数据地址值不能改变 但是可以调用方法
 	public static final String EXCEL_PATH="src/test/resources/cases_v3.xlsx";
  
-
+	public static final String MEDIA_TYPE="lemonban.v2";
 }
