@@ -1,5 +1,6 @@
 package com.alvin.utils;
 
+import java.io.Closeable;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -75,6 +76,7 @@ public class ExcelUtils {
 				Row row = sheet.getRow(wbd.getRowNum());
 				Cell cell = row.getCell(wbd.getCellNum(), MissingCellPolicy.CREATE_NULL_AS_BLANK);
 				cell.setCellType(CellType.STRING);
+				//设置会写内容
 				cell.setCellValue(wbd.getContent());
 			}
 			//7.通过流回写excel   写之前是先清空，要哪里回写就哪里写这语句 
@@ -84,23 +86,26 @@ public class ExcelUtils {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
-			   try {
-				fos.close();
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			try {
-				if (fis != null) {
-					fis.close();
-				}
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
+			closeFileStream(fis);
+			closeFileStream(fos);
+
 		}
-
-
 	}
+	/**
+	 * 关流方法，FileStream是任意流对象
+	 * @param fs
+	 */
+	private static void closeFileStream(Closeable FileStream ) {
+		try {
+			if (FileStream != null) {
+				FileStream.close();
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 	public static Object[][] getAPIAndCaseByApiId(String apiId) {
 		//需要的一个API
 		API wantAPI = null;
