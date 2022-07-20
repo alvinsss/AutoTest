@@ -1,7 +1,10 @@
 package com.alvin.cases;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.bouncycastle.asn1.cms.EnvelopedData;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
@@ -36,10 +39,17 @@ public class LoginCase {
 //		1、参数化替换
 //		2、数据库前置查询结果(数据断言必须在接口执行前后都查询)
 //		3、调用接口
-		String body=HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType());
+
+
+		Map<String, String> headers = new HashMap<String,String>();
+		headers.put("X-Lemonban-Media-Type", "lemonban.v2");
+		headers.put("Content-Type", "application/json");
+
+		String body=HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
 		Object token = JSONPath.read(body, "$.data.token_info.token");
 
 		// 防止只有member_id没有token值
+		System.out.println("Login After Current token is:"+token.toString());
 		if (token != null) {
 			EnvironmentUtils.env.put("${token}",token.toString());
 			Object member_Id = JSONPath.read(body, "$.data.id");
@@ -47,6 +57,12 @@ public class LoginCase {
 				EnvironmentUtils.env.put("${member_id}",member_Id.toString());
 			}
 		}
+		
+		//取出环境全局变量值给token
+//		String token = EnvironmentUtils.env.get("${token}");
+//		if (StringUtils.isNotBlank(token)) {
+//			headers.put("Authorization", "Bearer"+token);
+//		}
 
 //		4、断言响应结果
 //		5、添加接口响应回写内容

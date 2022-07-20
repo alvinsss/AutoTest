@@ -8,6 +8,7 @@ import java.util.Set;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
+import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
 import org.apache.http.StatusLine;
@@ -39,21 +40,21 @@ public class HttpUtils {
 //		formPost("http://test.lemonban.com/futureloan/mvc/api/member/login","mobile_phone=13221400113&pwd=12345678");
 	}
 
-	public static String call(String url, String method, String params, String contentType) {
+	public static String call(String url, String method, String params, String contentType,Map<String,String> headers) {
 		String boby=null;
 		try {
 			if (method.equalsIgnoreCase("post")) {
 				if ("form".equalsIgnoreCase(contentType)) {
 					params = jsonToKeyValue(params);
 //					System.out.println(params);
-					boby=HttpUtils.formPost(url, params);
+					boby=HttpUtils.formPost(url, params,headers);
 				} else if ("json".equalsIgnoreCase(contentType)) {
-					boby=HttpUtils.post(url, params);
+					boby=HttpUtils.post(url, params,headers);
 				}
 			} else if (method.equalsIgnoreCase("patch")) {
-				boby=HttpUtils.get(url);
+				boby=HttpUtils.get(url,headers);
 			} else if (method.equalsIgnoreCase("get")) {
-				boby=HttpUtils.patch(url, params);
+				boby=HttpUtils.patch(url, params,headers);
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -89,10 +90,10 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	private static String get(String url) throws Exception, IOException {
+	private static String get(String url,Map<String,String> headers) throws Exception, IOException {
 
 		HttpGet get = new HttpGet(url);
-		get.setHeader("X-Lemonban-Media-Type", "lemonban.v1");
+ 		setHeaders(get,headers);
 		HttpClient client = HttpClients.createDefault();
 //		HttpHost proxy = new HttpHost("127.0.0.1", 8888);
 //		HttpResponse response = client.execute(proxy,get);
@@ -108,11 +109,18 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	private static String post(String url, String jsonParams) throws Exception, IOException {
+	private static String post(String url, String jsonParams,Map<String,String> headers) throws Exception, IOException {
 		HttpPost post = new HttpPost(url);
-		post.setHeader("X-Lemonban-Media-Type", "lemonban.v1");
-		post.setHeader("Content-Type", "application/json");
 		post.setEntity(new StringEntity(jsonParams, "utf-8"));
+//		post.setHeader("Authorization", "Bearer ");
+		setHeaders(post,headers);
+		System.out.println("请求参数:"+jsonParams);
+		System.out.println(post.getEntity().toString());
+		Set<String> keySet =headers.keySet();
+		for (String key : keySet) {
+			String v = headers.get(key);
+			System.out.println(key+"-->"+v);
+		}
 		HttpClient client = HttpClients.createDefault();
 //		response = body + header + code ,execute多态
 		HttpResponse response = client.execute(post);
@@ -127,13 +135,16 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	private static String formPost(String url, String formParams) throws Exception, IOException {
+	private static String formPost(String url, String formParams,Map<String,String> headers) throws Exception, IOException {
 		HttpPost post = new HttpPost(url);
 		post.setHeader("Content-Type", "application/x-www-form-urlencodeed");
+		System.out.println("formPost requset before:"+post.getAllHeaders());
 		post.setEntity(new StringEntity(formParams, "utf-8"));
+		setHeaders(post,headers);
 		HttpClient client = HttpClients.createDefault();
 //		response = body + header + code ,execute多态
 		HttpResponse response = client.execute(post);
+		System.out.println("formPost requset after:"+post.getAllHeaders());
 		return printRespAndReturnBody(response);
 	}
 
@@ -145,11 +156,10 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	private static String patch(String url, String jsonParams) throws Exception, IOException {
+	private static String patch(String url, String jsonParams,Map<String,String> headers) throws Exception, IOException {
 		HttpPatch patch = new HttpPatch(url);
-		patch.setHeader("X-Lemonban-Media-Type", "lemonban.v1");
-		patch.setHeader("Content-Type", "application/json");
 		patch.setEntity(new StringEntity(jsonParams, "utf-8"));
+		setHeaders(patch,headers);
 		HttpClient client = HttpClients.createDefault();
 //		response = body + header + code ,execute多态
 		HttpResponse response = client.execute(patch);
@@ -176,4 +186,11 @@ public class HttpUtils {
 		System.out.println("状态码:" + statusCode2);
 		return body;
 	}
+	
+	public static void setHeaders(HttpRequest request,Map<String,String> headers) {
+		Set<String> keySet =headers.keySet();
+		for (String string : keySet) {
+			request.setHeader(string,headers.get(string));
+		}
+	}	
 }

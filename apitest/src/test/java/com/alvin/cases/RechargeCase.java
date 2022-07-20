@@ -1,14 +1,19 @@
 package com.alvin.cases;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.alvin.pojo.API;
 import com.alvin.pojo.Case;
+import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
+import com.ctc.wstx.util.StringUtil;
 
 public class RechargeCase {
 	
@@ -25,7 +30,16 @@ public class RechargeCase {
 //		1、参数化替换
 //		2、数据库前置查询结果(数据断言必须在接口执行前后都查询)
 //		3、调用接口
-		HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType());
+		Map<String, String> headers = new HashMap<String,String>();
+		headers.put("X-Lemonban-Media-Type", "lemonban.v2");
+		headers.put("Content-Type", "application/json");
+		//取出环境全局变量值给token
+		String token = EnvironmentUtils.env.get("${token}");
+		if (StringUtils.isNotBlank(token)) {
+			//Bearer 有空格
+			headers.put("Authorization", "Bearer "+token);
+		}
+		HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
 //		4、断言响应结果
 //		5、添加接口响应回写内容
 //		6、数据库后置查询结果
