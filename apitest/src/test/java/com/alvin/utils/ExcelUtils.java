@@ -28,13 +28,16 @@ public class ExcelUtils {
 	//所有的Case集合
 	public static List<Case> caseList;
 	
+	//excel回写集合
+	public static List<WriteBackData> wbdList  = new ArrayList<WriteBackData>();
+
 	public static void main(String[] args) throws Exception {
 
 //		Object[][] datas = read_v1();
 //		for (Object[] objects : datas) {
 //			System.out.println(Arrays.toString(objects));
 //		}
-		
+//		
 //		List<Case> excelDatas = readExcel(1, 1, Case.class);
 //		for (Case data : excelDatas) {
 //			System.out.println(data);

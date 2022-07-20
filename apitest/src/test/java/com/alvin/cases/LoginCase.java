@@ -83,6 +83,5 @@ public class LoginCase  extends BaseCase{
 	public void init() {
 		ExcelUtils.apiList = ExcelUtils.readExcel(0,1,API.class);
 		ExcelUtils.caseList = ExcelUtils.readExcel(1,1,Case.class);
- 
 	}
 }
