@@ -4,10 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
+import org.testng.annotations.BeforeSuite;
 
 import com.alibaba.fastjson.JSONPath;
 import com.alvin.constants.Constants;
+import com.alvin.pojo.API;
+import com.alvin.pojo.Case;
 import com.alvin.utils.EnvironmentUtils;
+import com.alvin.utils.ExcelUtils;
 
 public class BaseCase {
 	
@@ -43,6 +47,14 @@ public class BaseCase {
 			//Bearer 后有空格 规则要求
 			headers.put("Authorization", "Bearer "+token);
 		}
+	}
+	
+	//所以代码最先执行 初始化静态数据做准备,testng的注解属性特性
+	@BeforeSuite
+	public void init() {
+		System.out.println("================ 项目初始化BeforeSuite============ ");
+		ExcelUtils.apiList = ExcelUtils.readExcel(0,1,API.class);
+		ExcelUtils.caseList = ExcelUtils.readExcel(1,1,Case.class);
 	}
 	
 }

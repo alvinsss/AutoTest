@@ -12,6 +12,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.alibaba.fastjson.JSONPath;
+import com.alvin.constants.Constants;
 import com.alvin.pojo.API;
 import com.alvin.pojo.Case;
 import com.alvin.utils.EnvironmentUtils;
@@ -54,8 +55,10 @@ public class LoginCase  extends BaseCase{
 		setVariableInEnv(body,"$.data.id","${member_id}");
 
 //		4、添加接口响应回写内容
-		WriteBackData wbd = new WriteBackData(1,c.getId(),5,body);
+		WriteBackData wbd = new WriteBackData(1,c.getId(),Constants.ACTUAL_RESPONSE_CELLNUM,body);
 		System.out.println(wbd);
+		//局部变量需要存起来 要不然会消失
+		ExcelUtils.wbdList.add(wbd);
 //		5、断言响应结果
 //		6、数据库后置查询结果
 //		7、据库断言
@@ -78,10 +81,5 @@ public class LoginCase  extends BaseCase{
 	}
 
 	
-	//所以代码最先执行 初始化静态数据做准备
-	@BeforeSuite
-	public void init() {
-		ExcelUtils.apiList = ExcelUtils.readExcel(0,1,API.class);
-		ExcelUtils.caseList = ExcelUtils.readExcel(1,1,Case.class);
-	}
+
 }

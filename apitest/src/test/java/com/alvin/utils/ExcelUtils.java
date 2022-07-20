@@ -2,12 +2,15 @@ package com.alvin.utils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -47,7 +50,57 @@ public class ExcelUtils {
 //			System.out.println(Arrays.toString(objects));
 //		}
 	}
-	
+	/***
+	 * 都是局部变量 不需要传入参数
+	 * @throws  
+	 */
+	public static void batchWrite()  {
+		
+		FileInputStream fis = null;
+		FileOutputStream fos = null;
+
+		try {
+			//1.加载excel
+			//2.创建workbook
+//      1.打开文件excel （流读）
+			fis = new FileInputStream(Constants.EXCEL_PATH);
+//		2.创建excel对象workbook
+			Workbook workbook  = WorkbookFactory.create(fis);
+			//3.获取对应sheet -wbdList
+			//4.获取对应row   -wbdList
+			//5.获取对应cell  -wbdList
+			//6.setCellValue  -wbdList
+			for (WriteBackData wbd : wbdList) {
+				Sheet sheet = workbook.getSheetAt(wbd.getSheetIndex());
+				Row row = sheet.getRow(wbd.getRowNum());
+				Cell cell = row.getCell(wbd.getCellNum(), MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				cell.setCellType(CellType.STRING);
+				cell.setCellValue(wbd.getContent());
+			}
+			//7.通过流回写excel   写之前是先清空，要哪里回写就哪里写这语句 
+			fos = new FileOutputStream(Constants.EXCEL_PATH);
+			workbook.write(fos);
+		}  catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			   try {
+				fos.close();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			try {
+				if (fis != null) {
+					fis.close();
+				}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+
+	}
 	public static Object[][] getAPIAndCaseByApiId(String apiId) {
 		//需要的一个API
 		API wantAPI = null;
