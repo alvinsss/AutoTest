@@ -35,8 +35,8 @@ public class ExcelUtils {
 //			System.out.println(Arrays.toString(objects));
 //		}
 		
-//		List<API> excelDatas = readExcel(0, 1, API.class);
-//		for (API data : excelDatas) {
+//		List<Case> excelDatas = readExcel(1, 1, Case.class);
+//		for (Case data : excelDatas) {
 //			System.out.println(data);
 //		}
 //		Object[][] a = getAPIAndCaseByApiId("1");

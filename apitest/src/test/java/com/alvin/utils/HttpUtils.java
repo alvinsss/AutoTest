@@ -34,26 +34,26 @@ public class HttpUtils {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws IOException, Exception {
-		get("http://api.lemonban.com/futureloan/member/1/info");
+//		get("http://api.lemonban.com/futureloan/member/1/info");
 //		post("http://api.lemonban.com/futureloan/member/login","{\"mobile_phone\": \"13221400113\",\"pwd\": \"12345678\"}");
 //		formPost("http://test.lemonban.com/futureloan/mvc/api/member/login","mobile_phone=13221400113&pwd=12345678");
 	}
 
-	public static void call(String url, String method, String params, String contentType) {
-
+	public static String call(String url, String method, String params, String contentType) {
+		String boby=null;
 		try {
 			if (method.equalsIgnoreCase("post")) {
 				if ("form".equalsIgnoreCase(contentType)) {
 					params = jsonToKeyValue(params);
 //					System.out.println(params);
-					HttpUtils.formPost(url, params);
+					boby=HttpUtils.formPost(url, params);
 				} else if ("json".equalsIgnoreCase(contentType)) {
-					HttpUtils.post(url, params);
+					boby=HttpUtils.post(url, params);
 				}
 			} else if (method.equalsIgnoreCase("patch")) {
-				HttpUtils.get(url);
+				boby=HttpUtils.get(url);
 			} else if (method.equalsIgnoreCase("get")) {
-				HttpUtils.patch(url, params);
+				boby=HttpUtils.patch(url, params);
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -62,6 +62,7 @@ public class HttpUtils {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return boby;
 	}
 
 	private static String jsonToKeyValue(String jsonstr) {
@@ -86,7 +87,7 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	private static void get(String url) throws Exception, IOException {
+	private static String get(String url) throws Exception, IOException {
 
 		HttpGet get = new HttpGet(url);
 		get.setHeader("X-Lemonban-Media-Type", "lemonban.v1");
@@ -94,7 +95,7 @@ public class HttpUtils {
 //		HttpHost proxy = new HttpHost("127.0.0.1", 8888);
 //		HttpResponse response = client.execute(proxy,get);
 		HttpResponse response = client.execute(get);
-		printRespAndReturnBody(response);
+		return printRespAndReturnBody(response);
 	}
 
 	/**
@@ -105,7 +106,7 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	private static void post(String url, String jsonParams) throws Exception, IOException {
+	private static String post(String url, String jsonParams) throws Exception, IOException {
 		HttpPost post = new HttpPost(url);
 		post.setHeader("X-Lemonban-Media-Type", "lemonban.v1");
 		post.setHeader("Content-Type", "application/json");
@@ -113,7 +114,7 @@ public class HttpUtils {
 		HttpClient client = HttpClients.createDefault();
 //		response = body + header + code ,execute多态
 		HttpResponse response = client.execute(post);
-		printRespAndReturnBody(response);
+		return printRespAndReturnBody(response);
 	}
 
 	/**
@@ -124,14 +125,14 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	private static void formPost(String url, String formParams) throws Exception, IOException {
+	private static String formPost(String url, String formParams) throws Exception, IOException {
 		HttpPost post = new HttpPost(url);
 		post.setHeader("Content-Type", "application/x-www-form-urlencodeed");
 		post.setEntity(new StringEntity(formParams, "utf-8"));
 		HttpClient client = HttpClients.createDefault();
 //		response = body + header + code ,execute多态
 		HttpResponse response = client.execute(post);
-		printRespAndReturnBody(response);
+		return printRespAndReturnBody(response);
 	}
 
 	/**
@@ -142,7 +143,7 @@ public class HttpUtils {
 	 * @throws Exception
 	 * @throws IOException
 	 */
-	private static void patch(String url, String jsonParams) throws Exception, IOException {
+	private static String patch(String url, String jsonParams) throws Exception, IOException {
 		HttpPatch patch = new HttpPatch(url);
 		patch.setHeader("X-Lemonban-Media-Type", "lemonban.v1");
 		patch.setHeader("Content-Type", "application/json");
@@ -150,7 +151,7 @@ public class HttpUtils {
 		HttpClient client = HttpClients.createDefault();
 //		response = body + header + code ,execute多态
 		HttpResponse response = client.execute(patch);
-		printRespAndReturnBody(response);
+		return printRespAndReturnBody(response);
 	}
 
 	/**
