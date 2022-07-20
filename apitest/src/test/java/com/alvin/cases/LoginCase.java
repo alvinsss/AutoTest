@@ -17,6 +17,7 @@ import com.alvin.pojo.Case;
 import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
+import com.alvin.utils.WriteBackData;
 
 public class LoginCase  extends BaseCase{
 	
@@ -41,19 +42,21 @@ public class LoginCase  extends BaseCase{
 //		2、数据库前置查询结果(数据断言必须在接口执行前后都查询)
 //		3、调用接口
 
-		//设置默认请求头
+		//3.1设置默认请求头
 		Map<String, String> headers = new HashMap<String,String>();
 		setDefaultHeaders(headers);
 
 		String body=HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
 		Object token = JSONPath.read(body, "$.data.token_info.token");
 		
-		//从body获取值存储到环境变量中
+		//3.2从body获取值存储到环境变量中
 		setVariableInEnv(body,"$.data.token_info.token","${token}");
 		setVariableInEnv(body,"$.data.id","${member_id}");
 
-//		4、断言响应结果
-//		5、添加接口响应回写内容
+//		4、添加接口响应回写内容
+		WriteBackData wbd = new WriteBackData(1,c.getId(),5,body);
+		System.out.println(wbd);
+//		5、断言响应结果
 //		6、数据库后置查询结果
 //		7、据库断言
 //		8、添加断言回写内容
