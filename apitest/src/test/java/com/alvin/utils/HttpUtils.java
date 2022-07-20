@@ -62,6 +62,8 @@ public class HttpUtils {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		System.out.println(boby);
 		return boby;
 	}
 
