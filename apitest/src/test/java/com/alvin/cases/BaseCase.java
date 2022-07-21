@@ -18,13 +18,14 @@ import com.alvin.utils.ExcelUtils;
 
 public class BaseCase {
 	
+	
 	/**设置默认请求头
 	 * @param headers  
 	 * 
 	 */
 	public   void setDefaultHeaders(Map<String, String> headers ) {
  		headers.put("X-Lemonban-Media-Type", Constants.MEDIA_TYPE);
-		headers.put("Content-Type", "application/json");
+		headers.put("Content-Type", Constants.CONTENT_TYPE);
 	}
 	
 	/**
@@ -40,6 +41,7 @@ public class BaseCase {
 			EnvironmentUtils.env.put(envKey,token.toString());
 		}
 	}
+	
 	/***
 	 * 从环境变量获取token设置到Headers中
 	 * @param headers
@@ -63,6 +65,33 @@ public class BaseCase {
 		WriteBackData wbd = new WriteBackData(sheetIndex, rowNum, cellNum, content);
 		ExcelUtils.wbdList.add(wbd);
 	}
+	
+	
+	/**
+	 * 响应断言
+	 * @param expect
+	 * @param body
+	 * @return
+	 */
+	public String responseAssert(String expect, String body) {
+			//按照@@切割期望断言
+			String[] expectArray = expect.split("@@");
+			//定义返回值
+			String reponseAssertFlag = "断言成功";
+			//循环期望值切割之后的数组
+			for (String expectValue : expectArray) {
+//				如果响应体包含期望值 断言为成功,flag为true
+				boolean flag = body.contains(expectValue) ;
+//				如果不包含期望值 判断断言失败flag为false
+				if ( flag == false) {
+					System.out.println("期望值"+expectValue +"不在相同体里");
+					break;
+				}
+			}
+			System.out.println("断言响应结果："+reponseAssertFlag);
+			return reponseAssertFlag;
+		}
+
 	
 	//所以代码最先执行 初始化静态数据做准备,testng的注解属性特性
 	@BeforeSuite

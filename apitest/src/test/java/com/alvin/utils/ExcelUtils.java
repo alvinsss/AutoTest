@@ -32,8 +32,7 @@ public class ExcelUtils {
 	public static List<API> apiList;
 	//所有的Case集合
 	public static List<Case> caseList;
-	
-	//excel回写集合
+	//excel回写集合wbdList,属性静态公共
 	public static List<WriteBackData> wbdList  = new ArrayList<WriteBackData>();
 
 	public static void main(String[] args) throws Exception {
@@ -97,10 +96,10 @@ public class ExcelUtils {
 	 * 关流方法，FileStream是任意流对象
 	 * @param fs
 	 */
-	private static void closeFileStream(Closeable FileStream ) {
+	private static void closeFileStream(Closeable fileStream ) {
 		try {
-			if (FileStream != null) {
-				FileStream.close();
+			if (fileStream != null) {
+				fileStream.close();
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

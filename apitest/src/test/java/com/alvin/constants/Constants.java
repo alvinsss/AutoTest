@@ -11,5 +11,8 @@ public class Constants {
 	public static final String MEDIA_TYPE="lemonban.v2";
 	
 	public static final int ACTUAL_RESPONSE_CELLNUM=5;
+	
+	public static final String CONTENT_TYPE="application/json";
+
 
 }

@@ -59,17 +59,7 @@ public class LoginCase  extends BaseCase{
 		addWriteBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
 
 //		5、断言响应结果
-		String expect = c.getExpect();
-		String[] expectArray = expect.split("@@");
-		boolean reponseAssertFlag = true;
-		for (String expectValue : expectArray) {
-			reponseAssertFlag = body.contains(expectValue) ;
-			System.out.println("期望值："+expectValue);
-
-			if (reponseAssertFlag == false) {
-				break;
-			}
-		}
+		String reponseAssertFlag = responseAssert(c.getExpect(), body);
 		System.out.println("断言响应结果："+reponseAssertFlag);
 //		6、数据库后置查询结果
 //		7、据库断言
@@ -77,6 +67,7 @@ public class LoginCase  extends BaseCase{
 //		9、添加日志
 //		10、报表断言
 	}
+
 
 	
 	@DataProvider
