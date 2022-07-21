@@ -61,7 +61,7 @@ public class BaseCase {
 	 * @param cellNum			回写列号
 	 * @param content			回写内容
 	 */
-	public void writeResponBackData(int sheetIndex,int rowNum,int cellNum, String content) {
+	public void writeBackData(int sheetIndex,int rowNum,int cellNum, String content) {
 		WriteBackData wbd = new WriteBackData(sheetIndex, rowNum, cellNum, content);
 		ExcelUtils.wbdList.add(wbd);
 	}
@@ -77,18 +77,20 @@ public class BaseCase {
 			//按照@@切割期望断言
 			String[] expectArray = expect.split("@@");
 			//定义返回值
-			String reponseAssertFlag = "断言成功";
+			String reponseAssertFlag = " ";
 			//循环期望值切割之后的数组
 			for (String expectValue : expectArray) {
 //				如果响应体包含期望值 断言为成功,flag为true
 				boolean flag = body.contains(expectValue) ;
+				System.out.println("responseAssert flag"+flag);
 //				如果不包含期望值 判断断言失败flag为false
 				if ( flag == false) {
 					System.out.println("期望值"+expectValue +"不在相同体里");
-					break;
+					 reponseAssertFlag = "断言失败";
+					 break;
 				}
+				reponseAssertFlag = "断言成功";
 			}
-			System.out.println("断言响应结果："+reponseAssertFlag);
 			return reponseAssertFlag;
 		}
 

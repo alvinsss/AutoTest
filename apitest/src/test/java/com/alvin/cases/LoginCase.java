@@ -39,37 +39,21 @@ public class LoginCase  extends BaseCase{
 	 */
 	@Test(dataProvider = "datas")
 	public void test_LoginCase(API api,Case c) {
-//		1、参数化替换
-//		2、数据库前置查询结果(数据断言必须在接口执行前后都查询)
-//		Object beforesqleReuslt = MysqlUtils.getSQLSingleReuslt(null);
-//		3、调用接口
 
-		//3.1设置默认请求头
 		Map<String, String> headers = new HashMap<String,String>();
 		setDefaultHeaders(headers);
 
 		String body=HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
 		Object token = JSONPath.read(body, "$.data.token_info.token");
 		
-		//3.2从body获取值存储到环境变量中
 		setVariableInEnv(body,"$.data.token_info.token","${token}");
 		setVariableInEnv(body,"$.data.id","${member_id}");
+		
+		writeBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
+		String reponseAssert = responseAssert(c.getExpect(), body);
+		System.out.println("test_LoginCase responseAssert 断言响应结果："+reponseAssert);
+		writeBackData(1, c.getId(), Constants.RESPONSE_ASSERT_CELLNUM, reponseAssert);
 
-//		4、添加接口响应回写内容
-//		System.out.println("login c.getId() :"+c.getId() );
-
-		writeResponBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
-
-//		5、断言响应结果
-		String reponseAssertFlag = responseAssert(c.getExpect(), body);
-		System.out.println("断言响应结果："+reponseAssertFlag);
-//		6、数据库后置查询结果
-//		Object afterqleReuslt = MysqlUtils.getSQLSingleReuslt(null);
-
-//		7、据库断言
-//		8、添加断言回写内容
-//		9、添加日志
-//		10、报表断言
 	}
 
 

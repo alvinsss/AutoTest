@@ -25,26 +25,37 @@ public class RegisterCase extends BaseCase{
 	 * @param contentType	接口类型
 	 */
 	@Test(dataProvider = "datas")
-	public void test(API api,Case c) {	
-//		1、参数化替换
-//		2、数据库前置查询结果(数据断言必须在接口执行前后都查询)
+	public void test_RegisterCase(API api,Case c) {	
+		
 		Object beforeSQLReuslt = MysqlUtils.getSQLSingleReuslt(c.getSql());
-//		3、调用接口
+
 		Map<String, String> headers = new HashMap<String, String>();
+		
 		//3.1、设置默认请求头
 		setDefaultHeaders(headers);
 		String body = HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
+
 //		4、断言响应结果
+		String reponseAssert = responseAssert(c.getExpect(), body);
+
 //		5、添加接口响应回写内容
-		writeResponBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
+		writeBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
+		
 //		6、数据库后置查询结果
 		Object afterSQLReuslt = MysqlUtils.getSQLSingleReuslt(c.getSql());
+		System.out.println("test_RegisterCase  c.getSql() "+c.getSql());
+		System.out.println("test_RegisterCase  beforeSQLReuslt---"+beforeSQLReuslt+"-->"+afterSQLReuslt);
+
 //		7、据库断言
 		if(StringUtils.isNotBlank(c.getSql())) {
 			boolean sqlAssertFlag = sqlAssert(beforeSQLReuslt, afterSQLReuslt);
 			System.out.println("数据库断言：" + sqlAssertFlag);
+			writeBackData(1, c.getId(), Constants.SQL_ASSERT_CELLNUM, sqlAssertFlag?"断言成功":"断言失败");
 		}
 //		8、添加断言回写内容
+		System.out.println("test_RegisterCase responseAssert 断言响应结果："+reponseAssert);
+		writeBackData(1, c.getId(), Constants.RESPONSE_ASSERT_CELLNUM, reponseAssert);
+
 //		9、添加日志
 //		10、报表断言
 	}

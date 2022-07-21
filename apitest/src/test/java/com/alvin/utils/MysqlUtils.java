@@ -41,7 +41,8 @@ public class MysqlUtils {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(result);
+		System.out.println("----------getSQLSingle-SQL------"+sql);
+		System.out.println("----------getSQLSingleReuslt------"+result);
 		return result;
 	}
 	

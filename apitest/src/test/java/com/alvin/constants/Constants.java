@@ -9,9 +9,10 @@ public class Constants {
 	public static final String EXCEL_PATH="src/test/resources/cases_v5.xlsx";
  
 	public static final String MEDIA_TYPE="lemonban.v2";
-	
 	public static final int ACTUAL_RESPONSE_CELLNUM=5;
-	
+	public static final int RESPONSE_ASSERT_CELLNUM=6;
+	public static final int SQL_ASSERT_CELLNUM=8;
+
 	public static final String CONTENT_TYPE="application/json";
 
 	//jdbc:oracle:thin:@localhost:1521:orcl 

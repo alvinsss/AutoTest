@@ -22,7 +22,7 @@ public class RechargeCase extends BaseCase {
 	
 	
 	@Test(dataProvider = "datas")
-	public void test(API api,Case c) {	
+	public void test_RechargeCase(API api,Case c) {	
 		//1、参数化替换
 		//2、数据库前置查询结果(数据断言必须在接口执行前后都查询)
 		Object beforeSQLReuslt = MysqlUtils.getSQLSingleReuslt(c.getSql());
@@ -35,20 +35,28 @@ public class RechargeCase extends BaseCase {
 		getTokenToHeader(headers);
 		String body = HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
 		//4、断言响应结果
+		String reponseAssert = responseAssert(c.getExpect(), body);
 		//5、添加接口响应回写内容
-		writeResponBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
+		writeBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
 		//6、数据库后置查询结果
 		Object afterSQLReuslt = MysqlUtils.getSQLSingleReuslt(c.getSql());
 		//7、据库断言
 		if(StringUtils.isNotBlank(c.getSql())) {
 			boolean sqlAssertFlag = sqlAssert(beforeSQLReuslt, afterSQLReuslt,c);
-			System.out.println("数据库断言：" + sqlAssertFlag);
+			System.out.println("test_ RechargeCase数据库断言：" + sqlAssertFlag);
+			writeBackData(1, c.getId(), Constants.SQL_ASSERT_CELLNUM, sqlAssertFlag?"断言成功":"断言失败");
 		}
 		//8、添加断言回写内容
+		System.out.println("test_RechargeCase responseAssert 断言响应结果："+reponseAssert);
+		writeBackData(1, c.getId(), Constants.RESPONSE_ASSERT_CELLNUM, reponseAssert);
+
 		//9、添加日志
 		//10、报表断言
 	}
-	
+
+		
+ 
+
 	/**
 	 * 	数据库断言
 	 * @param beforeSQLReuslt	接口执行之前的数据结果
