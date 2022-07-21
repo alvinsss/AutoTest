@@ -32,6 +32,7 @@ public class MysqlUtils {
 	private static void queryBeanHander() throws SQLException {
 		QueryRunner qr = new QueryRunner();
 		Connection conn = JDBCUtils.getConnection();
+		//new BeanHandler<Member>(Member.class) 结果及处理对象，使用BeanHandler需要pojo创建实体类对象
 		Member member = qr.query(conn,"select * from member m WHERE m.id=1 ;", new BeanHandler<Member>(Member.class));
 		System.out.println(member);
 		JDBCUtils.close(conn);

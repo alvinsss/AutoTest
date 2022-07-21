@@ -2,6 +2,7 @@ package com.alvin.pojo;
 
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 public class Member {
 	
@@ -11,7 +12,7 @@ public class Member {
 	private String addr ;
 	private int age ;
 	private String email ;
-	private Date reg_time ;
+	private Timestamp reg_time ;
 	private BigDecimal amount ;
 	public int getId() {
 		return id;
@@ -49,10 +50,10 @@ public class Member {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Date getReg_time() {
+	public Timestamp getReg_time() {
 		return reg_time;
 	}
-	public void setReg_time(Date reg_time) {
+	public void setReg_time(Timestamp reg_time) {
 		this.reg_time = reg_time;
 	}
 	public BigDecimal getAmount() {
@@ -65,7 +66,7 @@ public class Member {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Member(int id, String name, String sex, String addr, int age, String email, Date reg_time,
+	public Member(int id, String name, String sex, String addr, int age, String email, Timestamp reg_time,
 			BigDecimal amount) {
 		super();
 		this.id = id;
