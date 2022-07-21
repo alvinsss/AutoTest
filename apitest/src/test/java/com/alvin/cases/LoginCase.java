@@ -39,7 +39,11 @@ public class LoginCase  extends BaseCase{
 	 */
 	@Test(dataProvider = "datas")
 	public void test_LoginCase(API api,Case c) {
-
+		
+		String params = paramsReplace(c.getParams());
+		c.setParams(params);
+		String sql = paramsReplace(c.getSql());
+		c.setSql(sql);
 		Map<String, String> headers = new HashMap<String,String>();
 		setDefaultHeaders(headers);
 

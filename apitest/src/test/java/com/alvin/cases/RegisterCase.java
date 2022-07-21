@@ -27,6 +27,12 @@ public class RegisterCase extends BaseCase{
 	@Test(dataProvider = "datas")
 	public void test_RegisterCase(API api,Case c) {	
 		
+		String params = paramsReplace(c.getParams());
+		c.setParams(params);
+		String sql = paramsReplace(c.getSql());
+		c.setSql(sql);
+		System.out.println("test_RegisterCase"+c.getParams());
+		
 		Object beforeSQLReuslt = MysqlUtils.getSQLSingleReuslt(c.getSql());
 
 		Map<String, String> headers = new HashMap<String, String>();

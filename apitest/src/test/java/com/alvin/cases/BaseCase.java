@@ -2,6 +2,7 @@ package com.alvin.cases;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.AfterClass;
@@ -94,6 +95,28 @@ public class BaseCase {
 			return reponseAssertFlag;
 		}
 
+	/**
+	 * 	参数化替换方法
+	 * @param params	需要替换的字符串
+	 * @return			替换之后的字符串
+	 */
+	public String paramsReplace(String params) {
+		//如果参数为null，返回参数本身
+		if(StringUtils.isBlank(params)) {
+			return params;
+		}
+		//1、从环境变量中获取所有的占位符
+		Set<String> keySet = EnvironmentUtils.env.keySet();
+		//2、遍历环境变量env
+		for (String key : keySet) {
+			//3、key就是参数化的占位符${xxxx} value参数化具体要替换的值。
+			//4、把需要替换的字符串执行replace(key,value);
+			String value = EnvironmentUtils.env.get(key);
+			//5、替换并且重新接受
+			params = params.replace(key, value);
+		}
+		return params;
+	}
 	
 	//所以代码最先执行 初始化静态数据做准备,testng的注解属性特性
 	@BeforeSuite
@@ -101,6 +124,8 @@ public class BaseCase {
 		System.out.println("=======================项目初始化============================");
 		ExcelUtils.apiList = ExcelUtils.readExcel(0, 1, API.class);
 		ExcelUtils.caseList = ExcelUtils.readExcel(1, 1, Case.class);
+		EnvironmentUtils.env.put(Constants.PARAM_MOBILE, "18610000000");
+		EnvironmentUtils.env.put(Constants.PARAM_PASSWORD,"aaabbb123");
 	}
 	
 	@AfterSuite

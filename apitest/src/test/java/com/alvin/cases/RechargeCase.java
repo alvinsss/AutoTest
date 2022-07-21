@@ -3,6 +3,7 @@ package com.alvin.cases;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.DataProvider;
@@ -16,6 +17,7 @@ import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
 import com.alvin.utils.MysqlUtils;
+import com.mysql.fabric.xmlrpc.base.Params;
 
 public class RechargeCase extends BaseCase {
 	
@@ -24,6 +26,12 @@ public class RechargeCase extends BaseCase {
 	@Test(dataProvider = "datas")
 	public void test_RechargeCase(API api,Case c) {	
 		//1、参数化替换
+		//1.变量环境变量env
+		String params = paramsReplace(c.getParams());
+		c.setParams(params);
+		String sql = paramsReplace(c.getSql());
+		c.setSql(sql);
+		//1.2
 		//2、数据库前置查询结果(数据断言必须在接口执行前后都查询)
 		Object beforeSQLReuslt = MysqlUtils.getSQLSingleReuslt(c.getSql());
 		//3、调用接口
@@ -54,9 +62,7 @@ public class RechargeCase extends BaseCase {
 		//10、报表断言
 	}
 
-		
  
-
 	/**
 	 * 	数据库断言
 	 * @param beforeSQLReuslt	接口执行之前的数据结果
