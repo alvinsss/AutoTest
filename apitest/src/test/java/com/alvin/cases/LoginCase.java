@@ -58,7 +58,7 @@ public class LoginCase  extends BaseCase{
 //		4、添加接口响应回写内容
 //		System.out.println("login c.getId() :"+c.getId() );
 
-		addWriteBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
+		writeResponBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
 
 //		5、断言响应结果
 		String reponseAssertFlag = responseAssert(c.getExpect(), body);
