@@ -54,11 +54,23 @@ public class LoginCase  extends BaseCase{
 		setVariableInEnv(body,"$.data.id","${member_id}");
 
 //		4、添加接口响应回写内容
-		System.out.println("login c.getId() :"+c.getId() );
+//		System.out.println("login c.getId() :"+c.getId() );
 
 		addWriteBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
 
 //		5、断言响应结果
+		String expect = c.getExpect();
+		String[] expectArray = expect.split("@@");
+		boolean reponseAssertFlag = true;
+		for (String expectValue : expectArray) {
+			reponseAssertFlag = body.contains(expectValue) ;
+			System.out.println("期望值："+expectValue);
+
+			if (reponseAssertFlag == false) {
+				break;
+			}
+		}
+		System.out.println("断言响应结果："+reponseAssertFlag);
 //		6、数据库后置查询结果
 //		7、据库断言
 //		8、添加断言回写内容
