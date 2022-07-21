@@ -14,5 +14,8 @@ public class Constants {
 	
 	public static final String CONTENT_TYPE="application/json";
 
-
+	//jdbc:oracle:thin:@localhost:1521:orcl 
+	public static final String JDBC_URL = "jdbc:mysql://localhost:3306/futureloan?useUnicode=true&characterEncoding=utf-8";
+	public static final String JDBC_USERNAME = "qa";
+	public static final String JDBC_PASSWORD = "qatest";
 }
