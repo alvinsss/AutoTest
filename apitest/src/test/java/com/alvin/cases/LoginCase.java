@@ -18,6 +18,7 @@ import com.alvin.pojo.Case;
 import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
+import com.alvin.utils.MysqlUtils;
 
 public class LoginCase  extends BaseCase{
 	
@@ -40,6 +41,7 @@ public class LoginCase  extends BaseCase{
 	public void test_LoginCase(API api,Case c) {
 //		1、参数化替换
 //		2、数据库前置查询结果(数据断言必须在接口执行前后都查询)
+//		Object beforesqleReuslt = MysqlUtils.getSQLSingleReuslt(null);
 //		3、调用接口
 
 		//3.1设置默认请求头
@@ -62,6 +64,8 @@ public class LoginCase  extends BaseCase{
 		String reponseAssertFlag = responseAssert(c.getExpect(), body);
 		System.out.println("断言响应结果："+reponseAssertFlag);
 //		6、数据库后置查询结果
+//		Object afterqleReuslt = MysqlUtils.getSQLSingleReuslt(null);
+
 //		7、据库断言
 //		8、添加断言回写内容
 //		9、添加日志

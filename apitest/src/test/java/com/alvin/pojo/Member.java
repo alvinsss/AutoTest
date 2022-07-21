@@ -13,7 +13,8 @@ public class Member {
 	private int age ;
 	private String email ;
 	private Timestamp reg_time ;
-	private BigDecimal amount ;
+	private BigDecimal leave_amount ;
+	private int mobile_phone;
 	public int getId() {
 		return id;
 	}
@@ -57,17 +58,19 @@ public class Member {
 		this.reg_time = reg_time;
 	}
 	public BigDecimal getAmount() {
-		return amount;
+		return leave_amount;
 	}
 	public void setAmount(BigDecimal amount) {
-		this.amount = amount;
+		this.leave_amount = amount;
 	}
-	public Member() {
-		super();
-		// TODO Auto-generated constructor stub
+	public int getMobile_phone() {
+		return mobile_phone;
+	}
+	public void setMobile_phone(int mobile_phone) {
+		this.mobile_phone = mobile_phone;
 	}
 	public Member(int id, String name, String sex, String addr, int age, String email, Timestamp reg_time,
-			BigDecimal amount) {
+			BigDecimal leave_amount, int mobile_phone) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -76,14 +79,17 @@ public class Member {
 		this.age = age;
 		this.email = email;
 		this.reg_time = reg_time;
-		this.amount = amount;
+		this.leave_amount = leave_amount;
+		this.mobile_phone = mobile_phone;
+	}
+	public Member() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
 		return "Member [id=" + id + ", name=" + name + ", sex=" + sex + ", addr=" + addr + ", age=" + age + ", email="
-				+ email + ", reg_time=" + reg_time + ", amount=" + amount + "]";
+				+ email + ", reg_time=" + reg_time + ", leave_amount=" + leave_amount + ", mobile_phone=" + mobile_phone + "]";
 	}
-
-
-
+	 
 }

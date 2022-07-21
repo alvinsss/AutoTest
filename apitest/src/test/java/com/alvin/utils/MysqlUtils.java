@@ -25,7 +25,7 @@ public class MysqlUtils {
 	 * @return
 	 */
 	public static Object getSQLSingleReuslt(String sql) {
-		//1、如果sql语句为空，不执行sql查询
+		//1、根据excel的实际情况，如果sql语句为空，不执行sql查询
 		if(StringUtils.isBlank(sql)) {
 			return null;
 		}

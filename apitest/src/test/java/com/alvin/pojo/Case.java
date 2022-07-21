@@ -18,19 +18,24 @@ public class Case {
 	// 期望响应数据
 	@Excel(name = "期望响应数据")
 	private String expect;
+	
+	// 检验SQL
+	@Excel(name = "检验SQL")
+	private String sql;
 
 	public Case() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Case(int id, String desc, String params, String apiId, String expect) {
+	public Case(int id, String desc, String params, String apiId, String expect, String sql) {
 		super();
 		this.id = id;
 		this.desc = desc;
 		this.params = params;
 		this.apiId = apiId;
 		this.expect = expect;
+		this.sql = sql;
 	}
 
 	public int getId() {
@@ -73,10 +78,13 @@ public class Case {
 		this.expect = expect;
 	}
 
-	@Override
-	public String toString() {
-		return "Case [id=" + id + ", desc=" + desc + ", params=" + params + ", apiId=" + apiId + ", expect=" + expect
-				+ "]";
+	public String getSql() {
+		return sql;
 	}
+
+	public void setSql(String sql) {
+		this.sql = sql;
+	}
+	
 
 }
