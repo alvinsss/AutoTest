@@ -12,9 +12,9 @@ import com.alibaba.fastjson.JSONPath;
 import com.alvin.constants.Constants;
 import com.alvin.pojo.API;
 import com.alvin.pojo.Case;
+import com.alvin.pojo.WriteBackData;
 import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
-import com.alvin.utils.WriteBackData;
 
 public class BaseCase {
 	

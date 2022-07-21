@@ -21,6 +21,7 @@ import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
 import com.alvin.constants.Constants;
 import com.alvin.pojo.API;
 import com.alvin.pojo.Case;
+import com.alvin.pojo.WriteBackData;
 
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
@@ -63,9 +64,9 @@ public class ExcelUtils {
 		try {
 			//1.加载excel
 			//2.创建workbook
-//      1.打开文件excel （流读）
+      //     1.打开文件excel （流读）
 			fis = new FileInputStream(Constants.EXCEL_PATH);
-//		2.创建excel对象workbook
+      //	 2.创建excel对象workbook
 			Workbook workbook  = WorkbookFactory.create(fis);
 			//3.获取对应sheet -wbdList
 			//4.获取对应row   -wbdList
@@ -75,8 +76,8 @@ public class ExcelUtils {
 				Sheet sheet = workbook.getSheetAt(wbd.getSheetIndex());
 				Row row = sheet.getRow(wbd.getRowNum());
 				Cell cell = row.getCell(wbd.getCellNum(), MissingCellPolicy.CREATE_NULL_AS_BLANK);
-				cell.setCellType(CellType.STRING);
-				//设置会写内容
+//				cell.setCellType(CellType.STRING);
+				//设置回写内容
 				cell.setCellValue(wbd.getContent());
 			}
 			//7.通过流回写excel   写之前是先清空，要哪里回写就哪里写这语句 

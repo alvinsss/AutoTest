@@ -15,7 +15,6 @@ import com.alvin.pojo.Case;
 import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
-import com.alvin.utils.WriteBackData;
 import com.ctc.wstx.util.StringUtil;
 
 public class RechargeCase  extends BaseCase{
