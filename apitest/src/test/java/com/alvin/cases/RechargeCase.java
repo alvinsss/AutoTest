@@ -36,7 +36,7 @@ public class RechargeCase extends BaseCase {
 		String body = HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
 		//4、断言响应结果
 		//5、添加接口响应回写内容
-		addWriteBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
+		writeResponBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
 		//6、数据库后置查询结果
 		Object afterSQLReuslt = MysqlUtils.getSQLSingleReuslt(c.getSql());
 		//7、据库断言

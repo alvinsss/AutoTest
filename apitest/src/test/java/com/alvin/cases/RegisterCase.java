@@ -32,7 +32,7 @@ public class RegisterCase  extends BaseCase{
 		setDefaultHeaders(headers);
 		getTokenToHeader(headers);
 		String body = HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
-		addWriteBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
+		writeResponBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
 
 	}
 

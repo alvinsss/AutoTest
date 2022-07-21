@@ -61,7 +61,7 @@ public class BaseCase {
 	 * @param cellNum			回写列号
 	 * @param content			回写内容
 	 */
-	public void addWriteBackData(int sheetIndex,int rowNum,int cellNum, String content) {
+	public void writeResponBackData(int sheetIndex,int rowNum,int cellNum, String content) {
 		WriteBackData wbd = new WriteBackData(sheetIndex, rowNum, cellNum, content);
 		ExcelUtils.wbdList.add(wbd);
 	}
