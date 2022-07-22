@@ -14,7 +14,32 @@ public class Member {
 	private String email ;
 	private Timestamp reg_time ;
 	private BigDecimal leave_amount ;
-	private int mobile_phone;
+	private String mobile_phone;
+	private String password ;
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", name=" + name + ", sex=" + sex + ", addr=" + addr + ", age=" + age + ", email="
+				+ email + ", reg_time=" + reg_time + ", leave_amount=" + leave_amount + ", mobile_phone=" + mobile_phone
+				+ ", password=" + password + "]";
+	}
+	public Member(int id, String name, String sex, String addr, int age, String email, Timestamp reg_time,
+			BigDecimal leave_amount, String mobile_phone, String password) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.sex = sex;
+		this.addr = addr;
+		this.age = age;
+		this.email = email;
+		this.reg_time = reg_time;
+		this.leave_amount = leave_amount;
+		this.mobile_phone = mobile_phone;
+		this.password = password;
+	}
+	public Member() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public int getId() {
 		return id;
 	}
@@ -57,39 +82,24 @@ public class Member {
 	public void setReg_time(Timestamp reg_time) {
 		this.reg_time = reg_time;
 	}
-	public BigDecimal getAmount() {
+	public BigDecimal getLeave_amount() {
 		return leave_amount;
 	}
-	public void setAmount(BigDecimal amount) {
-		this.leave_amount = amount;
+	public void setLeave_amount(BigDecimal leave_amount) {
+		this.leave_amount = leave_amount;
 	}
-	public int getMobile_phone() {
+	public String getMobile_phone() {
 		return mobile_phone;
 	}
-	public void setMobile_phone(int mobile_phone) {
+	public void setMobile_phone(String mobile_phone) {
 		this.mobile_phone = mobile_phone;
 	}
-	public Member(int id, String name, String sex, String addr, int age, String email, Timestamp reg_time,
-			BigDecimal leave_amount, int mobile_phone) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.sex = sex;
-		this.addr = addr;
-		this.age = age;
-		this.email = email;
-		this.reg_time = reg_time;
-		this.leave_amount = leave_amount;
-		this.mobile_phone = mobile_phone;
+	public String getPassword() {
+		return password;
 	}
-	public Member() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	@Override
-	public String toString() {
-		return "Member [id=" + id + ", name=" + name + ", sex=" + sex + ", addr=" + addr + ", age=" + age + ", email="
-				+ email + ", reg_time=" + reg_time + ", leave_amount=" + leave_amount + ", mobile_phone=" + mobile_phone + "]";
-	}
-	 
+
+ 
 }

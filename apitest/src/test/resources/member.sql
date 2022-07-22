@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50738
 File Encoding         : 65001
 
-Date: 2022-07-21 16:38:19
+Date: 2022-07-22 09:21:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,16 +28,17 @@ CREATE TABLE `member` (
   `email` char(50) DEFAULT NULL,
   `reg_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `leave_amount` decimal(20,0) DEFAULT NULL,
-  `mobile_phone` char(11) DEFAULT NULL,
+  `mobile_phone` char(20) DEFAULT NULL,
+  `password` char(18) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of member
 -- ----------------------------
-INSERT INTO `member` VALUES ('1', '张三', '男', '南京', '4', 'zhangsan@test.com', '2022-07-21 10:50:07', '2', null);
-INSERT INTO `member` VALUES ('2', '李四', '男', '上海', '4', 'lisi@test.com', '2022-07-21 16:32:09', '100', '18900011000');
-INSERT INTO `member` VALUES ('3', '王五', '男', '深圳', '5', 'wangwu@test.com', '2022-07-21 10:50:15', '3', null);
-INSERT INTO `member` VALUES ('4', '赵六', '女', '广州', '4', 'zhaoliu@test.com', '2022-07-21 16:37:52', '20', '18900000000');
-INSERT INTO `member` VALUES ('5', '张三上', '男', '长沙', '4', 'tianqi@test.com', '2022-07-21 10:50:31', '30', null);
-INSERT INTO `member` VALUES ('6', '黄八', '女', '北京', '4', 'huangba@test.com', '2022-07-21 10:50:37', '0', null);
+INSERT INTO `member` VALUES ('1', '张三', '男', '南京', '4', 'zhangsan@test.com', '2022-07-22 08:48:07', '2', '18900211000', '12345678');
+INSERT INTO `member` VALUES ('2', '李四', '男', '上海', '4', 'lisi@test.com', '2022-07-22 08:48:07', '100', '18900011000', '12345678');
+INSERT INTO `member` VALUES ('3', '王五', '男', '深圳', '5', 'wangwu@test.com', '2022-07-22 08:48:07', '3', '18902011000', '12345678');
+INSERT INTO `member` VALUES ('4', '赵六', '女', '广州', '4', 'zhaoliu@test.com', '2022-07-22 08:48:07', '20', '18900000000', '12345678');
+INSERT INTO `member` VALUES ('5', '张三上', '男', '长沙', '4', 'tianqi@test.com', '2022-07-22 08:48:07', '30', '18902011500', '12345678');
+INSERT INTO `member` VALUES ('6', '黄八', '女', '北京', '4', 'huangba@test.com', '2022-07-22 08:48:07', '0', '18902011040', '12345678');

@@ -23,6 +23,7 @@ public class Constants {
 	
 	public static final String PARAM_MOBILE = "${mobile_phone}";
 	public static final String PARAM_PASSWORD = "${pwd}";
-
+	public static final String PARAM_TOKEN = "${token}";
+	public static final String PARAM_MEMBER_ID = "${member_id}";
 	
 }

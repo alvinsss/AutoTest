@@ -13,10 +13,12 @@ import com.alibaba.fastjson.JSONPath;
 import com.alvin.constants.Constants;
 import com.alvin.pojo.API;
 import com.alvin.pojo.Case;
+import com.alvin.pojo.Member;
 import com.alvin.pojo.WriteBackData;
 import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
-
+import com.alvin.utils.MysqlUtils;
+ 
 public class BaseCase {
 	
 	
@@ -122,10 +124,14 @@ public class BaseCase {
 	@BeforeSuite
 	public void init() {
 		System.out.println("=======================项目初始化============================");
+		Member randomMember = MysqlUtils.getRandomMember();
 		ExcelUtils.apiList = ExcelUtils.readExcel(0, 1, API.class);
 		ExcelUtils.caseList = ExcelUtils.readExcel(1, 1, Case.class);
-		EnvironmentUtils.env.put(Constants.PARAM_MOBILE, "18610000000");
-		EnvironmentUtils.env.put(Constants.PARAM_PASSWORD,"aaabbb123");
+		EnvironmentUtils.env.put(Constants.PARAM_MOBILE, EnvironmentUtils.getRegisterPhone());
+		EnvironmentUtils.env.put(Constants.PARAM_PASSWORD,randomMember.getPassword());
+//		EnvironmentUtils.env.put(Constants.PARAM_TOKEN,"aaabbb123");
+//		EnvironmentUtils.env.put(Constants.PARAM_MEMBER_ID,"7795111");
+
 	}
 	
 	@AfterSuite

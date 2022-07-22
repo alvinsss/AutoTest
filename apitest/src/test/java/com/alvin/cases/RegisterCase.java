@@ -86,7 +86,8 @@ public class RegisterCase extends BaseCase{
 	@DataProvider
 	public Object[][] datas() {
 //		Object[][] datas = ExcelUtils.read();
-//		return datas;
+//		return datas;  
+		//1是注册
 		Object[][] datas = ExcelUtils.getAPIAndCaseByApiId("1");
 		return datas;
 	}

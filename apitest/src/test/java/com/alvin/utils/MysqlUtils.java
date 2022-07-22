@@ -16,7 +16,8 @@ public class MysqlUtils {
 	
 	
 	public static void main(String[] args) throws Exception {
-		getSQLSingleReuslt("SELECT  name from member WHERE id=1");
+//		getqueryBeanHander("SELECT * from member ORDER BY rand() LIMIT 1;");
+		getRandomMember();
 	}
 
 	/**
@@ -45,6 +46,33 @@ public class MysqlUtils {
 		System.out.println("----------getSQLSingleReuslt------"+result);
 		return result;
 	}
+	
+	/**
+	 * 获取一个随机的Member对象
+	 * @return
+	 */
+	public static Member getRandomMember( ) {
+		String sql = "SELECT * from member ORDER BY rand() LIMIT 1;";
+		//2、DBUtils操作sql语句核心类
+		QueryRunner qr = new QueryRunner();
+		//3、获取数据库连接
+		Connection conn = JDBCUtils.getConnection();
+		//3.1、定义返回值
+		Member result = null;
+		try {
+			//4、执行sql语句
+			result = qr.query(conn,sql,new BeanHandler<Member>(Member.class));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			JDBCUtils.close(conn);
+		}
+		System.out.println("----------getRandomMember-SQL------"+sql);
+		System.out.println("----------getRandomMember result------"+result);
+		System.out.println(result.getPassword());
+		return result;
+	}
+	
 	
 	private static void getqueryArrayHandler(String sql) throws SQLException {
 		QueryRunner qr = new QueryRunner();
