@@ -1,7 +1,10 @@
 package com.alvin.cases;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
@@ -122,16 +125,27 @@ public class BaseCase {
 	
 	//所以代码最先执行 初始化静态数据做准备,testng的注解属性特性
 	@BeforeSuite
-	public void init() {
+	public void init() throws Exception {
 		System.out.println("=======================项目初始化============================");
 		Member randomMember = MysqlUtils.getRandomMember();
 		ExcelUtils.apiList = ExcelUtils.readExcel(0, 1, API.class);
 		ExcelUtils.caseList = ExcelUtils.readExcel(1, 1, Case.class);
-		EnvironmentUtils.env.put(Constants.PARAM_MOBILE, EnvironmentUtils.getRegisterPhone());
-		EnvironmentUtils.env.put(Constants.PARAM_PASSWORD,randomMember.getPassword());
+		
+//		EnvironmentUtils.env.put(Constants.PARAM_MOBILE, EnvironmentUtils.getRegisterPhone());
+//		EnvironmentUtils.env.put(Constants.PARAM_PASSWORD,randomMember.getPassword());
 //		EnvironmentUtils.env.put(Constants.PARAM_TOKEN,"aaabbb123");
 //		EnvironmentUtils.env.put(Constants.PARAM_MEMBER_ID,"7795111");
-
+		
+		//另外一种取设置数据方法
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream("src/test/resources/params.properties");
+		prop.load(fis);
+		Set<Object> keySet = prop.keySet();
+		for (Object key : keySet) {
+			String v = prop.get(key).toString();
+			EnvironmentUtils.env.put(key.toString(), v);
+		}
+		
 	}
 	
 	@AfterSuite
