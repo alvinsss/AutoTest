@@ -84,7 +84,56 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+		<dependency>
+		    <groupId>io.qameta.allure</groupId>
+		    <artifactId>allure-testng</artifactId>
+		    <version>2.17.3</version>
+		</dependency>
 
 	</dependencies>
+	
+	<build>
+    <plugins>
+        <plugin>
+            <!-- maven-surefire-plugin 配合testng/junit执行测试用例的maven插件 -->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.1</version>
+            <configuration>
+                <!-- 测试失败后，是否忽略并继续测试 -->
+                <testFailureIgnore>true</testFailureIgnore>
+                <suiteXmlFiles>
+                    <!-- testng配置文件名称  -->
+                    <suiteXmlFile>testng.xml</suiteXmlFile>
+                </suiteXmlFiles>
+                <!--设置参数命令行 -->
+                <argLine>
+                    <!-- UTF-8编码 -->
+                    -Dfile.encoding=UTF-8
+                    <!-- 配置拦截器 -->
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                </argLine>
+                <systemProperties>
+                    <property>
+                        <!-- 配置 allure 结果存储路径  -->
+                        <name>allure.results.directory</name>
+                        <value>${project.build.directory}/allure-results</value>
+                    </property>
+                </systemProperties>
+            </configuration>
+            <dependencies>
+                <!-- aspectjweaver maven坐标 -->
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                    <version>${aspectj.version}</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+    </plugins>
+</build>
+
 
 </project>
