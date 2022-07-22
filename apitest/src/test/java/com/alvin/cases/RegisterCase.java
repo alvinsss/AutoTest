@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -13,6 +14,9 @@ import com.alvin.pojo.Case;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.HttpUtils;
 import com.alvin.utils.MysqlUtils;
+
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 
 public class RegisterCase extends BaseCase{
 	
@@ -24,7 +28,8 @@ public class RegisterCase extends BaseCase{
 	 * @param params		接口请求参数
 	 * @param contentType	接口类型
 	 */
-	@Test(dataProvider = "datas")
+	@Test(dataProvider = "datas",description = "注册功能测试")
+	@Severity(SeverityLevel.BLOCKER)
 	public void test_RegisterCase(API api,Case c) {	
 		
 		String params = paramsReplace(c.getParams());
@@ -52,9 +57,10 @@ public class RegisterCase extends BaseCase{
 		System.out.println("test_RegisterCase  c.getSql() "+c.getSql());
 		System.out.println("test_RegisterCase  beforeSQLReuslt---"+beforeSQLReuslt+"-->"+afterSQLReuslt);
 
-//		7、据库断言
+//		7、数据库断言
+		boolean sqlAssertFlag = true;
 		if(StringUtils.isNotBlank(c.getSql())) {
-			boolean sqlAssertFlag = sqlAssert(beforeSQLReuslt, afterSQLReuslt);
+			sqlAssertFlag = sqlAssert(beforeSQLReuslt, afterSQLReuslt);
 			System.out.println("数据库断言：" + sqlAssertFlag);
 			writeBackData(1, c.getId(), Constants.SQL_ASSERT_CELLNUM, sqlAssertFlag?"断言成功":"断言失败");
 		}
@@ -64,6 +70,9 @@ public class RegisterCase extends BaseCase{
 
 //		9、添加日志
 //		10、报表断言
+		Assert.assertEquals(reponseAssert, "断言成功");
+		Assert.assertEquals(sqlAssertFlag, true);
+
 	}
 	
 	/**

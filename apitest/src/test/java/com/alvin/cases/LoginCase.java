@@ -8,6 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.bouncycastle.asn1.cms.EnvelopedData;
 import org.bouncycastle.jcajce.provider.symmetric.ARC4.Base;
+import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -59,10 +60,13 @@ public class LoginCase  extends BaseCase{
 		setVariableInEnv(body,"$.data.id","${member_id}");
 		
 		writeBackData(1, c.getId(), Constants.ACTUAL_RESPONSE_CELLNUM, body);
+		
 		String reponseAssert = responseAssert(c.getExpect(), body);
 		log.info("test_LoginCase responseAssert 断言响应结果："+reponseAssert);
 		writeBackData(1, c.getId(), Constants.RESPONSE_ASSERT_CELLNUM, reponseAssert);
-
+		
+		Assert.assertEquals(reponseAssert, "断言成功");
+ 
 	}
 
 

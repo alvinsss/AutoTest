@@ -22,6 +22,8 @@ import com.alvin.pojo.WriteBackData;
 import com.alvin.utils.EnvironmentUtils;
 import com.alvin.utils.ExcelUtils;
 import com.alvin.utils.MysqlUtils;
+
+import io.qameta.allure.Step;
  
 public class BaseCase {
 	
@@ -31,6 +33,7 @@ public class BaseCase {
 	 * @param headers  
 	 * 
 	 */
+ 
 	public   void setDefaultHeaders(Map<String, String> headers ) {
  		headers.put("X-Lemonban-Media-Type", Constants.MEDIA_TYPE);
 		headers.put("Content-Type", Constants.CONTENT_TYPE);
@@ -42,6 +45,7 @@ public class BaseCase {
 	 * @param jsonPath
 	 * @param envKey
 	 */
+	@Step("设置环境变量")
 	public void setVariableInEnv(String body,String jsonPath,String envKey) {
 		Object token = JSONPath.read(body, jsonPath);
 		// 防止只有member_id没有token值
@@ -54,6 +58,7 @@ public class BaseCase {
 	 * 从环境变量获取token设置到Headers中
 	 * @param headers
 	 */
+	@Step("从环境变量获取请求头进行设置")
 	public void getTokenToHeader(Map<String, String> headers) {
 		String token = EnvironmentUtils.env.get("${token}");
 		if (StringUtils.isNotBlank(token)) {
@@ -69,6 +74,7 @@ public class BaseCase {
 	 * @param cellNum			回写列号
 	 * @param content			回写内容
 	 */
+	@Step("支持回写 断言结果数据")
 	public void writeBackData(int sheetIndex,int rowNum,int cellNum, String content) {
 		WriteBackData wbd = new WriteBackData(sheetIndex, rowNum, cellNum, content);
 		ExcelUtils.wbdList.add(wbd);
@@ -127,13 +133,14 @@ public class BaseCase {
 	
 	//所以代码最先执行 初始化静态数据做准备,testng的注解属性特性
 	@BeforeSuite
+	@Step("初始化数据和设置环境变量")
 	public void init() throws Exception {
 		log.info("=======================项目初始化============================");
 		System.out.println("=======================项目初始化============================");
 		Member randomMember = MysqlUtils.getRandomMember();
 		ExcelUtils.apiList = ExcelUtils.readExcel(0, 1, API.class);
 		ExcelUtils.caseList = ExcelUtils.readExcel(1, 1, Case.class);
-		
+		// 数据库查询密码是密文 如果不能解密，就使用注册时候的密码做登录使用
 //		EnvironmentUtils.env.put(Constants.PARAM_MOBILE, EnvironmentUtils.getRegisterPhone());
 //		EnvironmentUtils.env.put(Constants.PARAM_PASSWORD,randomMember.getPassword());
 //		EnvironmentUtils.env.put(Constants.PARAM_TOKEN,"aaabbb123");

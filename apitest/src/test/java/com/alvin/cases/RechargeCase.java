@@ -7,6 +7,7 @@ import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -50,8 +51,9 @@ public class RechargeCase extends BaseCase {
 		//6、数据库后置查询结果
 		Object afterSQLReuslt = MysqlUtils.getSQLSingleReuslt(c.getSql());
 		//7、据库断言
+		boolean sqlAssertFlag  = true;
 		if(StringUtils.isNotBlank(c.getSql())) {
-			boolean sqlAssertFlag = sqlAssert(beforeSQLReuslt, afterSQLReuslt,c);
+			sqlAssertFlag = sqlAssert(beforeSQLReuslt, afterSQLReuslt,c);
 			log.info("test_ RechargeCase数据库断言：" + sqlAssertFlag);
 			writeBackData(1, c.getId(), Constants.SQL_ASSERT_CELLNUM, sqlAssertFlag?"断言成功":"断言失败");
 		}
@@ -61,6 +63,8 @@ public class RechargeCase extends BaseCase {
 
 		//9、添加日志
 		//10、报表断言
+		Assert.assertEquals(reponseAssert, "断言成功");
+		Assert.assertEquals(sqlAssertFlag, true);
 	}
 
  

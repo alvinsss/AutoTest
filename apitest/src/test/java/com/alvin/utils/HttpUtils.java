@@ -23,6 +23,8 @@ import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSON;
 
+import io.qameta.allure.Step;
+
 public class HttpUtils {
 	
 	private static Logger log = Logger.getLogger(HttpUtils.class);
@@ -43,6 +45,7 @@ public class HttpUtils {
 //		formPost("http://test.lemonban.com/futureloan/mvc/api/member/login","mobile_phone=13221400113&pwd=12345678");
 	}
 
+	@Step("发送HTTP请求")
 	public static String call(String url, String method, String params, String contentType,Map<String,String> headers) {
 		String boby=null;
 		
