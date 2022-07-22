@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -27,6 +28,8 @@ import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
 
 public class ExcelUtils {
+	
+	private static Logger log = Logger.getLogger(ExcelUtils.class);
 	
 	//所有的API集合
 	public static List<API> apiList;
@@ -84,6 +87,7 @@ public class ExcelUtils {
 			workbook.write(fos);
 		}  catch (Exception e) {
 			// TODO Auto-generated catch block
+			log.error(e);
 			e.printStackTrace();
 		}finally {
 			closeFileStream(fis);
@@ -157,9 +161,6 @@ public class ExcelUtils {
 			params.setSheetNum(setSheetNum);
 			//导入验证
 			list = ExcelImportUtil.importExcel(fis, clazz, params);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

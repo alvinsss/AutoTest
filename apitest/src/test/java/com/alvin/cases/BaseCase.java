@@ -6,8 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
-
+ 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -24,6 +25,7 @@ import com.alvin.utils.MysqlUtils;
  
 public class BaseCase {
 	
+	private static Logger log =Logger.getLogger(BaseCase.class);
 	
 	/**设置默认请求头
 	 * @param headers  
@@ -126,6 +128,7 @@ public class BaseCase {
 	//所以代码最先执行 初始化静态数据做准备,testng的注解属性特性
 	@BeforeSuite
 	public void init() throws Exception {
+		log.info("=======================项目初始化============================");
 		System.out.println("=======================项目初始化============================");
 		Member randomMember = MysqlUtils.getRandomMember();
 		ExcelUtils.apiList = ExcelUtils.readExcel(0, 1, API.class);
@@ -144,12 +147,16 @@ public class BaseCase {
 		for (Object key : keySet) {
 			String v = prop.get(key).toString();
 			EnvironmentUtils.env.put(key.toString(), v);
+			log.info("env info:" +key.toString()+"-->"+v);
 		}
+		
+		
 		
 	}
 	
 	@AfterSuite
 	public void finish() {		
+		log.info("=======================项目结束============================");
 		System.out.println("=======================项目结束============================");
 		ExcelUtils.batchWrite();
 	}

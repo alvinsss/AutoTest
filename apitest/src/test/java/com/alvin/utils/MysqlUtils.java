@@ -2,18 +2,20 @@ package com.alvin.utils;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-
+ 
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ArrayHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 
 import com.alvin.pojo.Member;
 
  
 public class MysqlUtils {
 	
+	private static Logger log = Logger.getLogger(MysqlUtils.class);
 	
 	public static void main(String[] args) throws Exception {
 //		getqueryBeanHander("SELECT * from member ORDER BY rand() LIMIT 1;");
@@ -44,6 +46,8 @@ public class MysqlUtils {
 		}
 		System.out.println("----------getSQLSingle-SQL------"+sql);
 		System.out.println("----------getSQLSingleReuslt------"+result);
+		log.info("getSQLSingleReuslt sql->"+sql);
+
 		return result;
 	}
 	
@@ -69,6 +73,8 @@ public class MysqlUtils {
 		}
 		System.out.println("----------getRandomMember-SQL------"+sql);
 		System.out.println("----------getRandomMember result------"+result);
+		log.info("getRandomMember->"+result);
+
 		System.out.println(result.getPassword());
 		return result;
 	}

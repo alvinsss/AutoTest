@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -21,7 +22,7 @@ import com.mysql.fabric.xmlrpc.base.Params;
 
 public class RechargeCase extends BaseCase {
 	
-	
+	private static Logger log = Logger.getLogger(RechargeCase.class);
 	
 	@Test(dataProvider = "datas")
 	public void test_RechargeCase(API api,Case c) {	
@@ -39,7 +40,7 @@ public class RechargeCase extends BaseCase {
 		//3.1、设置默认请求头
 		setDefaultHeaders(headers);
 		//3.2、获取token
-		System.out.println(EnvironmentUtils.env);
+//		System.out.println(EnvironmentUtils.env);
 		getTokenToHeader(headers);
 		String body = HttpUtils.call(api.getUrl(), api.getMethod(), c.getParams(), api.getContentType(),headers);
 		//4、断言响应结果
@@ -51,11 +52,11 @@ public class RechargeCase extends BaseCase {
 		//7、据库断言
 		if(StringUtils.isNotBlank(c.getSql())) {
 			boolean sqlAssertFlag = sqlAssert(beforeSQLReuslt, afterSQLReuslt,c);
-			System.out.println("test_ RechargeCase数据库断言：" + sqlAssertFlag);
+			log.info("test_ RechargeCase数据库断言：" + sqlAssertFlag);
 			writeBackData(1, c.getId(), Constants.SQL_ASSERT_CELLNUM, sqlAssertFlag?"断言成功":"断言失败");
 		}
 		//8、添加断言回写内容
-		System.out.println("test_RechargeCase responseAssert 断言响应结果："+reponseAssert);
+		log.info("test_RechargeCase responseAssert 断言响应结果："+reponseAssert);
 		writeBackData(1, c.getId(), Constants.RESPONSE_ASSERT_CELLNUM, reponseAssert);
 
 		//9、添加日志

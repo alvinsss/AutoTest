@@ -19,10 +19,13 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSON;
 
 public class HttpUtils {
+	
+	private static Logger log = Logger.getLogger(HttpUtils.class);
 
 	private void HttpUtils() {
 	}
@@ -42,6 +45,8 @@ public class HttpUtils {
 
 	public static String call(String url, String method, String params, String contentType,Map<String,String> headers) {
 		String boby=null;
+		
+		log.info("call req  url is:"+url+"---------params is:"+params);
 		try {
 			if (method.equalsIgnoreCase("post")) {
 				if ("form".equalsIgnoreCase(contentType)) {
@@ -50,7 +55,6 @@ public class HttpUtils {
 					boby=HttpUtils.formPost(url, params,headers);
 				} else if ("json".equalsIgnoreCase(contentType)) {
 					boby=HttpUtils.post(url, params,headers);
-					System.out.println("call boby --------:"+boby);
 				}
 			} else if (method.equalsIgnoreCase("patch")) {
 				boby=HttpUtils.get(url,headers);
@@ -66,6 +70,7 @@ public class HttpUtils {
 		}
 		
 		System.out.println(boby);
+		log.info("call get boby is:"+boby);
 		return boby;
 	}
 
