@@ -4,6 +4,7 @@
     <classes>
       <class name="com.alvin.cases.RegisterCase"/>
       <class name="com.alvin.cases.LoginCase"/>
+      <class name="com.alvin.cases.RechargeCase"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

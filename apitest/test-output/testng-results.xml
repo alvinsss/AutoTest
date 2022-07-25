@@ -2,168 +2,168 @@
 <testng-results skipped="0" failed="0" total="16" passed="16">
   <reporter-output>
   </reporter-output>
-  <suite name="xxx项目" duration-ms="1983" started-at="2022-07-22T01:19:20Z" finished-at="2022-07-22T01:19:22Z">
+  <suite name="xxx项目" duration-ms="1898" started-at="2022-07-22T02:23:52Z" finished-at="2022-07-22T02:23:54Z">
     <groups>
     </groups>
-    <test name="用户模块" duration-ms="1983" started-at="2022-07-22T01:19:20Z" finished-at="2022-07-22T01:19:22Z">
+    <test name="用户模块" duration-ms="1898" started-at="2022-07-22T02:23:52Z" finished-at="2022-07-22T02:23:54Z">
       <class name="com.alvin.cases.LoginCase">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.alvin.cases.LoginCase@17f6480]" name="init" is-config="true" duration-ms="1908" started-at="2022-07-22T09:19:18Z" finished-at="2022-07-22T09:19:20Z">
+        <test-method status="PASS" signature="test_LoginCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.LoginCase@9629756]" name="test_LoginCase" duration-ms="168" started-at="2022-07-22T10:23:53Z" data-provider="datas" finished-at="2022-07-22T10:23:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[API [id=2, name=login, method=post, url=http://api.lemonban.com/futureloan/member/login, contentType=json]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.alvin.pojo.Case@37052337]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_LoginCase -->
+        <test-method status="PASS" signature="test_LoginCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.LoginCase@9629756]" name="test_LoginCase" duration-ms="96" started-at="2022-07-22T10:23:53Z" data-provider="datas" finished-at="2022-07-22T10:23:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[API [id=2, name=login, method=post, url=http://api.lemonban.com/futureloan/member/login, contentType=json]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.alvin.pojo.Case@2320fa6f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_LoginCase -->
+        <test-method status="PASS" signature="test_LoginCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.LoginCase@9629756]" name="test_LoginCase" duration-ms="95" started-at="2022-07-22T10:23:53Z" data-provider="datas" finished-at="2022-07-22T10:23:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[API [id=2, name=login, method=post, url=http://api.lemonban.com/futureloan/member/login, contentType=json]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.alvin.pojo.Case@7a560583]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_LoginCase -->
+        <test-method status="PASS" signature="test_LoginCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.LoginCase@9629756]" name="test_LoginCase" duration-ms="98" started-at="2022-07-22T10:23:53Z" data-provider="datas" finished-at="2022-07-22T10:23:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[API [id=2, name=login, method=post, url=http://api.lemonban.com/futureloan/member/login, contentType=json]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.alvin.pojo.Case@4d722ac9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_LoginCase -->
+      </class> <!-- com.alvin.cases.LoginCase -->
+      <class name="com.alvin.cases.RechargeCase">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.alvin.cases.RechargeCase@23ceabc1]" name="init" is-config="true" duration-ms="1828" started-at="2022-07-22T10:23:50Z" finished-at="2022-07-22T10:23:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="test_LoginCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.LoginCase@17f6480]" name="test_LoginCase" duration-ms="167" started-at="2022-07-22T09:19:21Z" data-provider="datas" finished-at="2022-07-22T09:19:21Z">
+        <test-method status="PASS" signature="test_RechargeCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@23ceabc1]" name="test_RechargeCase" duration-ms="94" started-at="2022-07-22T10:23:54Z" data-provider="datas" finished-at="2022-07-22T10:23:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[API [id=2, name=login, method=post, url=http://api.lemonban.com/futureloan/member/login, contentType=json]]]>
+                <![CDATA[API [id=3, name=recharge, method=post, url=http://api.lemonban.com/futureloan/member/recharge, contentType=json]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@767e20cf]]>
+                <![CDATA[com.alvin.pojo.Case@6aecbb8d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_LoginCase -->
-        <test-method status="PASS" signature="test_LoginCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.LoginCase@17f6480]" name="test_LoginCase" duration-ms="104" started-at="2022-07-22T09:19:21Z" data-provider="datas" finished-at="2022-07-22T09:19:21Z">
+        </test-method> <!-- test_RechargeCase -->
+        <test-method status="PASS" signature="test_RechargeCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@23ceabc1]" name="test_RechargeCase" duration-ms="100" started-at="2022-07-22T10:23:54Z" data-provider="datas" finished-at="2022-07-22T10:23:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[API [id=2, name=login, method=post, url=http://api.lemonban.com/futureloan/member/login, contentType=json]]]>
+                <![CDATA[API [id=3, name=recharge, method=post, url=http://api.lemonban.com/futureloan/member/recharge, contentType=json]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@3a3e78f]]>
+                <![CDATA[com.alvin.pojo.Case@6eeade6c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_LoginCase -->
-        <test-method status="PASS" signature="test_LoginCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.LoginCase@17f6480]" name="test_LoginCase" duration-ms="118" started-at="2022-07-22T09:19:21Z" data-provider="datas" finished-at="2022-07-22T09:19:21Z">
+        </test-method> <!-- test_RechargeCase -->
+        <test-method status="PASS" signature="test_RechargeCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@23ceabc1]" name="test_RechargeCase" duration-ms="100" started-at="2022-07-22T10:23:54Z" data-provider="datas" finished-at="2022-07-22T10:23:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[API [id=2, name=login, method=post, url=http://api.lemonban.com/futureloan/member/login, contentType=json]]]>
+                <![CDATA[API [id=3, name=recharge, method=post, url=http://api.lemonban.com/futureloan/member/recharge, contentType=json]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@301ec38b]]>
+                <![CDATA[com.alvin.pojo.Case@56a4479a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_LoginCase -->
-        <test-method status="PASS" signature="test_LoginCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.LoginCase@17f6480]" name="test_LoginCase" duration-ms="98" started-at="2022-07-22T09:19:21Z" data-provider="datas" finished-at="2022-07-22T09:19:21Z">
+        </test-method> <!-- test_RechargeCase -->
+        <test-method status="PASS" signature="test_RechargeCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@23ceabc1]" name="test_RechargeCase" duration-ms="100" started-at="2022-07-22T10:23:54Z" data-provider="datas" finished-at="2022-07-22T10:23:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[API [id=2, name=login, method=post, url=http://api.lemonban.com/futureloan/member/login, contentType=json]]]>
+                <![CDATA[API [id=3, name=recharge, method=post, url=http://api.lemonban.com/futureloan/member/recharge, contentType=json]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@17a1e4ca]]>
+                <![CDATA[com.alvin.pojo.Case@7e928e2f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_LoginCase -->
-        <test-method status="PASS" signature="finish()[pri:0, instance:com.alvin.cases.LoginCase@17f6480]" name="finish" is-config="true" duration-ms="228" started-at="2022-07-22T09:19:22Z" finished-at="2022-07-22T09:19:22Z">
+        </test-method> <!-- test_RechargeCase -->
+        <test-method status="PASS" signature="test_RechargeCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@23ceabc1]" name="test_RechargeCase" duration-ms="159" started-at="2022-07-22T10:23:54Z" data-provider="datas" finished-at="2022-07-22T10:23:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[API [id=3, name=recharge, method=post, url=http://api.lemonban.com/futureloan/member/recharge, contentType=json]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.alvin.pojo.Case@30bcf3c1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_RechargeCase -->
+        <test-method status="PASS" signature="finish()[pri:0, instance:com.alvin.cases.RechargeCase@23ceabc1]" name="finish" is-config="true" duration-ms="209" started-at="2022-07-22T10:23:54Z" finished-at="2022-07-22T10:23:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finish -->
-      </class> <!-- com.alvin.cases.LoginCase -->
-      <class name="com.alvin.cases.RechargeCase">
-        <test-method status="PASS" signature="test_RechargeCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@566776ad]" name="test_RechargeCase" duration-ms="97" started-at="2022-07-22T09:19:21Z" data-provider="datas" finished-at="2022-07-22T09:19:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[API [id=3, name=recharge, method=post, url=http://api.lemonban.com/futureloan/member/recharge, contentType=json]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[com.alvin.pojo.Case@7fe7c640]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_RechargeCase -->
-        <test-method status="PASS" signature="test_RechargeCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@566776ad]" name="test_RechargeCase" duration-ms="94" started-at="2022-07-22T09:19:22Z" data-provider="datas" finished-at="2022-07-22T09:19:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[API [id=3, name=recharge, method=post, url=http://api.lemonban.com/futureloan/member/recharge, contentType=json]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[com.alvin.pojo.Case@7096b474]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_RechargeCase -->
-        <test-method status="PASS" signature="test_RechargeCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@566776ad]" name="test_RechargeCase" duration-ms="102" started-at="2022-07-22T09:19:22Z" data-provider="datas" finished-at="2022-07-22T09:19:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[API [id=3, name=recharge, method=post, url=http://api.lemonban.com/futureloan/member/recharge, contentType=json]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[com.alvin.pojo.Case@31e4bb20]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_RechargeCase -->
-        <test-method status="PASS" signature="test_RechargeCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@566776ad]" name="test_RechargeCase" duration-ms="96" started-at="2022-07-22T09:19:22Z" data-provider="datas" finished-at="2022-07-22T09:19:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[API [id=3, name=recharge, method=post, url=http://api.lemonban.com/futureloan/member/recharge, contentType=json]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[com.alvin.pojo.Case@312ab28e]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_RechargeCase -->
-        <test-method status="PASS" signature="test_RechargeCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@566776ad]" name="test_RechargeCase" duration-ms="161" started-at="2022-07-22T09:19:22Z" data-provider="datas" finished-at="2022-07-22T09:19:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[API [id=3, name=recharge, method=post, url=http://api.lemonban.com/futureloan/member/recharge, contentType=json]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[com.alvin.pojo.Case@45905bff]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_RechargeCase -->
       </class> <!-- com.alvin.cases.RechargeCase -->
       <class name="com.alvin.cases.RegisterCase">
-        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@6108b2d7]" name="test_RegisterCase" duration-ms="266" started-at="2022-07-22T09:19:20Z" data-provider="datas" finished-at="2022-07-22T09:19:20Z">
+        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@62ee68d8]" name="test_RegisterCase" duration-ms="234" started-at="2022-07-22T10:23:52Z" data-provider="datas" finished-at="2022-07-22T10:23:52Z">
           <params>
             <param index="0">
               <value>
@@ -172,14 +172,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@1ae8bcbc]]>
+                <![CDATA[com.alvin.pojo.Case@4397ad89]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_RegisterCase -->
-        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@6108b2d7]" name="test_RegisterCase" duration-ms="98" started-at="2022-07-22T09:19:20Z" data-provider="datas" finished-at="2022-07-22T09:19:20Z">
+        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@62ee68d8]" name="test_RegisterCase" duration-ms="100" started-at="2022-07-22T10:23:52Z" data-provider="datas" finished-at="2022-07-22T10:23:53Z">
           <params>
             <param index="0">
               <value>
@@ -188,14 +188,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@495b0487]]>
+                <![CDATA[com.alvin.pojo.Case@6d9f7a80]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_RegisterCase -->
-        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@6108b2d7]" name="test_RegisterCase" duration-ms="106" started-at="2022-07-22T09:19:20Z" data-provider="datas" finished-at="2022-07-22T09:19:21Z">
+        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@62ee68d8]" name="test_RegisterCase" duration-ms="94" started-at="2022-07-22T10:23:53Z" data-provider="datas" finished-at="2022-07-22T10:23:53Z">
           <params>
             <param index="0">
               <value>
@@ -204,14 +204,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@2fc6f97f]]>
+                <![CDATA[com.alvin.pojo.Case@5aac4250]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_RegisterCase -->
-        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@6108b2d7]" name="test_RegisterCase" duration-ms="100" started-at="2022-07-22T09:19:21Z" data-provider="datas" finished-at="2022-07-22T09:19:21Z">
+        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@62ee68d8]" name="test_RegisterCase" duration-ms="94" started-at="2022-07-22T10:23:53Z" data-provider="datas" finished-at="2022-07-22T10:23:53Z">
           <params>
             <param index="0">
               <value>
@@ -220,14 +220,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@53bd8fca]]>
+                <![CDATA[com.alvin.pojo.Case@2807bdeb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_RegisterCase -->
-        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@6108b2d7]" name="test_RegisterCase" duration-ms="101" started-at="2022-07-22T09:19:21Z" data-provider="datas" finished-at="2022-07-22T09:19:21Z">
+        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@62ee68d8]" name="test_RegisterCase" duration-ms="96" started-at="2022-07-22T10:23:53Z" data-provider="datas" finished-at="2022-07-22T10:23:53Z">
           <params>
             <param index="0">
               <value>
@@ -236,14 +236,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@32193bea]]>
+                <![CDATA[com.alvin.pojo.Case@65045a87]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_RegisterCase -->
-        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@6108b2d7]" name="test_RegisterCase" duration-ms="102" started-at="2022-07-22T09:19:21Z" data-provider="datas" finished-at="2022-07-22T09:19:21Z">
+        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@62ee68d8]" name="test_RegisterCase" duration-ms="96" started-at="2022-07-22T10:23:53Z" data-provider="datas" finished-at="2022-07-22T10:23:53Z">
           <params>
             <param index="0">
               <value>
@@ -252,14 +252,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@584f54e6]]>
+                <![CDATA[com.alvin.pojo.Case@732f29af]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_RegisterCase -->
-        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@6108b2d7]" name="test_RegisterCase" duration-ms="154" started-at="2022-07-22T09:19:21Z" data-provider="datas" finished-at="2022-07-22T09:19:21Z">
+        <test-method status="PASS" signature="test_RegisterCase(com.alvin.pojo.API, com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@62ee68d8]" name="test_RegisterCase" duration-ms="156" started-at="2022-07-22T10:23:53Z" data-provider="datas" finished-at="2022-07-22T10:23:53Z">
           <params>
             <param index="0">
               <value>
@@ -268,7 +268,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[com.alvin.pojo.Case@1b73be9f]]>
+                <![CDATA[com.alvin.pojo.Case@4aa83f4f]]>
               </value>
             </param>
           </params>
