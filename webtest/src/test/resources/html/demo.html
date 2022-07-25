@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo html</title>
+    <script type="text/javascript">
+        // window.onload=function (){
+        //     alert("网页加载完成")
+        // }
+        window.onload=function (){
+            document.getElementsById("test1").onchange=function () {
+                alert("元素被改变了")
+            }
+        }
+    </script>
+</head>
+<body>
+<!--   文本输入框 -->
+	<input id="test1" type="text" name="" value="默认值">
+    <br>
+    <input type="checkbox" value="111" name="cbox">
+    <br>
+<!--    单选 通过相同name属性控制唯一-->
+    数学<input type="radio" name="select">
+    语文<input type="radio" name="select">
+    英文<input type="radio" name="select">
+    <br>
+    <input type="file" name="file1">
+    <br>
+    <input type="password" name="pwd" placeholder="输入密码">
+    <br>
+    <select>
+        <option>---</option>
+        <option>自动化</option>
+        <option>开发</option>
+        <option>运维</option>
+    </select>
+    <br>
+    <a href="http://www.baidu.com">百度</a>
+    <br>
+    <table border="1">
+        <tr><td>1</td><td>2</td></tr>
+        <tr><td>3</td><td>4</td></tr>
+        <tr><td>5</td><td>6</td></tr>
+    </table>
+    <br>
+    <img src="//www.baidu.com/s?wd=%E7%99%BE%E5%BA%A6%E7%83%AD%E6%90%9C&sa=ire_dl_gh_logo_texing&rsv_dl=igh_logo_pcs" alt="pic">
+    <br>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        </ol>
+        <br>
+        <ul>
+            <li>2</li>
+            <li>2</li>
+            <li>2</li>
+        </ul>
+        <br>
+        <textarea rows="11" cols="12" aria-label="1"></textarea>
+        <br>
+        <h1>测试</h1>
+        <h2>测试</h2>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+        <br>
+<!--        <iframe src="https://www.baidu.com/" width="900" height="900"></iframe>-->
+
+</body>
+</html>
