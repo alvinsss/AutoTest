@@ -1,0 +1,77 @@
+{
+  "id": "32ff2e20-9792-44bf-9be0-7eda83783c4d",
+  "version": "2.0",
+  "name": "搜索baidu",
+  "url": "https://www.baidu.com",
+  "tests": [{
+    "id": "76a92a6b-fc36-44b8-bfc6-c8baa20342dc",
+    "name": "搜索qatest",
+    "commands": [{
+      "id": "26e44170-52be-40c6-9e57-d7bf32f6209b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee52ae87-7b5b-4b50-be4f-0f8a2ec0746f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "644x689",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b54b84a-ce7e-4151-b280-319376fc3dd3",
+      "comment": "",
+      "command": "click",
+      "target": "id=kw",
+      "targets": [
+        ["id=kw", "id"],
+        ["name=wd", "name"],
+        ["css=#kw", "css:finder"],
+        ["xpath=//input[@id='kw']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d78efd65-b2a1-41f0-a6f1-b6cfb396486a",
+      "comment": "",
+      "command": "type",
+      "target": "id=kw",
+      "targets": [
+        ["id=kw", "id"],
+        ["name=wd", "name"],
+        ["css=#kw", "css:finder"],
+        ["xpath=//input[@id='kw']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "qatest"
+    }, {
+      "id": "63c1d8c7-217b-465a-92de-69b259b241ae",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=kw",
+      "targets": [
+        ["id=kw", "id"],
+        ["name=wd", "name"],
+        ["css=#kw", "css:finder"],
+        ["xpath=//input[@id='kw']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }],
+  "suites": [{
+    "id": "b91f4e90-5da9-4086-9c58-36d8a4d4f02a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["76a92a6b-fc36-44b8-bfc6-c8baa20342dc"]
+  }],
+  "urls": ["https://www.baidu.com/"],
+  "plugins": []
+}
