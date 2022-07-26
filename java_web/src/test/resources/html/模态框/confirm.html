@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			document.getElementById('abtn').onclick=function(){
+				// alert("被点击了");
+				var flag = confirm("请选择一个按钮");
+				if (flag) {
+					alert(1);
+				}else{
+					alert(2);
+				}
+			}			
+		};
+
+	</script>
+</head>
+<body>
+	<input type="button" id="abtn" name="btn" value="弹出confirm框">
+</body>
+</html>

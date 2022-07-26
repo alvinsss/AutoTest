@@ -1,6 +1,8 @@
 
 package com.alvin;
 
+import java.util.Set;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -35,5 +37,22 @@ public class OpenBrowser {
 				return driver;
 			}
 			return null;
+		}
+		
+		public static  void switchWindow(WebDriver driver,String title) {
+			//Set集合是无序 不能重复 不能保证第1个数据是第一个窗口
+			Set<String> handles = driver.getWindowHandles();
+			System.out.println(handles);
+			System.out.println(driver.getTitle());
+			for (String handle : handles) {
+				if(driver.getTitle().equals(title)) {
+					//退出循环
+					break;
+				}else {
+					//不符合 我们再切换窗口句柄
+					driver.switchTo().window(handle);
+				}
+			}
+			System.out.println(driver.getTitle());
 		}
 }
