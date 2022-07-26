@@ -1,7 +1,11 @@
 
 package com.basewebtest;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,8 +19,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class OpenBD {
 
 	public static void main(String[] args) {
-		WebDriver driver = OpenBrowser("chrome");
-		driver.get("http://www.baidu.com");
+
+		
 	}
 	
 	
@@ -26,7 +30,7 @@ public class OpenBD {
  * @param  browserName浏览器名字
  * @return WebDriver父类类型
  */
-	private static WebDriver OpenBrowser(String browserName) {
+	public static WebDriver OpenBrowser(String browserName) {
 		if ("chrome".equals(browserName)) {
 			ChromeDriver driver = new ChromeDriver();
 			return driver;
