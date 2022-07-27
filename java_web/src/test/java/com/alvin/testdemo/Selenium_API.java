@@ -1,5 +1,5 @@
 
-package com.alvin;
+package com.alvin.testdemo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
