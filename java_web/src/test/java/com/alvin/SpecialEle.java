@@ -6,9 +6,12 @@ import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.idealized.Javascript;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -55,7 +58,7 @@ public class SpecialEle {
 //		WebElement webElement = driverWait.until(ExpectedConditions.visibilityOfElementLocated(By.name("rate")));
 //		webElement.sendKeys("18");
 		
-		//iframe
+		//4.iframe
 //		driver.get("E:\\eclipse-workspace\\JavaAutoTest\\java_web\\src\\test\\resources\\html\\iframe\\a.html");
 //		driver.findElement(By.id("aa")).sendKeys("11");
 //		Thread.sleep(2000);
@@ -73,18 +76,70 @@ public class SpecialEle {
 //		driver.switchTo().defaultContent();
 //		driver.findElement(By.id("aa")).sendKeys("11aa");
 		
-		driver.get("https://www.baidu.com/");
-		driver.findElement(By.xpath("//a[text()='新闻']")).click();
-		System.out.println(driver.getTitle());
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[text()='hao123']")).click();
-		System.out.println(driver.getTitle());
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[text()='视频']")).click();
-		System.out.println(driver.getTitle());
-		Thread.sleep(2000);
-		OpenBrowser.switchWindow(driver,"百度新闻——海量中文资讯平台");
+//		5. window 
+//		driver.get("https://www.baidu.com/");
+//		driver.findElement(By.xpath("//a[text()='新闻']")).click();
+//		System.out.println(driver.getTitle());
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//a[text()='hao123']")).click();
+//		System.out.println(driver.getTitle());
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//a[text()='视频']")).click();
+//		System.out.println(driver.getTitle());
+//		Thread.sleep(2000);
+//		OpenBrowser.switchWindow(driver,"百度新闻——海量中文资讯平台");
+		
+//		6.radio 单选框
+//		driver.get("E:\\eclipse-workspace\\JavaAutoTest\\java_web\\src\\test\\resources\\html\\单选多选框\\radio.html");
+//		//根据value使用xpath匹配
+//		WebElement element = driver.findElement(By.xpath("//input[@value='female']"));
+//		element.click();
+//		//输出是否选中状态
+//		System.out.println(element.isSelected());
+		
+//		7.checkbox多选框
+//		driver.get("E:\\eclipse-workspace\\JavaAutoTest\\java_web\\src\\test\\resources\\html\\单选多选框\\checkbox.html");
+//		//根据value使用xpath匹配
+//		driver.findElement(By.xpath("//input[@value='Math']")).click();
+//		driver.findElement(By.xpath("//input[@value='English']")).click();
+//		//输出是否选中状态
+//		System.out.println(driver.findElement(By.xpath("//input[@value='English']")).isSelected());
+	
+	    
+//		8.下拉框
+//		driver.get("E:\\eclipse-workspace\\JavaAutoTest\\java_web\\src\\test\\resources\\html\\单选多选框\\select.html");
+//		WebElement element = driver.findElement(By.id("abc"));
+		// select 元素包装成select对象
+//		Select select = new Select(element);
+//		select.selectByIndex(1);
+		//根据value属性选择的
+//		select.selectByValue("英文");
+//		select.selectByVisibleText("历史");
+		
+//		9.时间控件，通过JavaScript去掉属性readonly
+		driver.get("https://www.12306.cn/index/index.html");
+
+		//多层继承接口JavascriptExecutor进行强制转换
+		JavascriptExecutor JavascriptExecutor = (JavascriptExecutor)driver;
+		WebElement element = driver.findElement(By.id("train_date"));
+		//添加readOnly属性
+		JavascriptExecutor.executeScript("document.getElementById('train_date').readOnly= true");
+		System.out.println(element.getAttribute("readOnly"));
+		Thread.sleep(1000);
+//		移除readOnly属性
+		JavascriptExecutor.executeScript("document.getElementById('train_date').removeAttribute('readonly')");
+		//判断是否移除成功，如果成功等于null
+		if (element.getAttribute("readOnly") == null) {
+			element.clear();
+			element.sendKeys("2023-02-12");
+		}
+		Thread.sleep(3000);
+		//通过js完成页面滚动到指定元素位置-最新发布
+		JavascriptExecutor.executeScript("document.getElementById('index_ads').scrollIntoView()");
+
+
 		
 		
+
 	}
 }
