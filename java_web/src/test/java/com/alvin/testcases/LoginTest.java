@@ -1,6 +1,7 @@
 
 package com.alvin.testcases;
 
+import java.sql.Connection;
 import java.time.Duration;
 
 import org.openqa.selenium.Alert;
@@ -17,6 +18,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.alvin.until.Constant;
+
 /**
 * @Title: LoginTest
 * @Description: 
@@ -32,7 +35,7 @@ public class LoginTest {
 		System.out.println("BeforeTest");
 		driver=OpenBrowserDriver("chrome");
 		driver.manage().window().maximize();
-		driver.get("http://localhost/zentaopms/www/index.php");
+		driver.get(Constant.LOGIN_URL);
 	}
 
 	@Test
