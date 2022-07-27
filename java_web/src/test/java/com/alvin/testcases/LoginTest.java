@@ -3,6 +3,7 @@ package com.alvin.testcases;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,32 +31,57 @@ public class LoginTest {
 	public void setUp() {
 		System.out.println("BeforeTest");
 		driver=OpenBrowserDriver("chrome");
+		driver.manage().window().maximize();
 		driver.get("http://localhost/zentaopms/www/index.php");
 	}
 
 	@Test
-	public void login_success() throws Exception {
+	public void login_asuccess() throws Exception {
 		System.out.println("login_success");
 		Thread.sleep(1000);
+		driver.findElement(By.name("account")).clear();
+		driver.findElement(By.name("password")).clear();
 		driver.findElement(By.name("account")).sendKeys("admin");
 		driver.findElement(By.name("password")).sendKeys("123456abcd");
 		driver.findElement(By.id("submit")).click();
 		Thread.sleep(1000);
 		//断言1 判断url地址
-//		System.out.println(driver.getCurrentUrl());
-//		String expectedValue="http://localhost/zentaopms/www/index.php?m=my&f=index";
-//		String actualValue=driver.getCurrentUrl();
-//		Assert.assertEquals(actualValue, expectedValue);
+		System.out.println("getCurrentUrl"+driver.getCurrentUrl());
+		String expectedValue="http://localhost/zentaopms/www/index.php?m=my&f=index";
+		String actualValue=driver.getCurrentUrl();
+		Assert.assertEquals(actualValue, expectedValue);
 		
 		//断言2 判断登录之后是否有退出按钮
  		WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
  		//元素可见
 		WebElement webElement = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='退出']")));
 		Assert.assertTrue(webElement.isDisplayed());
-		
+		System.out.println("isDisplayed:"+webElement.isDisplayed());
+		driver.findElement(By.xpath("//a[text()='退出']")).click();
 	}
 
-	
+	@Test
+	public void login_dfailure() throws Exception {
+		System.out.println("login_failure");
+		Thread.sleep(1000);
+		driver.findElement(By.name("account")).clear();
+		driver.findElement(By.name("password")).clear();
+		driver.findElement(By.name("account")).sendKeys("admin");
+		driver.findElement(By.name("password")).sendKeys("123456abc");
+		Thread.sleep(1000);
+		driver.findElement(By.id("submit")).click();
+		Thread.sleep(1000);
+		Alert alert = driver.switchTo().alert();
+
+		//断言1 alert文本是否与预期一致
+ 		String expectedValue="登录失败，请检查您的用户名或密码是否填写正确。";
+ 		System.out.println("getText:"+alert.getText());
+		String actualValue=alert.getText();
+		Assert.assertEquals(actualValue, expectedValue);
+		alert.accept();
+	}
+		
+		
 	@AfterTest
 	public void tearDown() {
 		System.out.println("@AfterTest");
