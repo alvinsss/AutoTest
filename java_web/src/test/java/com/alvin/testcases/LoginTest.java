@@ -19,9 +19,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.alvin.until.Constant;
-import com.beust.jcommander.Parameter;
-
+import com.alvin.pageobject.LoginPage;
+import com.alvin.util.BrowserUtil;
+import com.alvin.util.Constant;
+ 
 /**
 * @Title: LoginTest
 * @Description: 
@@ -30,29 +31,27 @@ import com.beust.jcommander.Parameter;
 */
 public class LoginTest {
 	
-	WebDriver driver;
+	public static WebDriver driver;
 	
 	@Parameters({"browerName"})
 	@BeforeTest
 	public void setUp(String browerName) {
 		System.out.println("BeforeTest current brower->"+browerName);
-		driver=OpenBrowserDriver(browerName);
+		driver=BrowserUtil.OpenBrowser(browerName);
 		driver.manage().window().maximize();
 		driver.get(Constant.LOGIN_URL);
 	}
 
 	@Test
 	public void login_asuccess() throws Exception {
-		System.out.println("login_success");
-		Thread.sleep(1000);
-		driver.findElement(By.name("account")).clear();
-		driver.findElement(By.name("password")).clear();
-		driver.findElement(By.name("account")).sendKeys("admin");
-		driver.findElement(By.name("password")).sendKeys("123456abcd");
-		driver.findElement(By.id("submit")).click();
+		System.out.println("test login_success");
+		LoginPage loginPage = new LoginPage();
+		loginPage.inputUserAccount("admin");
+		loginPage.inputPassword("123456abcd");
+		loginPage.clickLoginButton();
 		Thread.sleep(1000);
 		//断言1 判断url地址
-		System.out.println("getCurrentUrl"+driver.getCurrentUrl());
+		System.out.println("getCurrentUrl->"+driver.getCurrentUrl());
 		String expectedValue="http://localhost/zentaopms/www/index.php?m=my&f=index";
 		String actualValue=driver.getCurrentUrl();
 		Assert.assertEquals(actualValue, expectedValue);
@@ -68,14 +67,11 @@ public class LoginTest {
 
 	@Test
 	public void login_dfailure() throws Exception {
-		System.out.println("login_failure");
-		Thread.sleep(1000);
-		driver.findElement(By.name("account")).clear();
-		driver.findElement(By.name("password")).clear();
-		driver.findElement(By.name("account")).sendKeys("admin");
-		driver.findElement(By.name("password")).sendKeys("123456abc");
-		Thread.sleep(1000);
-		driver.findElement(By.id("submit")).click();
+		System.out.println("test login_failure");
+		LoginPage loginPage = new LoginPage();
+		loginPage.inputUserAccount("admin");
+		loginPage.inputPassword("123456abc");
+		loginPage.clickLoginButton();
 		Thread.sleep(1000);
 		Alert alert = driver.switchTo().alert();
 
@@ -91,27 +87,7 @@ public class LoginTest {
 	@AfterTest
 	public void tearDown() {
 		System.out.println("@AfterTest");
+		driver.quit();
 	}
-	/**
-	 * 
-	 * @param browserName
-	 * @return WebDriver
-	 */
-	public static WebDriver OpenBrowserDriver(String browserName) {
-		if ("chrome".equals(browserName)) {
-			ChromeDriver driver = new ChromeDriver();
-			return driver;
-		} else if ("firefox".equals(browserName)) {
-			System.setProperty("webdriver.firefox.bin", "D:\\UserTools\\Firefox\\firefox.exe");
-			System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver.exe");
-			FirefoxDriver driver = new FirefoxDriver();
-			return driver;
-
-		} else if ("edge".equals(browserName)) {
-			System.setProperty("webdriver.edge.driver", "src/test/resources/msedgedriver.exe");
-			EdgeDriver driver = new EdgeDriver();
-			return driver;
-		}
-		return null;
-	}
+	
 }

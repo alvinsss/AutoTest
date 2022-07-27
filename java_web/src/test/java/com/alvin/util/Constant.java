@@ -1,5 +1,5 @@
 
-package com.alvin.until;
+package com.alvin.util;
 /**
 * @Title: Constant
 * @Description: 

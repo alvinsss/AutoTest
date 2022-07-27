@@ -18,10 +18,12 @@ public class LoginPage {
 	private  By submitBy = By.id("submit");
 	
 	public void inputUserAccount(String account) {
+		LoginTest.driver.findElement(useraccountBy).clear();
 		LoginTest.driver.findElement(useraccountBy).sendKeys(account);
 	}
 	
 	public void inputPassword(String password) {
+		LoginTest.driver.findElement(passwordBy).clear();
 		LoginTest.driver.findElement(passwordBy).sendKeys(password);
 	}
 	
