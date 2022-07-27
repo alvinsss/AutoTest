@@ -16,9 +16,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.alvin.until.Constant;
+import com.beust.jcommander.Parameter;
 
 /**
 * @Title: LoginTest
@@ -30,10 +32,11 @@ public class LoginTest {
 	
 	WebDriver driver;
 	
+	@Parameters({"browerName"})
 	@BeforeTest
-	public void setUp() {
-		System.out.println("BeforeTest");
-		driver=OpenBrowserDriver("chrome");
+	public void setUp(String browerName) {
+		System.out.println("BeforeTest current brower->"+browerName);
+		driver=OpenBrowserDriver(browerName);
 		driver.manage().window().maximize();
 		driver.get(Constant.LOGIN_URL);
 	}
