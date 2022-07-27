@@ -117,29 +117,84 @@ public class SpecialEle {
 //		select.selectByVisibleText("历史");
 		
 //		9.时间控件，通过JavaScript去掉属性readonly
-		driver.get("https://www.12306.cn/index/index.html");
+//		driver.get("https://www.12306.cn/index/index.html");
+//
+//		//多层继承接口JavascriptExecutor进行强制转换
+//		JavascriptExecutor JSExecutor = (JavascriptExecutor)driver;
+//		WebElement element = driver.findElement(By.id("train_date"));
+//		//添加readOnly属性
+//		JSExecutor.executeScript("document.getElementById('train_date').readOnly= true");
+//		System.out.println(element.getAttribute("readOnly"));
+//		Thread.sleep(1000);
+////		移除readOnly属性
+//		JSExecutor.executeScript("document.getElementById('train_date').removeAttribute('readonly')");
+//		//判断是否移除成功，如果成功等于null
+//		if (element.getAttribute("readOnly") == null) {
+//			element.clear();
+//			element.sendKeys("2023-02-12");
+//		}
+//		Thread.sleep(3000);
+//		//通过js完成页面滚动到指定元素位置-最新发布
+////		JSExecutor.executeScript("document.getElementById('index_ads').scrollIntoView()");
+//		//arguments[0]接收elementIndex_ads,executeScript支持传引用和基本数据类型
+//		WebElement elementIndex_ads = driver.findElement(By.id("index_ads"));
+//		JSExecutor.executeScript("arguments[0].scrollIntoView()",elementIndex_ads);
+//		int i=0;
+//		JSExecutor.executeScript("arguments[0].scrollIntoView(arguments[1])",elementIndex_ads,i);
 
-		//多层继承接口JavascriptExecutor进行强制转换
-		JavascriptExecutor JavascriptExecutor = (JavascriptExecutor)driver;
-		WebElement element = driver.findElement(By.id("train_date"));
-		//添加readOnly属性
-		JavascriptExecutor.executeScript("document.getElementById('train_date').readOnly= true");
-		System.out.println(element.getAttribute("readOnly"));
-		Thread.sleep(1000);
-//		移除readOnly属性
-		JavascriptExecutor.executeScript("document.getElementById('train_date').removeAttribute('readonly')");
-		//判断是否移除成功，如果成功等于null
-		if (element.getAttribute("readOnly") == null) {
-			element.clear();
-			element.sendKeys("2023-02-12");
-		}
+//		懒加载：https://sj.qq.com/myapp/category.htm?orgame=1&categoryId=122
+		//懒加载 --页面比较复杂-->需要时间加载
+		/*driver.get("https://sj.qq.com/myapp/category.htm?orgame=1&categoryId=122");
+		//拼多多
+		//driver.findElement(By.xpath("//a[text()='拼多多']")).click();
 		Thread.sleep(3000);
-		//通过js完成页面滚动到指定元素位置-最新发布
-		JavascriptExecutor.executeScript("document.getElementById('index_ads').scrollIntoView()");
-
-
+		//driver.findElement(By.xpath("//a[text()='粉丝福利购']")).click();
+		//问题？？要滑动到什么位置 -- 正在加载中元素的位置
+		//怎么针对页面中一闪而过的元素进行定位
+		//1、开启F12 ，选择network->slow 3G 网速放慢点
+		//2、F12--》选择source-->选择暂停
+		////div[@class='loading']
+		WebElement webElement = driver.findElement(By.xpath("//div[@class='loading']"));
+		JavascriptExecutor jsExecuter = (JavascriptExecutor)driver;
+		//可能会存在这几种情况
+		//1、默认就有这个元素  --OK
+		//2、滑动了几次之后可以找的到元素  --OK
+		//3、滑动到底部还是找不到元素  --OK
+		
+		while(true){	
+			//滑动之前的页面信息
+			String beforeSource = driver.getPageSource();
+			//如果找到了元素，我们就退出
+			if(beforeSource.contains("拼XX")){
+				driver.findElement(By.xpath("//a[text()='拼XX']")).click();
+				break;
+			}
+			
+			//滑动到指定元素的位置上
+			jsExecuter.executeScript("arguments[0].scrollIntoView()",webElement);
+			Thread.sleep(1000);
+			String afterSource = driver.getPageSource();
+			//是不是滑动到了底部  getPageSource()  滑动之前的PageSource和滑动之后的PageSource是一样
+			if(beforeSource.equals(afterSource)){
+				//滑动到了底部
+				break;
+			}
+		}
+		
+		//driver.findElement(By.xpath("//a[text()='粉丝福利购']")).click();
+		 * */
+		
+//		driver.get("https://open.tencent.com/");
+//
+//		//多层继承接口JavascriptExecutor进行强制转换
+//		JavascriptExecutor JSExecutor = (JavascriptExecutor)driver;
+//		WebElement elementIndex_QQ = driver.findElement(By.xpath("//div[@class='title' and text()='QQ推广' ]"));
+//		Thread.sleep(1000);
+//		JSExecutor.executeScript("arguments[0].scrollIntoView()",elementIndex_QQ);
+//		System.out.println(elementIndex_QQ.getText());
+//		Thread.sleep(1000);
 		
 		
-
+		
 	}
 }
