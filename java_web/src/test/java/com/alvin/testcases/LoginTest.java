@@ -31,15 +31,14 @@ import com.alvin.util.Constant;
 */
 public class LoginTest {
 	
-	public static WebDriver driver;
-	
+ 	
 	@Parameters({"browerName"})
 	@BeforeTest
 	public void setUp(String browerName) {
 		System.out.println("BeforeTest current brower->"+browerName);
-		driver=BrowserUtil.OpenBrowser(browerName);
-		driver.manage().window().maximize();
-		driver.get(Constant.LOGIN_URL);
+		BrowserUtil.OpenBrowser(browerName);
+		BrowserUtil.driver.get(Constant.LOGIN_URL);
+		BrowserUtil.driver.manage().window().maximize();
 	}
 
 	@Test
@@ -51,18 +50,18 @@ public class LoginTest {
 		loginPage.clickLoginButton();
 		Thread.sleep(1000);
 		//断言1 判断url地址
-		System.out.println("getCurrentUrl->"+driver.getCurrentUrl());
+		System.out.println("getCurrentUrl->"+BrowserUtil.driver.getCurrentUrl());
 		String expectedValue="http://localhost/zentaopms/www/index.php?m=my&f=index";
-		String actualValue=driver.getCurrentUrl();
+		String actualValue=BrowserUtil.driver.getCurrentUrl();
 		Assert.assertEquals(actualValue, expectedValue);
 		
 		//断言2 判断登录之后是否有退出按钮
- 		WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+ 		WebDriverWait webDriverWait = new WebDriverWait(BrowserUtil.driver, Duration.ofSeconds(10));
  		//元素可见
 		WebElement webElement = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='退出']")));
 		Assert.assertTrue(webElement.isDisplayed());
 		System.out.println("isDisplayed:"+webElement.isDisplayed());
-		driver.findElement(By.xpath("//a[text()='退出']")).click();
+		BrowserUtil.driver.findElement(By.xpath("//a[text()='退出']")).click();
 	}
 
 	@Test
@@ -73,7 +72,7 @@ public class LoginTest {
 		loginPage.inputPassword("123456abc");
 		loginPage.clickLoginButton();
 		Thread.sleep(1000);
-		Alert alert = driver.switchTo().alert();
+		Alert alert = BrowserUtil.driver.switchTo().alert();
 
 		//断言1 alert文本是否与预期一致
  		String expectedValue="登录失败，请检查您的用户名或密码是否填写正确。";
@@ -87,7 +86,7 @@ public class LoginTest {
 	@AfterTest
 	public void tearDown() {
 		System.out.println("@AfterTest");
-		driver.quit();
+		BrowserUtil.driver.quit();
 	}
 	
 }
