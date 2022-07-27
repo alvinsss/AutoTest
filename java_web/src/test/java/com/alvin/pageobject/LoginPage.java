@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.alvin.base.BasePage;
 import com.alvin.testcases.LoginTest;
 import com.alvin.util.BrowserUtil;
 
@@ -17,7 +18,7 @@ import com.alvin.util.BrowserUtil;
 * @author: alvin
 * @date 2022年7月27日 下午4:23:18
 */
-public class LoginPage {
+public class LoginPage extends BasePage{
 	
 	private  By useraccountBy = By.name("account");
 	private  By passwordBy = By.name("password");
@@ -25,30 +26,18 @@ public class LoginPage {
 	
 	public void inputUserAccount(String account) {
 		WaitElementVisible(useraccountBy).clear();
-		WaitElementVisible(useraccountBy).sendKeys(account);
+		input_type(useraccountBy, account);
 	}
 	
 	public void inputPassword(String password) {
 		WaitElementVisible(passwordBy).clear();
-		WaitElementVisible(passwordBy).sendKeys(password);
+		input_type(passwordBy, password);
 	}
 	
 	public void clickLoginButton( ) {
-		WaitElementClickable(submitBy).click();
+//		WaitElementClickable(submitBy).click();
+		click(submitBy);
 	}
 	
-	public WebElement WaitElementVisible(By by) {
- 		WebDriverWait webDriverWait = new WebDriverWait(BrowserUtil.driver, Duration.ofSeconds(10));
- 		//元素可见
-		WebElement webElement = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(by));
-		return webElement;
-	}
-	
-	
-	public WebElement WaitElementClickable(By by) {
- 		WebDriverWait webDriverWait = new WebDriverWait(BrowserUtil.driver, Duration.ofSeconds(10));
- 		//元素可点击
-		WebElement webElement = webDriverWait.until(ExpectedConditions.elementToBeClickable(by));
-		return webElement;
-	}
+
 }

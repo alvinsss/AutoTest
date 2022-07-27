@@ -19,6 +19,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.alvin.pageobject.IndexPage;
 import com.alvin.pageobject.LoginPage;
 import com.alvin.util.BrowserUtil;
 import com.alvin.util.Constant;
@@ -46,6 +47,7 @@ public class LoginTest {
 	public void login_asuccess() throws Exception {
 		System.out.println("test login_success");
 		LoginPage loginPage = new LoginPage();
+		IndexPage indexPage = new IndexPage();
 		loginPage.inputUserAccount("admin");
 		loginPage.inputPassword("123456abcd");
 		loginPage.clickLoginButton();
@@ -57,12 +59,9 @@ public class LoginTest {
 		Assert.assertEquals(actualValue, expectedValue);
 		
 		//断言2 判断登录之后是否有退出按钮
- 		WebDriverWait webDriverWait = new WebDriverWait(BrowserUtil.driver, Duration.ofSeconds(10));
- 		//元素可见
-		WebElement webElement = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='退出']")));
-		Assert.assertTrue(webElement.isDisplayed());
-		System.out.println("isDisplayed:"+webElement.isDisplayed());
-		BrowserUtil.driver.findElement(By.xpath("//a[text()='退出']")).click();
+		Assert.assertTrue(indexPage.buttonQuitElementIsDisplayed());
+		System.out.println("isDisplayed:"+indexPage.buttonQuitElementIsDisplayed());
+		indexPage.buttonQuit();
 	}
 
 	@Test

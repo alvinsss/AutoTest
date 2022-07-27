@@ -46,8 +46,8 @@ public class BasePage {
 	}
 	
 	public void input_type(By by,String data) {
+		WaitElementVisible(by).clear();
 		WaitElementVisible(by).sendKeys(data);
 	}
-	
-
+ 
 }
