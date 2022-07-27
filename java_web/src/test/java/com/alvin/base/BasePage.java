@@ -40,5 +40,14 @@ public class BasePage {
 		WebElement webElement = webDriverWait.until(ExpectedConditions.elementToBeClickable(by));
 		return webElement;
 	}
+	
+	public void click(By by) {
+		WaitElementClickable(by).click();
+	}
+	
+	public void input_type(By by,String data) {
+		WaitElementVisible(by).sendKeys(data);
+	}
+	
 
 }
