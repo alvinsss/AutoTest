@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.idealized.Javascript;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -194,7 +195,22 @@ public class SpecialEle {
 //		System.out.println(elementIndex_QQ.getText());
 //		Thread.sleep(1000);
 		
+		//鼠标拖拽
+//		driver.get("http://www.treejs.cn/v3/demo/cn/exedit/drag.html");
+//		Thread.sleep(2000);
+//		WebElement sourceEle = driver.findElement(By.id("treeDemo_2_span"));
+//		WebElement targetEle = driver.findElement(By.id("treeDemo_3_span"));
+//		实例化Actions类对象
+//		Actions actions = new Actions(driver); 
+		//clickAndHold一直按鼠标       moveToElement移动到   release释放鼠标
+		// build构建一连串操作 perform立马生效
+//		actions.clickAndHold(sourceEle).moveToElement(targetEle).release().build().perform();
 		
+		//文件上传  <input type="file" id="fu" value="选择文件">
+		driver.get("E:\\eclipse-workspace\\JavaAutoTest\\java_web\\src\\test\\resources\\html\\文件上传\\fileupload.html");
+		Thread.sleep(2000);
+		driver.findElement(By.id("fu")).sendKeys("E:\\eclipse-workspace\\JavaAutoTest\\java_web\\src\\test\\resources\\html\\文件上传\\uploadfile.png");
+
 		
 	}
 }
