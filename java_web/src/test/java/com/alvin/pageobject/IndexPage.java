@@ -12,14 +12,57 @@ import org.openqa.selenium.By;
 import com.alvin.base.BasePage;
 
 public class IndexPage  extends BasePage {
-	
+	//退出
 	private By myQuitBy = By.xpath("//a[text()='退出']");
-	 
+	//我的地盘
+	private By myHomeBy = By.xpath("//i[@class='icon-home']");
+	//产品
+	private By productBy = By.xpath("//li[@data-id='product']/a[1]");
+	//项目
+	private By projectBy = By.xpath("//li[@data-id='project']/a[1]");
+	//测试
+	private By qaBy = By.xpath("//li[@data-id='qa']/a[1]");
+	//文档
+	private By docBy = By.xpath("//li[@data-id='doc']/a[1]");
+	//统计
+	private By reportBy = By.xpath("//li[@data-id='report']/a[1]");
+	//组织
+	private By companyBy = By.xpath("//li[@data-id='company']/a[1]");
+	//后台
+	private By backadminBy = By.xpath("//li[@data-id='admin']/a[1]");
+	//帮助
+	private By helpBy = By.className("dropdown");
+	//关于
+	private By AboutBy = By.xpath("//a[text()='关于']");
+	
+	//*[@class='active' and text()='项目']
 	public void buttonQuit() {
 //		WaitElementClickable(myQuitBy).click();
 		click(myQuitBy);
 	}
 	
+	public void buttonMyHome() {
+		click(myHomeBy);
+	}
+	public void buttonProduct() {
+		click(myHomeBy);
+	}
+	public void buttonQa() {
+		click(myHomeBy);
+	}
+	public void buttonDoc() {
+		click(myHomeBy);
+	}
+	public void buttonReport() {
+		click(myHomeBy);
+	}
+	public void buttonCompany() {
+		click(myHomeBy);
+	}
+	public void buttonBackAdmin() {
+		click(myHomeBy);
+	}
+ 
 	public boolean isDisplayed_ButtonQuit() {
 		return WaitElementVisible(myQuitBy).isDisplayed();
 	}
