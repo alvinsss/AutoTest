@@ -45,22 +45,32 @@ public class IndexPage  extends BasePage {
 		click(myHomeBy);
 	}
 	public void buttonProduct() {
-		click(myHomeBy);
+		click(productBy);
+	}
+	public void buttonProject() {
+		click(projectBy);
 	}
 	public void buttonQa() {
-		click(myHomeBy);
+		click(qaBy);
 	}
 	public void buttonDoc() {
-		click(myHomeBy);
+		click(docBy);
 	}
 	public void buttonReport() {
-		click(myHomeBy);
+		click(reportBy);
 	}
 	public void buttonCompany() {
-		click(myHomeBy);
+		click(companyBy);
 	}
-	public void buttonBackAdmin() {
-		click(myHomeBy);
+	public void buttonBackadmin() {
+		click(backadminBy);
+	}
+	
+	public void buttonHelp() {
+		click(helpBy);
+	}
+	public void buttonAbout() {
+		click(AboutBy);
 	}
  
 	public boolean isDisplayed_ButtonQuit() {

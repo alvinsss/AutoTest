@@ -17,7 +17,7 @@ import com.beust.jcommander.Parameter;
 * @author: alvin
 * @date 2022年7月28日 下午12:42:32
 */
-public class IndexButtonTest {
+public class TestCaseDemoFile {
 	
 	@Parameters({"browerName"})
 	@BeforeTest
