@@ -3,6 +3,7 @@ package com.alvin.base;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -49,5 +50,14 @@ public class BasePage {
 		WaitElementVisible(by).clear();
 		WaitElementVisible(by).sendKeys(data);
 	}
- 
+	
+	public static String _getAlertText() {
+		Alert alert = BrowserUtil.driver.switchTo().alert();
+		return alert.getText();
+	}
+	
+	public static void _click_AlertDismiss() {
+		Alert alert = BrowserUtil.driver.switchTo().alert();
+		alert.dismiss();
+	}
 }

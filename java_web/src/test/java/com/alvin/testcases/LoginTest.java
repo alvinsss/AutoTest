@@ -53,14 +53,12 @@ public class LoginTest {
 		loginPage.clickLoginButton();
 		Thread.sleep(1000);
 		//断言1 判断url地址
-		System.out.println("getCurrentUrl->"+BrowserUtil.driver.getCurrentUrl());
-		String expectedValue="http://localhost/zentaopms/www/index.php?m=my&f=index";
+		String expectedValue=Constant.INDEX_URL;
 		String actualValue=BrowserUtil.driver.getCurrentUrl();
 		Assert.assertEquals(actualValue, expectedValue);
 		
 		//断言2 判断登录之后是否有退出按钮
 		Assert.assertTrue(indexPage.buttonQuitElementIsDisplayed());
-		System.out.println("isDisplayed:"+indexPage.buttonQuitElementIsDisplayed());
 		indexPage.buttonQuit();
 	}
 
@@ -72,14 +70,12 @@ public class LoginTest {
 		loginPage.inputPassword("123456abc");
 		loginPage.clickLoginButton();
 		Thread.sleep(1000);
-		Alert alert = BrowserUtil.driver.switchTo().alert();
 
 		//断言1 alert文本是否与预期一致
  		String expectedValue="登录失败，请检查您的用户名或密码是否填写正确。";
- 		System.out.println("getText:"+alert.getText());
-		String actualValue=alert.getText();
+ 		String actualValue=loginPage.getAlertText();
 		Assert.assertEquals(actualValue, expectedValue);
-		alert.accept();
+		loginPage.click_AlertDismiss();
 	}
 		
 		

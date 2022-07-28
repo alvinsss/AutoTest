@@ -3,6 +3,7 @@ package com.alvin.pageobject;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -39,5 +40,13 @@ public class LoginPage extends BasePage{
 		click(submitBy);
 	}
 	
-
+	//获取alert文本
+	public String getAlertText() {
+		return BasePage._getAlertText();
+	}
+	
+	//提示alert点击确定
+	public static void click_AlertDismiss() {
+		BasePage._click_AlertDismiss();
+	}
 }
