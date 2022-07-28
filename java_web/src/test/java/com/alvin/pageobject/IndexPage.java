@@ -20,7 +20,7 @@ public class IndexPage  extends BasePage {
 		click(myQuitBy);
 	}
 	
-	public boolean buttonQuitElementIsDisplayed() {
+	public boolean isDisplayed_ButtonQuit() {
 		return WaitElementVisible(myQuitBy).isDisplayed();
 	}
 }

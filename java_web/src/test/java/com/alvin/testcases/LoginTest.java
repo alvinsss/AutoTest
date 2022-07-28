@@ -21,6 +21,7 @@ import org.testng.annotations.Test;
 
 import com.alvin.pageobject.IndexPage;
 import com.alvin.pageobject.LoginPage;
+import com.alvin.testdata.LoginDatas;
 import com.alvin.util.BrowserUtil;
 import com.alvin.util.Constant;
  
@@ -48,8 +49,8 @@ public class LoginTest {
 		System.out.println("test login_success");
 		LoginPage loginPage = new LoginPage();
 		IndexPage indexPage = new IndexPage();
-		loginPage.inputUserAccount("admin");
-		loginPage.inputPassword("123456abcd");
+		loginPage.inputUserAccount(LoginDatas.CORRECT_ACCOUNT);
+		loginPage.inputPassword(LoginDatas.CORRECT_PASSWORD);
 		loginPage.clickLoginButton();
 		Thread.sleep(1000);
 		//断言1 判断url地址
@@ -58,26 +59,30 @@ public class LoginTest {
 		Assert.assertEquals(actualValue, expectedValue);
 		
 		//断言2 判断登录之后是否有退出按钮
-		Assert.assertTrue(indexPage.buttonQuitElementIsDisplayed());
+		Assert.assertTrue(indexPage.isDisplayed_ButtonQuit());
 		indexPage.buttonQuit();
 	}
-
-	@Test
-	public void login_dfailure() throws Exception {
+	
+	/**
+	 *  dataProvider注解返回2维数组，可以多次执行不同情况的测试
+	 * @throws Exception
+	 */
+	@Test(description = "", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas")
+	public void login_dfailure_01(String account,String password, String expectedValue) throws Exception {
 		System.out.println("test login_failure");
+		System.out.println("account:"+account+"   password:"+password+"  expect:"+expectedValue);
 		LoginPage loginPage = new LoginPage();
-		loginPage.inputUserAccount("admin");
-		loginPage.inputPassword("123456abc");
+		loginPage.inputUserAccount(account);
+		loginPage.inputPassword(password);
 		loginPage.clickLoginButton();
 		Thread.sleep(1000);
-
 		//断言1 alert文本是否与预期一致
- 		String expectedValue="登录失败，请检查您的用户名或密码是否填写正确。";
  		String actualValue=loginPage.getAlertText();
-		Assert.assertEquals(actualValue, expectedValue);
+		Assert.assertEquals(actualValue, "登录失败，请检查您的用户名或密码是否填写正确。");
 		loginPage.click_AlertDismiss();
 	}
-		
+	
+
 		
 	@AfterTest
 	public void tearDown() {

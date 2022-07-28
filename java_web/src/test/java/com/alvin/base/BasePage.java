@@ -51,6 +51,16 @@ public class BasePage {
 		WaitElementVisible(by).sendKeys(data);
 	}
 	
+	public String getElementText(By by) {
+		String text = WaitElementVisible(by).getText();
+		return text;
+	}
+	
+	public String getElementAttribute(By by ,String attrName) {
+		String attribute = WaitElementVisible(by).getAttribute(attrName);
+		return attribute;
+	}
+	
 	public static String _getAlertText() {
 		Alert alert = BrowserUtil.driver.switchTo().alert();
 		return alert.getText();
