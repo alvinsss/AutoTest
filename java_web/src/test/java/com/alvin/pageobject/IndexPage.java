@@ -15,7 +15,7 @@ public class IndexPage  extends BasePage {
 	//退出
 	private By myQuitBy = By.xpath("//a[text()='退出']");
 	//我的地盘
-	private By myHomeBy = By.xpath("//i[@class='icon-home']");
+	private By myHomeBy = By.className("active");
 	//产品
 	private By productBy = By.xpath("//li[@data-id='product']/a[1]");
 	//项目
@@ -32,8 +32,12 @@ public class IndexPage  extends BasePage {
 	private By backadminBy = By.xpath("//li[@data-id='admin']/a[1]");
 	//帮助
 	private By helpBy = By.className("dropdown");
+	//手册
+	private By helpSCBy = By.xpath("//a[text()='手册']");
 	//关于
 	private By AboutBy = By.xpath("//a[text()='关于']");
+	
+
 	
 	//*[@class='active' and text()='项目']
 	public void buttonQuit() {
@@ -68,6 +72,10 @@ public class IndexPage  extends BasePage {
 	
 	public void buttonHelp() {
 		click(helpBy);
+	}
+	
+	public void buttonHelpSC() {
+		click(helpSCBy);
 	}
 	public void buttonAbout() {
 		click(AboutBy);

@@ -34,8 +34,7 @@ public class Selenium_API {
 //		driver.findElement(By.id("kw")).sendKeys(Keys.CONTROL,"v");
 //		driver.findElement(By.id("su")).click();
 		WebElement element = driver.findElement(By.linkText("图片"));
-		
-		System.out.println(element.getText());
+ 		System.out.println(element.getText());
 		System.out.println(element.getAttribute("href"));
 		System.out.println(element.getTagName());
 		//isDisplayed看元素是否显示 true
