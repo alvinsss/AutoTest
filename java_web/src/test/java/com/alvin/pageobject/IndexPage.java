@@ -20,6 +20,7 @@ public class IndexPage  extends BasePage {
 	private By productBy = By.xpath("//li[@data-id='product']/a[1]");
 	//项目
 	private By projectBy = By.xpath("//li[@data-id='project']/a[1]");
+	
 	//测试
 	private By qaBy = By.xpath("//li[@data-id='qa']/a[1]");
 	//文档

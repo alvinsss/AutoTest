@@ -1,5 +1,5 @@
 
-package com.alvin.util;
+package com.alvin.testdata;
 /**
 * @Title: Constant
 * @Description: 

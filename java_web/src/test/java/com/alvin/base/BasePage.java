@@ -34,38 +34,62 @@ public class BasePage {
 	/**
 	 * 元素是否可点击
 	 * @param by
-	 * @return
+	 * @return webElement
 	 */
 	public WebElement WaitElementClickable(By by) {
  		WebDriverWait webDriverWait = new WebDriverWait(BrowserUtil.driver, Duration.ofSeconds(10));
 		WebElement webElement = webDriverWait.until(ExpectedConditions.elementToBeClickable(by));
 		return webElement;
 	}
-	
+	/**
+	 * 点击操作
+	 * @param by
+	 */
 	public void click(By by) {
 		WaitElementClickable(by).click();
 	}
-	
+	/***
+	 * 输入数据
+	 * @param by
+	 * @param data
+	 */
 	public void input_type(By by,String data) {
 		WaitElementVisible(by).clear();
 		WaitElementVisible(by).sendKeys(data);
 	}
-	
+	/***
+	 * 获取元素文本
+	 * @param by
+	 * @return  String
+	 */
 	public String getElementText(By by) {
 		String text = WaitElementVisible(by).getText();
 		return text;
 	}
 	
+	/**
+	 * 获取元素属性
+	 * @param by
+	 * @param By by ,String attrName
+	 * @return attribute
+	 */
 	public String getElementAttribute(By by ,String attrName) {
 		String attribute = WaitElementVisible(by).getAttribute(attrName);
 		return attribute;
 	}
 	
+	/**
+	 * 获取alert文本
+	 * @return  String
+	 */
 	public static String _getAlertText() {
 		Alert alert = BrowserUtil.driver.switchTo().alert();
 		return alert.getText();
 	}
 	
+	/**
+	 * 点击alert确认按钮
+	 */
 	public static void _click_AlertDismiss() {
 		Alert alert = BrowserUtil.driver.switchTo().alert();
 		alert.dismiss();

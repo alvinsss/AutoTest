@@ -7,8 +7,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.alvin.testdata.Constant;
 import com.alvin.util.BrowserUtil;
-import com.alvin.util.Constant;
 import com.beust.jcommander.Parameter;
 
 /**

@@ -40,7 +40,7 @@ public class LoginTest {
 	@Parameters({"browerName"})
 	@BeforeTest
 	public void setUp(String browerName) {
-		System.out.println("BeforeTest current brower->"+browerName);
+		System.out.println("CreateProjectTest BeforeTest");
 		BrowserUtil.OpenBrowser(browerName);
 		BrowserUtil.driver.get(Constant.LOGIN_URL);
 		BrowserUtil.driver.manage().window().maximize();
@@ -103,7 +103,7 @@ public class LoginTest {
 		
 	@AfterTest
 	public void tearDown() {
-		System.out.println("@AfterTest");
+		System.out.println("CreateProjectTest AfterTest");
 		BrowserUtil.driver.quit();
 	}
 	

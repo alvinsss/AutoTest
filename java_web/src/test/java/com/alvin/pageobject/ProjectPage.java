@@ -14,6 +14,8 @@ import com.alvin.util.BrowserUtil;
 * @date 2022年7月28日 下午3:52:11
 */
 public class ProjectPage extends BasePage{
+	
+	
 	//创建项目
 	private By createProjectBy = By.xpath("//*[@id='modulemenu']/ul[1]/li[@data-id='create']/a[1]/i[1]");
 	//项目名称	
@@ -49,8 +51,21 @@ public class ProjectPage extends BasePage{
 	//维护模块-返回
 	private By projectDetail_ModuleUpdataBackBy = By.xpath("//button[text()='返回']");	
 	
+	//项目名称链接
+	private By currentProjectNameBy = By.id("currentItem");
+
+	//创建项目
 	public void click_CreateProject() {
 		click(createProjectBy);
+	}
+	
+ 
+	
+	//获取项目名称Text
+	public String get_currentProjectNameText() {
+		String text= getElementText(currentProjectNameBy);
+		System.out.println(text);
+		return text;
 	}
 	
 	public void input_ProjectName(String projectName) {
