@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -39,7 +40,7 @@ public class LoginTest {
  	
 	
 	@Parameters({"browerName"})
-	@BeforeTest
+	@BeforeMethod
 	public void setUp(String browerName) {
 		System.out.println("CreateProjectTest BeforeTest");
 		BrowserUtil.OpenBrowser(browerName);
@@ -80,14 +81,12 @@ public class LoginTest {
 		LoginPage loginPage = new LoginPage();
  		String actualValue=loginPage.getAlertText();
 		Assert.assertEquals(actualValue, expectedValue);
-		Thread.sleep(1000);
 		loginPage.click_AlertDismiss();
 	}
 	
 	@Test(description = "", dataProviderClass = LoginDatas.class, dataProvider = "getLoginErrorDatas")
 	public void login_dfailure_getLoginErrorDatas(String account,String password, String expectedValue) throws Exception {
 		System.out.println("login_dfailure_getLoginErrorDatas");
-		Thread.sleep(2000);
 		LoginFlow loginAction = new LoginFlow(account,password);
 		loginAction.login();
 		Thread.sleep(1000);
@@ -96,12 +95,11 @@ public class LoginTest {
 		LoginPage loginPage = new LoginPage();
  		String actualValue=loginPage.getAlertText();
 		Assert.assertEquals(actualValue, expectedValue);
-		Thread.sleep(1000);
-		loginPage.click_AlertDismiss();
+ 		loginPage.click_AlertDismiss();
 	}
 	
 		
-	@AfterTest
+	@AfterMethod
 	public void tearDown() {
 		System.out.println("LoginTest tearDown");
 		BrowserUtil.closeBrowser();

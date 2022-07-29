@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-  <test name="Test">
-  <parameter name="browerName" value="firefox"></parameter>
+　<test name="Test" preserve-order="true">  
+  <parameter name="browerName" value="chrome"></parameter>
     <classes>
-      <class name="com.alvin.testcases.LoginTest"/>
+	  <class name="com.alvin.testcases.LoginTest"/>
+      <class name="com.alvin.testcases.CreateProjectTest"/>
+      <class name="com.alvin.testcases.IndexLinkClickTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

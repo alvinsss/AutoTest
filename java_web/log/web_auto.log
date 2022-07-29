@@ -1,34 +1,326 @@
-2022-07-29 15:58:37 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:36) - [ INFO ]----打开chrome浏览器
-2022-07-29 15:58:52 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:36) - [ INFO ]----打开chrome浏览器
-2022-07-29 15:58:56 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:36) - [ INFO ]----打开chrome浏览器
-2022-07-29 15:58:58 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-29 15:58:58 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-29 15:58:58 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-29 15:59:01 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
-2022-07-29 15:59:01 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
-2022-07-29 15:59:01 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
-2022-07-29 15:59:02 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-29 15:59:04 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-29 15:59:04 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
-2022-07-29 15:59:04 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-29 15:59:07 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.name: account] 输入键值[] 
-2022-07-29 15:59:07 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-29 15:59:07 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-29 15:59:10 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-29 15:59:11 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-29 15:59:11 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-29 15:59:12 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
-2022-07-29 15:59:14 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.xpath: //*[@id='modulemenu']/ul[1]/li[@data-id='create']/a[1]/i[1]]
-2022-07-29 15:59:15 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.id: name] 输入键值[web自动化1659081553942] 
-2022-07-29 15:59:15 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659081553942] 
-2022-07-29 15:59:15 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.id: delta365]
-2022-07-29 15:59:17 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
-2022-07-29 15:59:20 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.xpath: //*[@id='tipsModal']/div[1]/a[1]]
-2022-07-29 15:59:26 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.xpath: //a[text()='维护模块']]
-2022-07-29 15:59:28 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.xpath: //*[@class='panel-body']/table[@class='table table-form']/tbody[1]/tr[1]/td[@id='moduleBox']/div[1]/div[1]/div[1]/input[@type='text']] 输入键值[web自动化1659081553942] 
-2022-07-29 15:59:29 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
-2022-07-29 15:59:34 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.xpath: //button[text()='返回']]
-2022-07-29 15:59:35 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.xpath: //a[text()='编辑']]
-2022-07-29 15:59:36 method: com.alvin.base.BasePage.input_type(BasePage.java:61) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659081553942] 
-2022-07-29 15:59:38 method: com.alvin.base.BasePage.click(BasePage.java:51) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
-2022-07-29 15:59:42 method: com.alvin.base.BasePage.getElementText(BasePage.java:71) - [ INFO ]----元素[By.id: currentItem] 的Text是[web自动化1659081553942] 
+2022-07-29 16:33:03 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:33:09 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:33:21 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:33:22 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:33:22 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:33:24 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
+2022-07-29 16:33:24 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:33:26 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:33:26 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:33:29 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:33:31 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:33:32 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:33:32 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:33:34 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 16:33:36 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='modulemenu']/ul[1]/li[@data-id='create']/a[1]/i[1]]
+2022-07-29 16:33:36 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: name] 输入键值[web自动化1659083615300] 
+2022-07-29 16:33:37 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659083615300] 
+2022-07-29 16:33:37 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: delta365]
+2022-07-29 16:33:39 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:33:42 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='tipsModal']/div[1]/a[1]]
+2022-07-29 16:33:48 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='维护模块']]
+2022-07-29 16:33:50 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.xpath: //*[@class='panel-body']/table[@class='table table-form']/tbody[1]/tr[1]/td[@id='moduleBox']/div[1]/div[1]/div[1]/input[@type='text']] 输入键值[web自动化1659083615300] 
+2022-07-29 16:33:51 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:33:56 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //button[text()='返回']]
+2022-07-29 16:33:57 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='编辑']]
+2022-07-29 16:33:58 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659083615300] 
+2022-07-29 16:34:00 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:34:04 method: com.alvin.base.BasePage.getElementText(BasePage.java:72) - [ INFO ]----元素[By.id: currentItem] 的Text是[web自动化1659083615300] 
+2022-07-29 16:34:04 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:34:04 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:34:07 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:34:08 method: com.alvin.util.BrowserUtil.switchWindow(BrowserUtil.java:87) - [ INFO ]----切换window是:用户登录 - 禅道
+2022-07-29 16:34:08 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:34:09 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:34:09 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:34:11 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='product']/a[1]]
+2022-07-29 16:34:12 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 16:34:14 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='qa']/a[1]]
+2022-07-29 16:34:16 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='doc']/a[1]]
+2022-07-29 16:34:17 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='report']/a[1]]
+2022-07-29 16:34:18 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.className: dropdown]
+2022-07-29 16:34:20 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:40:01 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:40:10 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:40:22 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:40:22 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:40:23 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:40:25 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
+2022-07-29 16:40:25 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:40:27 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:40:27 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:40:29 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:40:32 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:40:32 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:40:33 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:40:34 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 16:40:37 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='modulemenu']/ul[1]/li[@data-id='create']/a[1]/i[1]]
+2022-07-29 16:40:37 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: name] 输入键值[web自动化1659084035961] 
+2022-07-29 16:40:37 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659084035961] 
+2022-07-29 16:40:38 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: delta365]
+2022-07-29 16:40:40 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:40:42 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='tipsModal']/div[1]/a[1]]
+2022-07-29 16:40:49 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='维护模块']]
+2022-07-29 16:40:50 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.xpath: //*[@class='panel-body']/table[@class='table table-form']/tbody[1]/tr[1]/td[@id='moduleBox']/div[1]/div[1]/div[1]/input[@type='text']] 输入键值[web自动化1659084035961] 
+2022-07-29 16:40:52 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:40:56 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //button[text()='返回']]
+2022-07-29 16:40:58 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='编辑']]
+2022-07-29 16:40:58 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659084035961] 
+2022-07-29 16:41:01 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:41:05 method: com.alvin.base.BasePage.getElementText(BasePage.java:72) - [ INFO ]----元素[By.id: currentItem] 的Text是[web自动化1659084035961] 
+2022-07-29 16:41:05 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:41:05 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:41:06 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:41:07 method: com.alvin.util.BrowserUtil.switchWindow(BrowserUtil.java:87) - [ INFO ]----切换window是:用户登录 - 禅道
+2022-07-29 16:41:07 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:41:07 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:41:07 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:41:09 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='product']/a[1]]
+2022-07-29 16:41:11 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 16:41:12 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='qa']/a[1]]
+2022-07-29 16:41:14 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='doc']/a[1]]
+2022-07-29 16:41:15 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='report']/a[1]]
+2022-07-29 16:41:17 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.className: dropdown]
+2022-07-29 16:41:18 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:45:26 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:45:35 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:45:42 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:45:42 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:45:42 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:45:44 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
+2022-07-29 16:45:46 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
+2022-07-29 16:45:47 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-07-29 16:45:47 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:45:48 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 16:45:49 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 16:45:49 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:45:50 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-07-29 16:45:50 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:45:51 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 16:45:52 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 16:45:53 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
+2022-07-29 16:45:53 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:45:53 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:45:54 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 16:45:55 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 16:45:55 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:45:58 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:46:00 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:46:01 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:46:01 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:46:03 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 16:46:05 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='modulemenu']/ul[1]/li[@data-id='create']/a[1]/i[1]]
+2022-07-29 16:46:05 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: name] 输入键值[web自动化1659084364288] 
+2022-07-29 16:46:06 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659084364288] 
+2022-07-29 16:46:06 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: delta365]
+2022-07-29 16:46:08 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:46:11 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='tipsModal']/div[1]/a[1]]
+2022-07-29 16:46:17 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='维护模块']]
+2022-07-29 16:46:19 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.xpath: //*[@class='panel-body']/table[@class='table table-form']/tbody[1]/tr[1]/td[@id='moduleBox']/div[1]/div[1]/div[1]/input[@type='text']] 输入键值[web自动化1659084364288] 
+2022-07-29 16:46:20 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:46:25 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //button[text()='返回']]
+2022-07-29 16:46:26 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='编辑']]
+2022-07-29 16:46:27 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659084364288] 
+2022-07-29 16:46:29 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:46:33 method: com.alvin.base.BasePage.getElementText(BasePage.java:72) - [ INFO ]----元素[By.id: currentItem] 的Text是[web自动化1659084364288] 
+2022-07-29 16:46:33 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:46:33 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:46:34 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:46:35 method: com.alvin.util.BrowserUtil.switchWindow(BrowserUtil.java:87) - [ INFO ]----切换window是:用户登录 - 禅道
+2022-07-29 16:46:36 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:46:36 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:46:36 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:46:38 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='product']/a[1]]
+2022-07-29 16:46:40 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 16:46:41 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='qa']/a[1]]
+2022-07-29 16:46:43 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='doc']/a[1]]
+2022-07-29 16:46:45 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='report']/a[1]]
+2022-07-29 16:46:46 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.className: dropdown]
+2022-07-29 16:46:47 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:46:47 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:52:25 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:52:34 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:52:35 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:52:36 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:52:36 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:52:38 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
+2022-07-29 16:52:40 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
+2022-07-29 16:52:40 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-07-29 16:52:41 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:52:42 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 16:52:43 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 16:52:43 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:52:43 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-07-29 16:52:43 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:52:44 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 16:52:45 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 16:52:46 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
+2022-07-29 16:52:46 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:52:46 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:52:47 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 16:52:48 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 16:52:48 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:52:50 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:52:53 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:52:53 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:52:54 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:52:56 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 16:52:57 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='modulemenu']/ul[1]/li[@data-id='create']/a[1]/i[1]]
+2022-07-29 16:52:58 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: name] 输入键值[web自动化1659084777051] 
+2022-07-29 16:52:58 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659084777051] 
+2022-07-29 16:52:59 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: delta365]
+2022-07-29 16:53:01 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:53:03 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='tipsModal']/div[1]/a[1]]
+2022-07-29 16:53:10 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='维护模块']]
+2022-07-29 16:53:11 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.xpath: //*[@class='panel-body']/table[@class='table table-form']/tbody[1]/tr[1]/td[@id='moduleBox']/div[1]/div[1]/div[1]/input[@type='text']] 输入键值[web自动化1659084777051] 
+2022-07-29 16:53:12 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:53:17 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //button[text()='返回']]
+2022-07-29 16:53:19 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='编辑']]
+2022-07-29 16:53:19 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659084777051] 
+2022-07-29 16:53:21 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:53:25 method: com.alvin.base.BasePage.getElementText(BasePage.java:72) - [ INFO ]----元素[By.id: currentItem] 的Text是[web自动化1659084777051] 
+2022-07-29 16:53:25 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:53:26 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:53:28 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:53:40 method: com.alvin.util.BrowserUtil.switchWindow(BrowserUtil.java:87) - [ INFO ]----切换window是:用户登录 - 禅道
+2022-07-29 16:53:40 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:53:41 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:53:41 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:53:43 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='product']/a[1]]
+2022-07-29 16:53:44 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 16:53:46 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='qa']/a[1]]
+2022-07-29 16:53:48 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='doc']/a[1]]
+2022-07-29 16:53:49 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='report']/a[1]]
+2022-07-29 16:53:51 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.className: dropdown]
+2022-07-29 16:53:52 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:53:52 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:58:34 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:58:42 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:58:55 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:58:55 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:58:55 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:58:58 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
+2022-07-29 16:58:58 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:58:58 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:59:00 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:59:13 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
+2022-07-29 16:59:13 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-07-29 16:59:13 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:59:14 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 16:59:14 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 16:59:14 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:59:14 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:59:17 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:59:18 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:59:19 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-07-29 16:59:19 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:59:20 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 16:59:20 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 16:59:20 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:59:20 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:59:22 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:59:24 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
+2022-07-29 16:59:24 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:59:24 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:59:25 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 16:59:25 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 16:59:25 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 16:59:26 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 16:59:28 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 16:59:31 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 16:59:31 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 16:59:31 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 16:59:33 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 16:59:35 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='modulemenu']/ul[1]/li[@data-id='create']/a[1]/i[1]]
+2022-07-29 16:59:35 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: name] 输入键值[web自动化1659085174620] 
+2022-07-29 16:59:36 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659085174620] 
+2022-07-29 16:59:36 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: delta365]
+2022-07-29 16:59:38 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:59:41 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='tipsModal']/div[1]/a[1]]
+2022-07-29 16:59:48 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='维护模块']]
+2022-07-29 16:59:49 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.xpath: //*[@class='panel-body']/table[@class='table table-form']/tbody[1]/tr[1]/td[@id='moduleBox']/div[1]/div[1]/div[1]/input[@type='text']] 输入键值[web自动化1659085174620] 
+2022-07-29 16:59:50 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 16:59:55 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //button[text()='返回']]
+2022-07-29 16:59:56 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='编辑']]
+2022-07-29 16:59:57 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659085174620] 
+2022-07-29 16:59:59 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 17:00:03 method: com.alvin.base.BasePage.getElementText(BasePage.java:72) - [ INFO ]----元素[By.id: currentItem] 的Text是[web自动化1659085174620] 
+2022-07-29 17:00:03 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 17:00:03 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 17:00:06 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 17:00:13 method: com.alvin.util.BrowserUtil.switchWindow(BrowserUtil.java:87) - [ INFO ]----切换window是:用户登录 - 禅道
+2022-07-29 17:00:13 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 17:00:13 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 17:00:13 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 17:00:15 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='product']/a[1]]
+2022-07-29 17:00:16 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 17:00:18 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='qa']/a[1]]
+2022-07-29 17:00:19 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='doc']/a[1]]
+2022-07-29 17:00:21 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='report']/a[1]]
+2022-07-29 17:00:22 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.className: dropdown]
+2022-07-29 17:00:24 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 17:01:48 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 17:01:56 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 17:02:11 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 17:02:11 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 17:02:12 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 17:02:14 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
+2022-07-29 17:02:14 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 17:02:14 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 17:02:16 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 17:02:18 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
+2022-07-29 17:02:18 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-07-29 17:02:18 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 17:02:20 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 17:02:20 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 17:02:20 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 17:02:20 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 17:02:22 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 17:02:24 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 17:02:24 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-07-29 17:02:24 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 17:02:25 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 17:02:25 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 17:02:25 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 17:02:25 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 17:02:28 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 17:02:29 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
+2022-07-29 17:02:30 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 17:02:30 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 17:02:31 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-07-29 17:02:31 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-07-29 17:02:31 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 17:02:31 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 17:02:34 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 17:02:42 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 17:02:42 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 17:02:42 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 17:02:44 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 17:02:46 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='modulemenu']/ul[1]/li[@data-id='create']/a[1]/i[1]]
+2022-07-29 17:02:46 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: name] 输入键值[web自动化1659085365508] 
+2022-07-29 17:02:47 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659085365508] 
+2022-07-29 17:02:47 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: delta365]
+2022-07-29 17:02:49 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 17:02:52 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='tipsModal']/div[1]/a[1]]
+2022-07-29 17:02:58 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='维护模块']]
+2022-07-29 17:03:00 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.xpath: //*[@class='panel-body']/table[@class='table table-form']/tbody[1]/tr[1]/td[@id='moduleBox']/div[1]/div[1]/div[1]/input[@type='text']] 输入键值[web自动化1659085365508] 
+2022-07-29 17:03:01 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 17:03:06 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //button[text()='返回']]
+2022-07-29 17:03:07 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='编辑']]
+2022-07-29 17:03:08 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659085365508] 
+2022-07-29 17:03:10 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
+2022-07-29 17:03:14 method: com.alvin.base.BasePage.getElementText(BasePage.java:72) - [ INFO ]----元素[By.id: currentItem] 的Text是[web自动化1659085365508] 
+2022-07-29 17:03:14 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------
+2022-07-29 17:03:14 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:33) - [ INFO ]----开始测试--------
+2022-07-29 17:03:16 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----打开chrome浏览器
+2022-07-29 17:03:17 method: com.alvin.util.BrowserUtil.switchWindow(BrowserUtil.java:87) - [ INFO ]----切换window是:用户登录 - 禅道
+2022-07-29 17:03:18 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-07-29 17:03:18 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-07-29 17:03:18 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-07-29 17:03:20 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='product']/a[1]]
+2022-07-29 17:03:21 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
+2022-07-29 17:03:23 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='qa']/a[1]]
+2022-07-29 17:03:24 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='doc']/a[1]]
+2022-07-29 17:03:26 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='report']/a[1]]
+2022-07-29 17:03:27 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.className: dropdown]
+2022-07-29 17:03:28 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:65) - [ INFO ]----结束测试，关闭浏览器--------

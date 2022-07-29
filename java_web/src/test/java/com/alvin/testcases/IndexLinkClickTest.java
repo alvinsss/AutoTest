@@ -4,6 +4,7 @@ package com.alvin.testcases;
 import java.awt.Container;
 
 import org.openqa.selenium.devtools.v85.browser.Browser;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
