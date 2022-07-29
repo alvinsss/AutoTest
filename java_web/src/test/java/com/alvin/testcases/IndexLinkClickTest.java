@@ -4,7 +4,9 @@ package com.alvin.testcases;
 import java.awt.Container;
 
 import org.openqa.selenium.devtools.v85.browser.Browser;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -28,7 +30,7 @@ public class IndexLinkClickTest {
 	 
 	
 	@Parameters({"browerName"})
-	@BeforeTest
+	@BeforeMethod
 	public void setUp(String browerName) throws Exception {
 		System.out.println("IndexLinkClickTest BeforeTest");
 		BrowserUtil.OpenBrowser(browerName);
@@ -39,7 +41,7 @@ public class IndexLinkClickTest {
 	@Test(description = "测试首页链接")
    public void test_LinkClick() throws Exception  {
 	   //需要登录才能点击
-		BrowserUtil.switchWindow(BrowserUtil.driver,"用户登录 - 禅道");
+		BrowserUtil.switchWindow("用户登录 - 禅道");
 		LoginFlow loginFlow = new LoginFlow(LoginDatas.CORRECT_ACCOUNT,LoginDatas.CORRECT_PASSWORD);
 		loginFlow.login();
 	    Thread.sleep(1000);
@@ -49,10 +51,10 @@ public class IndexLinkClickTest {
 	   
    }
 	
-	@AfterTest
+	@AfterMethod
 	public void tearDown() {
-		System.out.println("IndexLinkClickTest AfterTest");
-		BrowserUtil.driver.quit();
+		BrowserUtil.closeBrowser();
+
 	}
 	
 }	

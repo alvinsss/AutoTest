@@ -2,7 +2,9 @@
 package com.alvin.base;
 
 import java.time.Duration;
+import java.util.Set;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -19,7 +21,7 @@ import com.alvin.util.BrowserUtil;
 */
 public class BasePage {
 	
-	
+	private static Logger logger = Logger.getLogger(BasePage.class);
 	/**
 	 *  元素是否可见
 	 * @param by
@@ -47,6 +49,7 @@ public class BasePage {
 	 */
 	public void click(By by) {
 		WaitElementClickable(by).click();
+		logger.info("点击了元素["+by+"]");
 	}
 	/***
 	 * 输入数据
@@ -56,6 +59,8 @@ public class BasePage {
 	public void input_type(By by,String data) {
 		WaitElementVisible(by).clear();
 		WaitElementVisible(by).sendKeys(data);
+		logger.info("给元素["+by+"] 输入键值["+data+"] ");
+
 	}
 	/***
 	 * 获取元素文本
@@ -64,6 +69,8 @@ public class BasePage {
 	 */
 	public String getElementText(By by) {
 		String text = WaitElementVisible(by).getText();
+		logger.info("元素["+by+"] 的Text是["+text+"] ");
+
 		return text;
 	}
 	
@@ -75,6 +82,7 @@ public class BasePage {
 	 */
 	public String getElementAttribute(By by ,String attrName) {
 		String attribute = WaitElementVisible(by).getAttribute(attrName);
+		logger.info("元素["+by+"] 的["+attrName+"]值是["+attrName+"] ");
 		return attribute;
 	}
 	
@@ -84,6 +92,7 @@ public class BasePage {
 	 */
 	public static String _getAlertText() {
 		Alert alert = BrowserUtil.driver.switchTo().alert();
+		logger.info("获取Alert文本内容:"+alert.getText());
 		return alert.getText();
 	}
 	
@@ -92,6 +101,8 @@ public class BasePage {
 	 */
 	public static void _click_AlertDismiss() {
 		Alert alert = BrowserUtil.driver.switchTo().alert();
+		logger.info("点击Alert的确定按钮");
 		alert.dismiss();
 	}
+
 }

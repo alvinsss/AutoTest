@@ -15,6 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -71,6 +72,7 @@ public class LoginTest {
 	 */
 	@Test(description = "", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas")
 	public void login_dfailure_getLoginFailureDatas(String account,String password, String expectedValue) throws Exception {
+		System.out.println("login_dfailure_getLoginFailureDatas");
 		LoginFlow loginAction = new LoginFlow(account,password);
 		loginAction.login();
 		Thread.sleep(1000);
@@ -84,8 +86,8 @@ public class LoginTest {
 	
 	@Test(description = "", dataProviderClass = LoginDatas.class, dataProvider = "getLoginErrorDatas")
 	public void login_dfailure_getLoginErrorDatas(String account,String password, String expectedValue) throws Exception {
-		System.out.println("account:"+account+"   password:"+password+"  expect:"+expectedValue);
-
+		System.out.println("login_dfailure_getLoginErrorDatas");
+		Thread.sleep(2000);
 		LoginFlow loginAction = new LoginFlow(account,password);
 		loginAction.login();
 		Thread.sleep(1000);
@@ -93,8 +95,6 @@ public class LoginTest {
 		//断言1 alert文本是否与预期一致
 		LoginPage loginPage = new LoginPage();
  		String actualValue=loginPage.getAlertText();
- 		System.out.println("actualValue"+actualValue);
- 		System.out.println("expectedValue"+expectedValue);
 		Assert.assertEquals(actualValue, expectedValue);
 		Thread.sleep(1000);
 		loginPage.click_AlertDismiss();
@@ -103,8 +103,8 @@ public class LoginTest {
 		
 	@AfterTest
 	public void tearDown() {
-		System.out.println("CreateProjectTest AfterTest");
-		BrowserUtil.driver.quit();
+		System.out.println("LoginTest tearDown");
+		BrowserUtil.closeBrowser();
 	}
 	
 }

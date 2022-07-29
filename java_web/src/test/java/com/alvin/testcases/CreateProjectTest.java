@@ -2,7 +2,10 @@
 package com.alvin.testcases;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -24,7 +27,7 @@ import com.alvin.util.BrowserUtil;
 public class CreateProjectTest {
 	
 	@Parameters({"browerName"})
-	@BeforeTest
+	@BeforeMethod
 	public void setUp(String browerName) {
 		BrowserUtil.OpenBrowser(browerName);
 		BrowserUtil.driver.get(Constant.LOGIN_URL);
@@ -61,16 +64,13 @@ public class CreateProjectTest {
 		Thread.sleep(2000);
 		String get_inputCreateProjectName = createProject.get_inputCreateProjectName();
 		String get_currentProjectNameText = createProject.get_autoTestcurrentProjectNameText();
-		
-		System.out.println("get_currentProjectNameText:"+get_currentProjectNameText);
- 		System.out.println("get_inputCreateProjectName:"+get_inputCreateProjectName);
+
 		Assert.assertEquals(get_inputCreateProjectName, get_currentProjectNameText);
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void tearDown() {
-		System.out.println("LoginTest AfterTest");
-		BrowserUtil.driver.quit();
+		BrowserUtil.closeBrowser();
 	}
 	
 }
