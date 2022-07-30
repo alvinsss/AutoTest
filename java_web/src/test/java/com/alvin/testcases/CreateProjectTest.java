@@ -39,7 +39,6 @@ public class CreateProjectTest {
 		
 		//登录
 		Thread.sleep(1000);
-		System.out.println("createProjectTest 登录");
 		LoginFlow loginFlow = new LoginFlow(LoginDatas.CORRECT_ACCOUNT,LoginDatas.CORRECT_PASSWORD);
 		loginFlow.login();
 		Thread.sleep(1000);
