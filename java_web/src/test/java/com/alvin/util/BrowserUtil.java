@@ -1,9 +1,14 @@
 
 package com.alvin.util;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -49,6 +54,27 @@ public class BrowserUtil {
 			logger.info("打开edge浏览器");
 		}
 	}
+	
+	/**
+	 * 截图方法，使用TakesScreenshot接口
+	 */
+	public static void takesScreenshot() {
+		//driver强转
+		TakesScreenshot takesScreenshot =(TakesScreenshot)driver; 
+		//OutputType.FILE--返回类型FILE（图片）
+		File srcFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		//目标file路径
+		File destFile = new File("E:\\eclipse-workspace\\JavaAutoTest\\java_web\\pic\\screeshort2.png");
+		try {
+			FileUtils.copyFile(srcFile,destFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
 	
 	
 	/**

@@ -58,6 +58,7 @@ public class LoginTest {
 		//断言1 判断url地址
 		String expectedValue=Constant.INDEX_URL;
 		String actualValue=BrowserUtil.driver.getCurrentUrl();
+		BrowserUtil.takesScreenshot();
 		System.out.println("actualValue:" + actualValue);
 		Assert.assertEquals(actualValue, expectedValue);
 		
@@ -71,7 +72,7 @@ public class LoginTest {
 	 *  dataProvider注解返回2维数组，根据dataProviderClass.dataProvider的方法名指定数据
 	 * @throws Exception
 	 */
-	@Test(description = "", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas")
+	@Test(enabled = false, description = "账号和密码错误", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas")
 	public void login_dfailure_getLoginFailureDatas(String account,String password, String expectedValue) throws Exception {
 		System.out.println("login_dfailure_getLoginFailureDatas");
 		LoginFlow loginAction = new LoginFlow(account,password);
@@ -84,7 +85,7 @@ public class LoginTest {
 		loginPage.click_AlertDismiss();
 	}
 	
-	@Test(description = "", dataProviderClass = LoginDatas.class, dataProvider = "getLoginErrorDatas")
+	@Test(enabled = false, description = "错误账号和密码", dataProviderClass = LoginDatas.class, dataProvider = "getLoginErrorDatas")
 	public void login_dfailure_getLoginErrorDatas(String account,String password, String expectedValue) throws Exception {
 		System.out.println("login_dfailure_getLoginErrorDatas");
 		LoginFlow loginAction = new LoginFlow(account,password);
