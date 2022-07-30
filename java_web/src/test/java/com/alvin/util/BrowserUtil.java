@@ -58,24 +58,32 @@ public class BrowserUtil {
 	/**
 	 * 截图方法，使用TakesScreenshot接口
 	 */
-	public static void takesScreenshot() {
+	public static void takesScreenshot(String filePath) {
 		//driver强转
 		TakesScreenshot takesScreenshot =(TakesScreenshot)driver; 
 		//OutputType.FILE--返回类型FILE（图片）
 		File srcFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
 		//目标file路径
-		File destFile = new File("E:\\eclipse-workspace\\JavaAutoTest\\java_web\\pic\\screeshort2.png");
+//		File destFile = new File("E:\\eclipse-workspace\\JavaAutoTest\\java_web\\pic\\screeshort2.png");
+		File destFile = new File(filePath);
 		try {
 			FileUtils.copyFile(srcFile,destFile);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 	}
 	
-	
+	/**
+	 * 返回字节类型一维数组
+	 * @return byte []
+	 */
+	public static byte[] takesScreenshot() {
+		//driver强转
+		TakesScreenshot takesScreenshot =(TakesScreenshot)driver; 
+ 		byte [] arr= takesScreenshot.getScreenshotAs(OutputType.BYTES);
+ 		return arr;
+	}
 	
 	/**
 	 * 浏览器最大化
