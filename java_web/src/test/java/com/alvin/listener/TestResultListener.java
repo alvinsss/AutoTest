@@ -32,15 +32,7 @@ public class TestResultListener extends TestListenerAdapter {
 		String fileName =System.currentTimeMillis()+".png";
 		BrowserUtil.takesScreenshot(filePath+fileName);
 	}
-	/**
-	 * 用例失败返回
-	 * @return
-	 */
-	@Attachment(value="Page screenshort" ,type="image/png")
-	public byte[]  addAttachment() {
-		return BrowserUtil.takesScreenshot();
-	}
-	
+ 
 	
 	@Override
 	public void onTestSuccess(ITestResult tr) {
@@ -48,6 +40,14 @@ public class TestResultListener extends TestListenerAdapter {
 		super.onTestSuccess(tr);
 		//自定义成功操作
 	}
-
+	/**
+	 * 用例失败返回
+	 * @return
+	 */
+	@Attachment
+	public String  addAttachment() {
+		return "hello java 17";
+	}
+	
 	
 }

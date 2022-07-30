@@ -85,6 +85,7 @@ public class BrowserUtil {
  		return arr;
 	}
 	
+	
 	/**
 	 * 浏览器最大化
 	 */
