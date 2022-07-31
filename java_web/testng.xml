@@ -4,6 +4,8 @@
 	<listeners>
 	<!-- 截图失败截图方法 继承TestListenerAdapter-->
 		<listener class-name="com.alvin.listener.TestResultListener"></listener>
+		<!-- 设置全局监听-->
+		<listener class-name="com.alvin.listener.RetryListener"></listener>
 	</listeners>
 	
 　<test name="Test" preserve-order="true">  
