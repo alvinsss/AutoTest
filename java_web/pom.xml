@@ -38,6 +38,13 @@
 			<version>2.17.3</version>
 			<scope>test</scope>
 		</dependency>
+		
+				<!-- commons-io依赖 截图 -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
 
 	</dependencies>
 	
@@ -64,7 +71,7 @@
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
 						<!-- testng配置文件名称 -->
-						<suiteXmlFile>testng_success.xml</suiteXmlFile>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<!--设置参数命令行 -->
 					<argLine>

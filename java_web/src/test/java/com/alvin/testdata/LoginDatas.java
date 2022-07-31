@@ -20,8 +20,8 @@ public class LoginDatas {
 	public static Object[][] getLoginFailureDatas(){
 		Object[][] datas = {
 				{"admin","123456abc","登录失败，请检查您的用户名或密码是否填写正确。"},
-				{"","123456abcd","登录失败，请检查您的用户名或密码是否填写正确。"}   };
-		System.out.println("getLoginFailureDatas");
+				{"","123456abcd","登录失败，请检查您的用户名或密码是否填写正确。"} 
+	 };		 
 		return datas;
 	}
 	
@@ -29,7 +29,6 @@ public class LoginDatas {
 	public static Object[][] getLoginErrorDatas(){
 		Object[][] datas = {
 				{"alvin","123456abc","登录失败，请检查您的用户名或密码是否填写正确。"}  };
-		System.out.println("getLoginErrorDatas");
 		return datas;
 	}
 

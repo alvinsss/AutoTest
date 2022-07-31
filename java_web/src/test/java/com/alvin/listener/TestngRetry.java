@@ -18,7 +18,7 @@ public class TestngRetry implements IRetryAnalyzer{
 
 	// 规定重试次数最多跑多少次
 	private int maxRetryCount = 2;
-	// 当前的重试次数
+	// 只有断言失败的测试才能进入，所以当前的重试次数初始是1，static类型方便TestResultListener操作重置
 	public static int currentRetryCount = 1;
 
 	@Override

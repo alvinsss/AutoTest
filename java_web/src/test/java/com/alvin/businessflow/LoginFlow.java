@@ -33,13 +33,8 @@ public class LoginFlow {
 	 * 登录业务流程
 	 */
 	public  void login(){
-		System.out.println("login");
 		LoginPage loginPage = new LoginPage();
-		System.out.println("111");
-
 		loginPage.inputUserAccount(account);
-		System.out.println("222");
-
 		loginPage.inputPassword(password);
 		//验证码处理
 		loginPage.clickLoginButton();

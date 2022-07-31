@@ -12,6 +12,9 @@
   <parameter name="browerName" value="chrome"></parameter>
     <classes>
 	  <class name="com.alvin.testcases.LoginTest"/>
+	        <class name="com.alvin.testcases.CreateProjectTest"/>
+      <class name="com.alvin.testcases.IndexLinkClickTest"/>
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -2,7 +2,9 @@
 package com.alvin.testcases;
 
 import org.openqa.selenium.devtools.v85.browser.Browser;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -20,7 +22,7 @@ import com.beust.jcommander.Parameter;
 public class TestCaseDemoFile {
 	
 	@Parameters({"browerName"})
-	@BeforeTest
+	@BeforeMethod
 	public void setUp(String browerName) {
 		BrowserUtil.OpenBrowser(browerName);
 		BrowserUtil.driver.get(Constant.LOGIN_URL);
@@ -32,7 +34,7 @@ public class TestCaseDemoFile {
 		System.out.println("test1");
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void tearDown() {
 		BrowserUtil.driver.quit();
 	}
