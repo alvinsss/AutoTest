@@ -23,6 +23,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.alvin.businessflow.LoginFlow;
+import com.alvin.listener.TestngRetry;
 import com.alvin.pageobject.IndexPage;
 import com.alvin.pageobject.LoginPage;
 import com.alvin.testdata.Constant;
@@ -48,7 +49,7 @@ public class LoginTest {
 		BrowserUtil.driver.manage().window().maximize();
 	}
 
-	@Test(description = "正确的account ,password的用例")
+	@Test(enabled = false, description = "正确的account ,password的用例")
 	public void login_asuccess() throws Exception {
 		System.out.println("test login_success");
 		System.out.println(LoginDatas.CORRECT_ACCOUNT+"---->"+LoginDatas.CORRECT_PASSWORD);
@@ -58,7 +59,6 @@ public class LoginTest {
 		//断言1 判断url地址
 		String expectedValue=Constant.INDEX_URL;
 		String actualValue=BrowserUtil.driver.getCurrentUrl();
-		BrowserUtil.takesScreenshot();
 		System.out.println("actualValue:" + actualValue);
 		Assert.assertEquals(actualValue, expectedValue);
 		
@@ -72,7 +72,7 @@ public class LoginTest {
 	 *  dataProvider注解返回2维数组，根据dataProviderClass.dataProvider的方法名指定数据
 	 * @throws Exception
 	 */
-	@Test(enabled = false, description = "账号和密码错误", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas")
+	@Test( description = "账号和密码错误", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas",retryAnalyzer=TestngRetry.class )
 	public void login_dfailure_getLoginFailureDatas(String account,String password, String expectedValue) throws Exception {
 		System.out.println("login_dfailure_getLoginFailureDatas");
 		LoginFlow loginAction = new LoginFlow(account,password);
