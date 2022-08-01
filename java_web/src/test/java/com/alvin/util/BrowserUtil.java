@@ -78,7 +78,7 @@ public class BrowserUtil {
 	 * 返回字节类型一维数组
 	 * @return byte []
 	 */
-	public static byte[] takesScreenshot() {
+	public static byte[] screenshot() {
 		//driver强转
 		TakesScreenshot takesScreenshot =(TakesScreenshot)driver; 
  		byte [] arr= takesScreenshot.getScreenshotAs(OutputType.BYTES);

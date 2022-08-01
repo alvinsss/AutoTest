@@ -34,7 +34,7 @@ public class TestResultListener extends TestListenerAdapter {
 		System.getProperty("user.dir");
 		
 		//用例失败返回备注文字和失败截图方便allure展示
-		addAttachmentTakesScreenshot();
+//		addAttachmentTakesScreenshot();
 		
 		String filePath = System.getProperty("user.dir")+"\\target\\screenshot\\";
 		String fileName =System.currentTimeMillis()+".png";
@@ -53,14 +53,12 @@ public class TestResultListener extends TestListenerAdapter {
 		//当执行第1次重试失败 用例通过的，当执行第2次重试的时候，用例通过的
 		TestngRetry.currentRetryCount=1;
 		logger.info("onTestSuccess reset:"+TestngRetry.currentRetryCount);
-
-
 	}
 	
 	
 	/**
 	 * 用例失败返回固定的备注文字方便allure展示
-	 * @return
+	 * @return 固定写死备注给allure展示
 	 */
 	@Attachment
 	public String  addAttachment() {
@@ -75,7 +73,10 @@ public class TestResultListener extends TestListenerAdapter {
 	@Attachment(value = "current case page screenshot", type = "image/png")
 	public byte[] addAttachmentTakesScreenshot(){
 		logger.info(" addAttachmentTakesScreenshot  is running...");
-		return BrowserUtil.takesScreenshot();
+		return BrowserUtil.screenshot();
 	}
+	
+
+	
 	
 }

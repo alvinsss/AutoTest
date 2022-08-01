@@ -17,9 +17,7 @@ import io.qameta.allure.Attachment;
 * @date 2022年8月1日 上午9:00:47
 */
 public class AllureReportListener  implements IHookable{
-	
 	private static Logger logger = Logger.getLogger(AllureReportListener.class);
-
 	@Override
 	public void run(IHookCallBack callBack, ITestResult testResult) {
 		// TODO Auto-generated method stub
@@ -34,9 +32,7 @@ public class AllureReportListener  implements IHookable{
 			saveScreenshot(testResult.getMethod().getDescription());
 		}
 	}
-	
 	/**
-	 *  
 	 * @return 返回iHookable返回(testResult)info1给allure截图当做备注展示
 	 */
 	@Attachment(value = "Screenshot:{0}", type = "image/png")

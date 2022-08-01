@@ -1,5 +1,5 @@
 
-package com.alvin.testdemo;
+package com.test.demo;
 
 import java.util.Set;
 

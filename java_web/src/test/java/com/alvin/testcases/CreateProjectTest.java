@@ -15,7 +15,6 @@ import com.alvin.businessflow.LoginFlow;
 import com.alvin.pageobject.IndexPage;
 import com.alvin.testdata.Constant;
 import com.alvin.testdata.LoginDatas;
-import com.alvin.testdemo.OpenBrowser;
 import com.alvin.util.BrowserUtil;
 
 /**

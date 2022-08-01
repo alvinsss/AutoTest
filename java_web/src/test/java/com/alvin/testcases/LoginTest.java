@@ -73,7 +73,7 @@ public class LoginTest {
 	 *  使用testng重试监听，所以可以去掉每个@Test的retryAnalyzer
 	 * @throws Exception
 	 */
-	@Test(  description = "账号和密码错误", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas",retryAnalyzer=TestngRetry.class )
+	@Test(  description = "账号和密码错误1", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas",retryAnalyzer=TestngRetry.class )
 //	@Test( enabled = false,description = "账号和密码错误", dataProviderClass = LoginDatas.class, dataProvider = "getLoginErrorDatas" )
 	public void login_dfailure_getLoginFailureDatas(String account,String password, String expectedValue) throws Exception {
 		System.out.println("login_dfailure_getLoginFailureDatas");
@@ -87,7 +87,7 @@ public class LoginTest {
 		loginPage.click_AlertDismiss();
 	}
 	
-	@Test( description = "错误账号和密码", dataProviderClass = LoginDatas.class, dataProvider = "getLoginErrorDatas")
+	@Test( description = "错误账号和密码2", dataProviderClass = LoginDatas.class, dataProvider = "getLoginErrorDatas")
 	public void login_dfailure_getLoginErrorDatas(String account,String password, String expectedValue) throws Exception {
 		System.out.println("login_dfailure_getLoginErrorDatas");
 		LoginFlow loginAction = new LoginFlow(account,password);

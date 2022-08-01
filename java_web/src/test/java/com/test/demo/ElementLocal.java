@@ -1,5 +1,5 @@
 
-package com.basewebtest;
+package com.test.demo;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class ElementLocal {
 	
 	public static void main(String[] args) {
 		
-		WebDriver driver = OpenBD.OpenBrowser("firefox");
+		WebDriver driver = OpenBrowser.OpenBrowserDriver("firefox");
 		driver.get("http://www.baidu.com");
 //		driver.findElement(By.id("kw")).sendKeys("qatest");
 //		driver.findElement(By.name("wd")).sendKeys("qatest");
@@ -54,6 +54,9 @@ public class ElementLocal {
 		//支持元素全部文本的定位  //*[text()='文本值']  
 		//支持部分属性/文本的定位  //*[contains(@name,'wd')]    //*[contains(text(),'登录')]  
 		driver.findElement(By.xpath("//*[contains(@name,'wd')] ")).sendKeys("qa");
+		driver.get("https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner");
+		WebElement element4 = driver.findElement(By.xpath("//*[@class='VirusSummarySix_1-58-1_3wCKWi VirusSummarySix_1-58-1_c39Mfc']/div[2]"));
+		System.out.println(element4.getText());
 	}
 
 }
