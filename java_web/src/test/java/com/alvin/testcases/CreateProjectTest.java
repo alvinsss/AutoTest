@@ -29,8 +29,8 @@ public class CreateProjectTest {
 	@BeforeMethod
 	public void setUp(String browerName) {
 		BrowserUtil.OpenBrowser(browerName);
-		BrowserUtil.driver.get(Constant.LOGIN_URL);
-		BrowserUtil.driver.manage().window().maximize();
+		BrowserUtil.getDriver().get(Constant.LOGIN_URL);
+		BrowserUtil.getDriver().manage().window().maximize();
 	}
 	
 	@Test
@@ -58,7 +58,7 @@ public class CreateProjectTest {
 		createProject.input_moduleUpdataProject();
 		System.out.println("createProjectTest 编辑项目");
 		createProject.input_editProject();
-		System.out.println(BrowserUtil.driver.getCurrentUrl());
+		System.out.println(BrowserUtil.getDriver().getCurrentUrl());
 		Thread.sleep(2000);
 		String get_inputCreateProjectName = createProject.get_inputCreateProjectName();
 		String get_currentProjectNameText = createProject.get_autoTestcurrentProjectNameText();

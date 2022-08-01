@@ -32,7 +32,7 @@ public class LoginTest {
 	
 	@AfterTest
 	public void tearDown(){
-		System.out.println("当前LoginTest类里面a的值："+a);
+		logger.info("当前LoginTest类里面a的值："+a);
 	}
 	
 

@@ -1,154 +1,180 @@
-2022-07-31 12:14:51 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:15:02 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:15:04 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-31 12:15:05 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:15:05 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:15:07 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
-2022-07-31 12:15:07 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:15:07 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:15:07 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:15:10 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:15:11 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
-2022-07-31 12:15:12 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
-2022-07-31 12:15:12 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:15:13 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
-2022-07-31 12:15:13 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
-2022-07-31 12:15:13 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:15:13 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:15:13 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:15:16 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:15:17 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-31 12:15:18 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
-2022-07-31 12:15:18 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:15:19 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
-2022-07-31 12:15:19 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
-2022-07-31 12:15:19 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:15:19 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:15:19 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:15:21 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:15:23 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
-2022-07-31 12:15:23 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:15:24 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:15:25 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
-2022-07-31 12:15:25 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
-2022-07-31 12:15:25 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:15:25 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:17:46 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:17:56 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:18:08 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-31 12:18:09 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:18:09 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:18:11 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
-2022-07-31 12:18:11 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:18:11 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:18:11 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:18:14 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:18:15 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
-2022-07-31 12:18:16 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
-2022-07-31 12:18:16 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:18:17 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
-2022-07-31 12:18:17 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
-2022-07-31 12:18:17 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:18:17 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:18:17 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:18:19 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:18:21 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-31 12:18:21 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:18:22 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:18:23 method: com.alvin.listener.TestngRetry.retry(TestngRetry.java:30) - [ INFO ]------------当前的重试次数【1】---------
-2022-07-31 12:18:23 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:18:23 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:18:25 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:18:27 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-31 12:18:27 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:18:27 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:18:28 method: com.alvin.listener.TestngRetry.retry(TestngRetry.java:30) - [ INFO ]------------当前的重试次数【2】---------
-2022-07-31 12:18:28 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:18:28 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:18:31 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:18:32 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-31 12:18:33 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:18:33 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:18:34 method: com.alvin.listener.TestResultListener.addAttachmentTakesScreenshot(TestResultListener.java:77) - [ INFO ]---- addAttachmentTakesScreenshot  is running...
-2022-07-31 12:18:35 method: com.alvin.listener.TestResultListener.onTestFailure(TestResultListener.java:44) - [ INFO ]----onTestFailure reset:1
-2022-07-31 12:18:35 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:18:35 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:18:37 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:18:39 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
-2022-07-31 12:18:39 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:18:39 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:18:41 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
-2022-07-31 12:18:41 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
-2022-07-31 12:18:41 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:18:41 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:20:44 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:20:55 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:20:57 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-31 12:20:57 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:20:57 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:21:00 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
-2022-07-31 12:21:00 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:21:00 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:21:00 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:21:02 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:21:04 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
-2022-07-31 12:21:04 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
-2022-07-31 12:21:04 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:21:06 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
-2022-07-31 12:21:06 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
-2022-07-31 12:21:06 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:21:06 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:21:06 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:21:08 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:21:10 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-31 12:21:10 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
-2022-07-31 12:21:10 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:21:11 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
-2022-07-31 12:21:11 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
-2022-07-31 12:21:11 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:21:11 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:21:11 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:21:14 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:21:15 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
-2022-07-31 12:21:16 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:21:16 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:21:17 method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
-2022-07-31 12:21:17 method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
-2022-07-31 12:21:17 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:21:17 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:21:17 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:21:19 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:21:22 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-31 12:21:22 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:21:23 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:21:25 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
-2022-07-31 12:21:26 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='modulemenu']/ul[1]/li[@data-id='create']/a[1]/i[1]]
-2022-07-31 12:21:27 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: name] 输入键值[web自动化1659241286159] 
-2022-07-31 12:21:27 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659241286159] 
-2022-07-31 12:21:28 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: delta365]
-2022-07-31 12:21:30 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
-2022-07-31 12:21:32 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='tipsModal']/div[1]/a[1]]
-2022-07-31 12:21:39 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='维护模块']]
-2022-07-31 12:21:40 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.xpath: //*[@class='panel-body']/table[@class='table table-form']/tbody[1]/tr[1]/td[@id='moduleBox']/div[1]/div[1]/div[1]/input[@type='text']] 输入键值[web自动化1659241286159] 
-2022-07-31 12:21:41 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
-2022-07-31 12:21:46 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //button[text()='返回']]
-2022-07-31 12:21:48 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='编辑']]
-2022-07-31 12:21:48 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.id: code] 输入键值[web自动化1659241286159] 
-2022-07-31 12:21:50 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //*[@id='submit']]
-2022-07-31 12:21:54 method: com.alvin.base.BasePage.getElementText(BasePage.java:72) - [ INFO ]----元素[By.id: currentItem] 的Text是[web自动化1659241286159] 
-2022-07-31 12:21:54 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:21:54 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
-2022-07-31 12:21:54 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:38) - [ INFO ]----开始测试--------
-2022-07-31 12:21:57 method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:43) - [ INFO ]----打开chrome浏览器
-2022-07-31 12:21:58 method: com.alvin.util.BrowserUtil.switchWindow(BrowserUtil.java:122) - [ INFO ]----切换window是:用户登录 - 禅道
-2022-07-31 12:21:58 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
-2022-07-31 12:21:58 method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
-2022-07-31 12:21:58 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
-2022-07-31 12:22:00 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='product']/a[1]]
-2022-07-31 12:22:02 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='project']/a[1]]
-2022-07-31 12:22:03 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='qa']/a[1]]
-2022-07-31 12:22:05 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='doc']/a[1]]
-2022-07-31 12:22:07 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //li[@data-id='report']/a[1]]
-2022-07-31 12:22:08 method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.className: dropdown]
-2022-07-31 12:22:09 method: com.alvin.listener.TestResultListener.onTestSuccess(TestResultListener.java:55) - [ INFO ]----onTestSuccess reset:1
-2022-07-31 12:22:09 method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:100) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:36:30 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:36:30 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:36:34 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:46) - [ INFO ]----打开chrome浏览器
+2022-08-01 16:36:37 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:53) - [ INFO ]----打开firefox浏览器
+2022-08-01 16:36:37 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-08-01 16:36:38 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-08-01 16:36:38 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:36:39 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
+2022-08-01 16:36:39 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:36:39 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_asuccess()[pri:0, instance:com.alvin.testcases.LoginTest@3ec300f1]
+2022-08-01 16:36:39 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:正确的account ,password的用例
+2022-08-01 16:36:39 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:121) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:36:39 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:36:40 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-08-01 16:36:40 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-08-01 16:36:40 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:36:41 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:46) - [ INFO ]----打开chrome浏览器
+2022-08-01 16:36:42 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
+2022-08-01 16:36:42 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:36:42 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_asuccess()[pri:0, instance:com.alvin.testcases.LoginTest@3ee0fea4]
+2022-08-01 16:36:42 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:正确的account ,password的用例
+2022-08-01 16:36:42 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:121) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:36:44 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
+2022-08-01 16:36:44 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-08-01 16:36:44 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:36:44 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:36:45 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:36:45 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:36:45 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:36:45 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginErrorDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ec300f1]
+2022-08-01 16:36:45 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:错误账号和密码2
+2022-08-01 16:36:45 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:121) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:36:45 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:36:47 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:46) - [ INFO ]----打开chrome浏览器
+2022-08-01 16:36:49 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:53) - [ INFO ]----打开firefox浏览器
+2022-08-01 16:36:49 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-08-01 16:36:50 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-08-01 16:36:50 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:36:51 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:36:51 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:36:51 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:36:51 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginFailureDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ec300f1]
+2022-08-01 16:36:51 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:账号和密码错误1
+2022-08-01 16:36:51 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:121) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:36:51 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:36:51 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
+2022-08-01 16:36:51 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-08-01 16:36:52 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:36:52 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:46) - [ INFO ]----打开chrome浏览器
+2022-08-01 16:36:53 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:36:53 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:36:53 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:36:53 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginErrorDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ee0fea4]
+2022-08-01 16:36:53 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:错误账号和密码2
+2022-08-01 16:36:53 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:121) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:36:53 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:36:55 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
+2022-08-01 16:36:55 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-08-01 16:36:56 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:36:57 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:36:57 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:36:57 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:36:57 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginFailureDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ec300f1]
+2022-08-01 16:36:57 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:账号和密码错误1
+2022-08-01 16:36:57 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:121) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:36:57 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:53) - [ INFO ]----打开firefox浏览器
+2022-08-01 16:37:00 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-08-01 16:37:00 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-08-01 16:37:01 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:37:02 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:37:02 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:37:02 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:37:02 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginFailureDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ee0fea4]
+2022-08-01 16:37:02 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:账号和密码错误1
+2022-08-01 16:37:02 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:121) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:37:04 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:37:08 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:53) - [ INFO ]----打开firefox浏览器
+2022-08-01 16:37:11 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
+2022-08-01 16:37:11 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-08-01 16:37:11 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:37:12 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:37:12 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:37:12 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:37:12 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginFailureDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ee0fea4]
+2022-08-01 16:37:12 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:账号和密码错误1
+2022-08-01 16:37:12 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:121) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:40:56 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:40:56 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:40:56 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:41) - [ INFO ]----testaaa-1线程id:20
+2022-08-01 16:40:56 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:41) - [ INFO ]----testaaa-1线程id:21
+2022-08-01 16:41:00 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:47) - [ INFO ]----打开chrome浏览器
+2022-08-01 16:41:03 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:54) - [ INFO ]----打开firefox浏览器
+2022-08-01 16:41:03 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-08-01 16:41:03 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-08-01 16:41:03 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:41:05 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
+2022-08-01 16:41:05 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:41:05 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_asuccess()[pri:0, instance:com.alvin.testcases.LoginTest@3ec300f1]
+2022-08-01 16:41:05 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:正确的account ,password的用例
+2022-08-01 16:41:05 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:122) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:41:05 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:41:05 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:41) - [ INFO ]----testaaa-1线程id:20
+2022-08-01 16:41:06 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:47) - [ INFO ]----打开chrome浏览器
+2022-08-01 16:41:09 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
+2022-08-01 16:41:09 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-08-01 16:41:10 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:41:11 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:41:11 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:41:11 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:41:11 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginErrorDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ec300f1]
+2022-08-01 16:41:11 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:错误账号和密码2
+2022-08-01 16:41:11 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:122) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:41:11 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:41:11 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:41) - [ INFO ]----testaaa-1线程id:20
+2022-08-01 16:41:12 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:47) - [ INFO ]----打开chrome浏览器
+2022-08-01 16:41:15 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-08-01 16:41:15 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-08-01 16:41:15 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:41:16 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:41:16 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:41:16 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:41:16 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginFailureDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ec300f1]
+2022-08-01 16:41:16 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:账号和密码错误1
+2022-08-01 16:41:16 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:122) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:41:16 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:41:16 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:41) - [ INFO ]----testaaa-1线程id:20
+2022-08-01 16:41:17 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:47) - [ INFO ]----打开chrome浏览器
+2022-08-01 16:41:18 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-08-01 16:41:18 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-08-01 16:41:18 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:41:20 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.xpath: //a[text()='退出']]
+2022-08-01 16:41:20 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:41:20 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_asuccess()[pri:0, instance:com.alvin.testcases.LoginTest@3ee0fea4]
+2022-08-01 16:41:20 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:正确的account ,password的用例
+2022-08-01 16:41:20 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:122) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:41:20 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
+2022-08-01 16:41:20 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-08-01 16:41:20 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:41:21 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:41:21 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:41:22 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:41:22 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginFailureDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ec300f1]
+2022-08-01 16:41:22 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:账号和密码错误1
+2022-08-01 16:41:22 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:122) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:41:22 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:41:22 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:41) - [ INFO ]----testaaa-1线程id:21
+2022-08-01 16:41:26 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:54) - [ INFO ]----打开firefox浏览器
+2022-08-01 16:41:29 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[alvin] 
+2022-08-01 16:41:29 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-08-01 16:41:29 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:41:30 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:41:30 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:41:30 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:41:30 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginErrorDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ee0fea4]
+2022-08-01 16:41:30 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:错误账号和密码2
+2022-08-01 16:41:30 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:122) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:41:33 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:41:33 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:41) - [ INFO ]----testaaa-1线程id:21
+2022-08-01 16:41:37 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:54) - [ INFO ]----打开firefox浏览器
+2022-08-01 16:41:39 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[admin] 
+2022-08-01 16:41:39 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abc] 
+2022-08-01 16:41:40 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:41:41 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:41:41 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:41:41 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:41:41 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginFailureDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ee0fea4]
+2022-08-01 16:41:41 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:账号和密码错误1
+2022-08-01 16:41:41 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:122) - [ INFO ]----结束测试，关闭浏览器--------
+2022-08-01 16:41:43 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:40) - [ INFO ]----开始测试--------
+2022-08-01 16:41:43 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:41) - [ INFO ]----testaaa-1线程id:21
+2022-08-01 16:41:47 thread:TestNG method: com.alvin.util.BrowserUtil.OpenBrowser(BrowserUtil.java:54) - [ INFO ]----打开firefox浏览器
+2022-08-01 16:41:50 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: account] 输入键值[] 
+2022-08-01 16:41:50 thread:TestNG method: com.alvin.base.BasePage.input_type(BasePage.java:62) - [ INFO ]----给元素[By.name: password] 输入键值[123456abcd] 
+2022-08-01 16:41:50 thread:TestNG method: com.alvin.base.BasePage.click(BasePage.java:52) - [ INFO ]----点击了元素[By.id: submit]
+2022-08-01 16:41:51 thread:TestNG method: com.alvin.base.BasePage._getAlertText(BasePage.java:95) - [ INFO ]----获取Alert文本内容:登录失败，请检查您的用户名或密码是否填写正确。
+2022-08-01 16:41:51 thread:TestNG method: com.alvin.base.BasePage._click_AlertDismiss(BasePage.java:104) - [ INFO ]----点击Alert的确定按钮
+2022-08-01 16:41:51 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:26) - [ INFO ]----testResult.getTestClass:[TestClass name=class com.alvin.testcases.LoginTest]
+2022-08-01 16:41:51 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:27) - [ INFO ]----testResult.getMethod:LoginTest.login_dfailure_getLoginFailureDatas(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.alvin.testcases.LoginTest@3ee0fea4]
+2022-08-01 16:41:51 thread:TestNG method: com.alvin.listener.AllureReportListener.run(AllureReportListener.java:28) - [ INFO ]----testResult.getDescription:账号和密码错误1
+2022-08-01 16:41:51 thread:TestNG method: com.alvin.util.BrowserUtil.closeBrowser(BrowserUtil.java:122) - [ INFO ]----结束测试，关闭浏览器--------

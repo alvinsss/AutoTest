@@ -45,8 +45,8 @@ public class LoginTest {
 	public void setUp(String browerName) {
 		System.out.println("CreateProjectTest BeforeTest");
 		BrowserUtil.OpenBrowser(browerName);
-		BrowserUtil.driver.get(Constant.LOGIN_URL);
-		BrowserUtil.driver.manage().window().maximize();
+		BrowserUtil.getDriver().get(Constant.LOGIN_URL);
+		BrowserUtil.getDriver().manage().window().maximize();
 	}
 
 	@Test(description = "正确的account ,password的用例")
@@ -58,7 +58,7 @@ public class LoginTest {
 		Thread.sleep(1000);
 		//断言1 判断url地址
 		String expectedValue=Constant.INDEX_URL;
-		String actualValue=BrowserUtil.driver.getCurrentUrl();
+		String actualValue=BrowserUtil.getDriver().getCurrentUrl();
 		System.out.println("actualValue:" + actualValue);
 		Assert.assertEquals(actualValue, expectedValue);
 		
@@ -73,8 +73,8 @@ public class LoginTest {
 	 *  使用testng重试监听，所以可以去掉每个@Test的retryAnalyzer
 	 * @throws Exception
 	 */
-	@Test(  description = "账号和密码错误1", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas",retryAnalyzer=TestngRetry.class )
-//	@Test( enabled = false,description = "账号和密码错误", dataProviderClass = LoginDatas.class, dataProvider = "getLoginErrorDatas" )
+//	@Test(  description = "账号和密码错误1", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas",retryAnalyzer=TestngRetry.class )
+	@Test(  description = "账号和密码错误1", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas")
 	public void login_dfailure_getLoginFailureDatas(String account,String password, String expectedValue) throws Exception {
 		System.out.println("login_dfailure_getLoginFailureDatas");
 		LoginFlow loginAction = new LoginFlow(account,password);

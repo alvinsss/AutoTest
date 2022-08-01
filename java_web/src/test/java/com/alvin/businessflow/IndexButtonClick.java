@@ -27,14 +27,14 @@ public class IndexButtonClick {
 		Thread.sleep(1000);
 		indexpage.buttonQa();
 		Thread.sleep(1000);
-		BrowserUtil.driver.navigate().back();
+		BrowserUtil.getDriver().navigate().back();
 		indexpage.buttonDoc();
 		Thread.sleep(1000);
 		indexpage.buttonReport();
 		Thread.sleep(1000);
 		indexpage.buttonHelp();
-		BrowserUtil.driver.navigate().back();
+		BrowserUtil.getDriver().navigate().back();
 		Thread.sleep(1000);
-		BrowserUtil.driver.navigate().refresh();
+		BrowserUtil.getDriver().navigate().refresh();
 	}
 }

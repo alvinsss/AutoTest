@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+	<!-- 监听器配置 -->
+	<listeners>
+		<listener class-name="com.alvin.listener.TestResultListener"></listener>
+		<listener class-name="com.alvin.listener.AllureReportListener"></listener>
+	</listeners>
+
+	<test name="Test01">
+		<parameter name="browserName" value="chrome"></parameter>
+		<classes>
+			<class name="com.test.parallel.LoginTest" />
+		</classes>
+	</test>
+
+	<test name="Test02">
+		<parameter name="browserName" value="firefox"></parameter>
+		<classes>
+			<class name="com.test.parallel.LoginTest" />
+		</classes>
+	</test>
+</suite> 

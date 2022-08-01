@@ -28,7 +28,7 @@ public class BasePage {
 	 * @return WebElement
 	 */
 	public WebElement WaitElementVisible(By by) {
- 		WebDriverWait webDriverWait = new WebDriverWait(BrowserUtil.driver, Duration.ofSeconds(10));
+ 		WebDriverWait webDriverWait = new WebDriverWait(BrowserUtil.getDriver(), Duration.ofSeconds(10));
 		WebElement webElement = webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(by));
 		return webElement;
 	}
@@ -39,7 +39,7 @@ public class BasePage {
 	 * @return webElement
 	 */
 	public WebElement WaitElementClickable(By by) {
- 		WebDriverWait webDriverWait = new WebDriverWait(BrowserUtil.driver, Duration.ofSeconds(10));
+ 		WebDriverWait webDriverWait = new WebDriverWait(BrowserUtil.getDriver(), Duration.ofSeconds(10));
 		WebElement webElement = webDriverWait.until(ExpectedConditions.elementToBeClickable(by));
 		return webElement;
 	}
@@ -91,7 +91,7 @@ public class BasePage {
 	 * @return  String
 	 */
 	public static String _getAlertText() {
-		Alert alert = BrowserUtil.driver.switchTo().alert();
+		Alert alert = BrowserUtil.getDriver().switchTo().alert();
 		logger.info("获取Alert文本内容:"+alert.getText());
 		return alert.getText();
 	}
@@ -100,7 +100,7 @@ public class BasePage {
 	 * 点击alert确认按钮
 	 */
 	public static void _click_AlertDismiss() {
-		Alert alert = BrowserUtil.driver.switchTo().alert();
+		Alert alert = BrowserUtil.getDriver().switchTo().alert();
 		logger.info("点击Alert的确定按钮");
 		alert.dismiss();
 	}

@@ -83,7 +83,7 @@ public class ProjectPage extends BasePage{
 	
 	//保存按钮非首屏 需要js滚动展示
 	public void click_SaveProject( ) {
-		JavascriptExecutor JSExecutor = (JavascriptExecutor)BrowserUtil.driver;
+		JavascriptExecutor JSExecutor = (JavascriptExecutor)BrowserUtil.getDriver();
 		JSExecutor.executeScript("document.getElementById('submit').scrollIntoView()");
 		try {
 			Thread.sleep(2000);
@@ -131,7 +131,7 @@ public class ProjectPage extends BasePage{
 	public void input_ProjectDetailEdit_Describe(String projectDescribe) {
 		try {
 			System.out.println("input_ProjectDetailEdit_Describe");
-			JavascriptExecutor JSExecutor = (JavascriptExecutor)BrowserUtil.driver;
+			JavascriptExecutor JSExecutor = (JavascriptExecutor)BrowserUtil.getDriver();
 			JSExecutor.executeScript("document.getElementById('submit').scrollIntoView()");
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {

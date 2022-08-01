@@ -35,8 +35,8 @@ public class IndexLinkClickTest {
 	public void setUp(String browerName) throws Exception {
 		System.out.println("IndexLinkClickTest BeforeTest");
 		BrowserUtil.OpenBrowser(browerName);
-		BrowserUtil.driver.get(Constant.LOGIN_URL);
-		BrowserUtil.driver.manage().window().maximize();
+		BrowserUtil.getDriver().get(Constant.LOGIN_URL);
+		BrowserUtil.getDriver().manage().window().maximize();
 	}
 	
 	@Test(description = "测试首页链接")

@@ -25,8 +25,8 @@ public class TestCaseDemoFile {
 	@BeforeMethod
 	public void setUp(String browerName) {
 		BrowserUtil.OpenBrowser(browerName);
-		BrowserUtil.driver.get(Constant.LOGIN_URL);
-		BrowserUtil.driver.manage().window().maximize();
+		BrowserUtil.getDriver().get(Constant.LOGIN_URL);
+		BrowserUtil.getDriver().manage().window().maximize();
 	}
 	
 	@Test
@@ -36,7 +36,7 @@ public class TestCaseDemoFile {
 	
 	@AfterMethod
 	public void tearDown() {
-		BrowserUtil.driver.quit();
+		BrowserUtil.getDriver().quit();
 	}
 	
 }	

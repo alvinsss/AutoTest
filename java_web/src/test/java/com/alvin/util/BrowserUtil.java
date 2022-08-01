@@ -27,7 +27,9 @@ public class BrowserUtil {
 	private static Logger logger = Logger.getLogger(BrowserUtil.class);
 
 	
-	public static WebDriver driver;
+//	public static WebDriver driver;
+	
+	private static ThreadLocal<WebDriver> driverthreadLocal= new ThreadLocal<WebDriver>(); 
 	
 	/**
 	 * 工具方法一般是static
@@ -36,31 +38,51 @@ public class BrowserUtil {
 	 */
 	public static void OpenBrowser(String browserName) {
 		logger.info("开始测试--------");
+		logger.info("当前线程id:"+Thread.currentThread().getId());
 
 		if ("chrome".equals(browserName)) {
 			ChromeDriver chromedriver = new ChromeDriver();
-			driver = chromedriver;
+//			driver = chromedriver;
+			setDriver(chromedriver);
 			logger.info("打开chrome浏览器");
 		} else if ("firefox".equals(browserName)) {
 			System.setProperty("webdriver.firefox.bin", "D:\\UserTools\\Firefox\\firefox.exe");
 			System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver.exe");
 			FirefoxDriver firefoxdriver = new FirefoxDriver();
-			driver = firefoxdriver;
+//			driver = firefoxdriver;
+			setDriver(firefoxdriver);
 			logger.info("打开firefox浏览器");
 		} else if ("edge".equals(browserName)) {
 			System.setProperty("webdriver.edge.driver", "src/test/resources/msedgedriver.exe");
 			EdgeDriver edgedriver = new EdgeDriver();
-			driver = edgedriver;
+//			driver = edgedriver;
+			setDriver(edgedriver);
 			logger.info("打开edge浏览器");
 		}
 	}
+	/**
+	 * 解决testng多线程安全，threadLoca区域取webDriver对象
+	 * @return
+	 */
+	public static WebDriver getDriver() {
+		return driverthreadLocal.get();
+	}
+	
+	/**解决testng多线程安全，threadLoca区域存储webDriver对象
+	 * 
+	 * @return
+	 */
+	public static void setDriver(WebDriver webDriver) {
+		driverthreadLocal.set(webDriver);
+	}
+	
 	
 	/**
 	 * 截图方法，使用TakesScreenshot接口
 	 */
 	public static void takesScreenshot(String filePath) {
 		//driver强转
-		TakesScreenshot takesScreenshot =(TakesScreenshot)driver; 
+		TakesScreenshot takesScreenshot =(TakesScreenshot) getDriver(); 
 		//OutputType.FILE--返回类型FILE（图片）
 		File srcFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
 		//目标file路径
@@ -80,7 +102,7 @@ public class BrowserUtil {
 	 */
 	public static byte[] screenshot() {
 		//driver强转
-		TakesScreenshot takesScreenshot =(TakesScreenshot)driver; 
+		TakesScreenshot takesScreenshot =(TakesScreenshot) getDriver(); 
  		byte [] arr= takesScreenshot.getScreenshotAs(OutputType.BYTES);
  		return arr;
 	}
@@ -90,7 +112,7 @@ public class BrowserUtil {
 	 * 浏览器最大化
 	 */
 	public static void browserMaximize( ) {
-		driver.manage().window().maximize();
+		getDriver().manage().window().maximize();
 	}
 	
 	/**
@@ -98,7 +120,7 @@ public class BrowserUtil {
 	 */
 	public static void closeBrowser( ) {
 		logger.info("结束测试，关闭浏览器--------");
-		driver.close();;
+		getDriver().close();;
 	}
 	
 	
@@ -109,14 +131,14 @@ public class BrowserUtil {
 	 */
 	public static  void switchWindow(String title) {
 		//Set集合是无序 不能重复 不能保证第1个数据是第一个窗口
-		Set<String> handles = BrowserUtil.driver.getWindowHandles();
+		Set<String> handles = BrowserUtil.getDriver().getWindowHandles();
 		for (String handle : handles) {
-			if(BrowserUtil.driver.getTitle().equals(title)) {
+			if(BrowserUtil.getDriver().getTitle().equals(title)) {
 				//退出循环
 				break;
 			}else {
 				//不符合 我们再切换窗口句柄
-				BrowserUtil.driver.switchTo().window(handle);
+				BrowserUtil.getDriver().switchTo().window(handle);
 			}
 		}
 		logger.info("切换window是:"+title);
