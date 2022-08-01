@@ -28,7 +28,7 @@ public class LoginDatas {
 	@DataProvider
 	public static Object[][] getLoginErrorDatas(){
 		Object[][] datas = {
-				{"alvin","123456abc","登录失败，请检查您的用户名或密码是否填写正确。"}  };
+				{"alvin","123456abc","登录失败，请检查您的用户名或密码是否填写正确1。"}  };
 		return datas;
 	}
 

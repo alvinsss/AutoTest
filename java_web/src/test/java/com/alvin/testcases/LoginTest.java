@@ -18,6 +18,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -38,6 +39,14 @@ import com.alvin.util.BrowserUtil;
 */
 public class LoginTest {
 	
+	/***
+	 * BeforeSuite套件执行初始化 只执行一次 没多线程会报空指针
+	 */
+	@BeforeTest
+	public void initRetryCount() {
+		TestngRetry.setRetryCount(1);
+		System.out.println("initRetryCount: "+TestngRetry.getRetryCount());
+	}
  	
 	
 	@Parameters({"browerName"})
@@ -49,7 +58,7 @@ public class LoginTest {
 		BrowserUtil.getDriver().manage().window().maximize();
 	}
 
-	@Test(description = "正确的account ,password的用例")
+	@Test( enabled = false,  description = "正确的account ,password的用例")
 	public void login_asuccess() throws Exception {
 		System.out.println("test login_success");
 		System.out.println(LoginDatas.CORRECT_ACCOUNT+"---->"+LoginDatas.CORRECT_PASSWORD);
@@ -74,7 +83,7 @@ public class LoginTest {
 	 * @throws Exception
 	 */
 //	@Test(  description = "账号和密码错误1", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas",retryAnalyzer=TestngRetry.class )
-	@Test(  description = "账号和密码错误1", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas")
+	@Test( enabled = false, description = "账号和密码错误1", dataProviderClass = LoginDatas.class, dataProvider = "getLoginFailureDatas")
 	public void login_dfailure_getLoginFailureDatas(String account,String password, String expectedValue) throws Exception {
 		System.out.println("login_dfailure_getLoginFailureDatas");
 		LoginFlow loginAction = new LoginFlow(account,password);

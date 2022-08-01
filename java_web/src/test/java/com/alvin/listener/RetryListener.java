@@ -6,9 +6,10 @@ import java.lang.reflect.Method;
 
 import org.testng.IAnnotationTransformer;
 import org.testng.IRetryAnalyzer;
-import org.testng.annotations.IFactoryAnnotation;
 import org.testng.annotations.ITestAnnotation;
 import org.testng.internal.annotations.DisabledRetryAnalyzer;
+
+
 
 /**
 * @Title: RetryListener
@@ -31,13 +32,12 @@ public class RetryListener implements IAnnotationTransformer {
 //		 System.out.println("transform dataProvider--->"+dataProvider);
 		 /*TestNG 7.0以上版本已经弃用了annotation.getRetryAnalyzer() 这个方法,
 		 如果是低版本使用itestretryAnalyzer == null判断*/
-		 Class<? extends IRetryAnalyzer> itestretryAnalyzer = annotation.getRetryAnalyzerClass();
-//		 System.out.println("itestretryAnalyzer--->"+itestretryAnalyzer);
-		 //为空，表示属性没设置 
-		 if (itestretryAnalyzer == DisabledRetryAnalyzer.class) {
-			 //设置属性
+		 Class<? extends IRetryAnalyzer> retryAnalyzerClass = annotation.getRetryAnalyzerClass();
+		 //retryAnalyzerClass等于DisabledRetryAnalyzer.class，表示属性没设置 
+		 if (retryAnalyzerClass == DisabledRetryAnalyzer.class) {
+			 //设置属性等于 TestngRetry.class自定义
 			 annotation.setRetryAnalyzer(TestngRetry.class);
 		 }
-	 
+		 
 	}
 }

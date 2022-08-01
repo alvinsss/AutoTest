@@ -71,7 +71,7 @@
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
 						<!-- testng配置文件名称 -->
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>testng_parallel.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<!--设置参数命令行 -->
 					<argLine>

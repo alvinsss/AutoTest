@@ -40,8 +40,8 @@ public class TestResultListener extends TestListenerAdapter {
 		String fileName =System.currentTimeMillis()+".png";
 		BrowserUtil.takesScreenshot(filePath+fileName);
 		//全部的重试运行完，用例结果失败 我们需要把currentRetryCount设置1
-		TestngRetry.currentRetryCount=1;
-		logger.info("onTestFailure reset:"+TestngRetry.currentRetryCount);
+		TestngRetry.setRetryCount(1);
+		logger.info("onTestFailure reset:"+TestngRetry.getRetryCount());
 	}
  
 	
@@ -51,8 +51,8 @@ public class TestResultListener extends TestListenerAdapter {
 		super.onTestSuccess(tr);
 		//自定义成功操作 [ERROR] Tests run: 4, Failures: 2, Errors: 0, Skipped: 1
 		//当执行第1次重试失败 用例通过的，当执行第2次重试的时候，用例通过的
-		TestngRetry.currentRetryCount=1;
-		logger.info("onTestSuccess reset:"+TestngRetry.currentRetryCount);
+		TestngRetry.setRetryCount(1);
+		logger.info("onTestFailure reset:"+TestngRetry.getRetryCount());
 	}
 	
 	

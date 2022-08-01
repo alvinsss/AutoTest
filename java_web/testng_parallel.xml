@@ -5,7 +5,7 @@
 		<!-- 截图失败截图方法 继承TestListenerAdapter-->
 <!--		<listener class-name="com.alvin.listener.TestResultListener"></listener> -->
 		<!-- 设置全局监听重试-->
-<!-- 	<listener class-name="com.alvin.listener.RetryListener"></listener>-->	
+		<listener class-name="com.alvin.listener.RetryListener"></listener>
 		<!-- allure报表补充数据-->
 		<listener class-name="com.alvin.listener.AllureReportListener"></listener>
 	</listeners>
@@ -16,11 +16,18 @@
 	  <class name="com.alvin.testcases.LoginTest"/>
     </classes>
   </test> <!-- Test -->
-  
-  　<test name="Test02" preserve-order="true">  
-  <parameter name="browerName" value="firefox"></parameter>
+  　<test name="Test03" preserve-order="true">  
+  <parameter name="browerName" value="chrome"></parameter>
     <classes>
 	  <class name="com.alvin.testcases.LoginTest"/>
     </classes>
   </test> <!-- Test -->
+  <!--
+  　<test name="Test02" preserve-order="true">  
+  <parameter name="browerName" value="edge"></parameter>
+    <classes>
+	  <class name="com.alvin.testcases.LoginTest"/>
+    </classes>
+  </test> 
+   -->
 </suite> <!-- Suite -->
