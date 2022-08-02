@@ -42,6 +42,7 @@ public class BrowserUtil {
 
 		if ("chrome".equals(browserName)) {
 			ChromeDriver chromedriver = new ChromeDriver();
+			System.getProperty("webdriver.chrome.bin");
 //			driver = chromedriver;
 			setDriver(chromedriver);
 			logger.info("打开chrome浏览器");

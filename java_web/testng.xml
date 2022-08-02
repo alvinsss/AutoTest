@@ -3,9 +3,9 @@
 
 	<listeners>
 		<!-- 截图失败截图方法 继承TestListenerAdapter-->
-		<listener class-name="com.alvin.listener.TestResultListener"></listener>
+<!--		<listener class-name="com.alvin.listener.TestResultListener"></listener> -->
 		<!-- 设置全局监听重试-->
-		<listener class-name="com.alvin.listener.RetryListener"></listener>
+<!-- 	<listener class-name="com.alvin.listener.RetryListener"></listener>-->	
 		<!-- allure报表补充数据-->
 		<listener class-name="com.alvin.listener.AllureReportListener"></listener>
 	</listeners>
