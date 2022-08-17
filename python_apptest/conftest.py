@@ -25,3 +25,9 @@ def class_scope():
 def class_scope():
     pass
 
+#定义带返回值 元祖
+@pytest.fixture()
+def has_return():
+    print("===我是测试用例的前置===")
+    yield 100,200
+    print("===我是测试用例的后置===")
