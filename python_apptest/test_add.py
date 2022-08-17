@@ -4,7 +4,13 @@
 # @File    : test_add.py
 # @Software: PyCharm
 from add import add
+import pytest
 
+@pytest.mark.usefixture("setup_teardown")
+def test_hello():
+    assert True
+#表示类下面的没个测试用例都会执行setup_teardown
+@pytest.mark.usefixture("setup_teardown")
 class TestAdd:
 
     def test_add(self):
