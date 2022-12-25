@@ -1,0 +1,5 @@
+
+2022-08-18 15:11:11,251-app-autotest:INFO:test_add_hasreturn.py-【18】: has_return返回值:(100, 200)
+2022-08-18 15:11:11,252-app-autotest:INFO:test_add_hasreturn.py-【19】: 测试数据为:100
+2022-08-18 15:11:11,252-app-autotest:INFO:test_add_hasreturn.py-【21】: 实际结果:300
+2022-08-18 15:11:11,252-app-autotest:INFO:test_add_hasreturn.py-【23】: 期望结果:300

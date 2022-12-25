@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [xxx项目]">
+  <test name="用户模块(failed)">
+    <classes>
+      <class name="com.alvin.cases.LoginCase">
+        <methods>
+          <include name="test_LoginCase" invocation-numbers="0 1 2 3"/>
+          <include name="init"/>
+          <include name="finish"/>
+        </methods>
+      </class> <!-- com.alvin.cases.LoginCase -->
+      <class name="com.alvin.cases.RechargeCase">
+        <methods>
+          <include name="test_RechargeCase" invocation-numbers="0 1 2 3 4"/>
+        </methods>
+      </class> <!-- com.alvin.cases.RechargeCase -->
+      <class name="com.alvin.cases.RegisterCase">
+        <methods>
+          <include name="test_RegisterCase" invocation-numbers="0 1 2 3 4 5 6"/>
+        </methods>
+      </class> <!-- com.alvin.cases.RegisterCase -->
+    </classes>
+  </test> <!-- 用户模块(failed) -->
+</suite> <!-- Failed suite [xxx项目] -->
