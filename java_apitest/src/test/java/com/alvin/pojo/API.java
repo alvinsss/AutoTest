@@ -10,7 +10,7 @@ import cn.afterturn.easypoi.excel.annotation.Excel;
 public class API {
 	// 必须私有属性、空参构造、get/set方法
 	// 接口编号
-	@Excel(name="接口编号")	//@Excel：excel列和实体类的成员变量映射关系
+	@Excel(name="接口编号")	//@Excel：easypoi excel列和实体类的成员变量映射关系
 	@NotNull
 	private String id;
 	// 接口名称
