@@ -1,0 +1,12 @@
+Login: #登录模块！
+  login: #登录接口
+    path:  /api/auth/login #登录路径
+    method: POST
+  logout: #登出接口
+    path:  "xxxx" #登录路径
+    method: POST
+
+Shop: #店铺模块
+  add: #新增店铺
+    path:  "xxxx" #登录路径
+    method: POST
