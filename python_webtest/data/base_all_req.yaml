@@ -1,0 +1,14 @@
+-
+  api_name: 登录alist
+  api_request:
+    url: http://127.0.0.1:5244/api/auth/login
+    method: post
+    headers:
+      Content-Type: application/json
+      charset: UTF-8
+    params:
+      otp_code: ""
+      password: "123456"
+      username: "admin"
+  api_validate:
+    - eq: {message: "success"}

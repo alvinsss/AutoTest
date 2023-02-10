@@ -17,7 +17,7 @@ public class Constants {
 	public static final int SQL_ASSERT_CELLNUM=8;
 
 	//jdbc:oracle:thin:@localhost:1521:orcl 
-	public static final String JDBC_URL = "jdbc:mysql://localhost:3306/futureloan?useUnicode=true&characterEncoding=utf-8";
+	public static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/futureloan?useUnicode=true&characterEncoding=utf-8";
 	public static final String JDBC_USERNAME = "qa";
 	public static final String JDBC_PASSWORD = "qatest";
 	

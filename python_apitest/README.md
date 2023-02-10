@@ -27,12 +27,11 @@ pytest.ini:配置执行接口或mark，支持allure插件报告等
 4、 手动或jenkins方式在工程目录下执行pytest生成测试报告
 -----------
 
-运行之后结果报告
-![img_1.png](img_1.png)
+运行之后结果报告<br>
+![img.png](img.png)
 
 
-
-4、作者信息
+3、作者信息
 -----------
 author:alvin<br>
 qq    :6449694<br>
