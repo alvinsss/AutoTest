@@ -11,7 +11,7 @@ import pytest,allure
 from libs.login import  Login
 from utils.handle_excel import get_excel_data
 from utils.handle_path import allure_json_path,allure_report_path
-from common.baseRequest import ApiAssert
+from common.baseRequest import RequestAssert
 import os
 """
 测试文件执行条件：
@@ -30,7 +30,7 @@ import os
 
 @allure.epic('alist项目')
 @allure.feature('登录模块')
-class TestLogin:
+class TestLogin(RequestAssert):
     @pytest.mark.parametrize('title,inBody,expData',
     get_excel_data('登录模块','Login','标题','请求参数','响应预期结果',runCase=['1-3']) )
     @allure.title("{title}")
@@ -39,15 +39,15 @@ class TestLogin:
         print("res -->",res,type(res))
         print("expData -->",expData,type(expData))
     #断言:1-局部关键信息相等  2- 包含关系 in
-        ApiAssert.define_api_assert(res['code'],'=',expData['code'])
+        self.define_api_assert(res['code'],'=',expData['code'])
 
 # SHIFT+tab  往前缩进 ，tab  往后缩进
 if __name__ == '__main__':
     #输出 打印信息 -s
     #--clean-alluredir   清空json上一次运行的数据文件 allure serve ./outFiles/report/tmp
     pytest.main(['test_login.py','-s','--alluredir',allure_json_path,'--clean-alluredir'])
-    os.system('allure generate {} -o {}'.format(allure_json_path,allure_report_path))
-    os.system('allure serve {}'.format(allure_json_path))
+    # os.system('allure generate {} -o {}'.format(allure_json_path,allure_report_path))
+    # os.system('allure serve {}'.format(allure_json_path))
 
 
 """

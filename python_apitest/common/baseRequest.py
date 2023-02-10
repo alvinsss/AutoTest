@@ -35,20 +35,30 @@ from configs.config import HOST
 from utils.handle_path import config_path
 import os
 class BaseRequest:#基类
-    def __init__(self):#初始化方法
-        #__class__.__name__ 获取类名
-        #print('当前类名是>>> ',self.__class__.__name__)
-        #通过模块名去获取对应模块的数据
+    def __init__(self,inToken=None):#初始化方法
+        if inToken:# 业务接口 传递了token---inToken=有值
+            self.headers = {'Authorization':inToken}
+        else:# 登录接口不需要token传入的
+            # self.headers = None
+            self.headers = {'Content-Type':'application/json;charset=UTF-8'}
+    #通过模块名去获取对应模块的数据
         self.data = get_yaml_data(os.path.join(config_path,"apiConfig.yaml"))[self.__class__.__name__]
-        self.headers = {"Content-Type":"application/json;charset=UTF-8"}
+        print("继承基类名称是 --------- : ",self.__class__.__name__)
+
     #--------公共的发送方法----------每一个接口方法都会调用这个去发送请求
-    def request_send(self,data=None):
+    def request_send(self,data=None,file=None):
         try:
             methodName = inspect.stack()[1][3]#谁调用了我，他的函数名
-            path,method = self.data[methodName].values()
+            print("request_send methodname --------- : ",methodName)
+            print("request_send data      -----------: ",self.data[methodName])
+            path,method = self.data[methodName].values()#apiConfig.yaml配置的methodName名称
             # 数据---需要剥离对应某一个接口的数据
-            print("request_send--------->",f'{HOST}{path}',method,data,type(data))
-            resp = requests.request(method=method,url= f'{HOST}{path}',json=data,headers=self.headers)
+            print("request_send info --------->",f'{HOST}{path}',method,self.headers,data,type(data))
+            if file:
+                resp = requests.request(method=method,url= f'{HOST}{path}',files=data,headers=self.headers)
+            else:
+                resp = requests.request(method=method,url= f'{HOST}{path}',json=data,headers=self.headers)
+                print(" resp -------->:",resp.json())
             # resp = requests.request(method=method,url= f'{HOST}{path}',data=data)
             #print(methodName,'---',self.data[methodName])
             return resp.json()
@@ -56,8 +66,24 @@ class BaseRequest:#基类
             #打日志
             pass
 
+    #1- 新增接口：
+    def create(self,data):
+        return self.request_send(data=data)
 
-class ApiAssert:
+    #2- 删除接口---对应某一个id  删除  /delete/api/{id}
+    def delete(self,data):
+        return self.request_send(data=data)
+    #3- 更新接口
+    def update(self,data):
+        return self.request_send(data=data)
+    #4- 查询list接口
+    def query(self,data):
+        return self.request_send(data=data)
+    #5- 查询一个用户
+    def get_one(self,data):
+        return self.request_send(data=data)
+
+class RequestAssert:
     @classmethod#类方法
     def define_api_assert(cls,result,condition,exp_result):
         print("result-->",result,type(result))

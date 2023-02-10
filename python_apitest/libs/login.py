@@ -13,6 +13,7 @@ import copy
     2- 为后续接口获取token
 """
 class Login(BaseRequest):
+
     def login(self,inData,getToken=False):
         inData = copy.copy(inData)#浅拷贝下数据--避免修改全局数据
         # inData['password'] = get_md5_data(inData['password'])

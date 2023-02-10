@@ -6,7 +6,19 @@ Login: #登录模块！
     path:  "xxxx" #登录路径
     method: POST
 
-Shop: #店铺模块
-  add: #新增店铺
-    path:  "xxxx" #登录路径
+User: #用户模块
+  create: #增加
+    path: /api/admin/user/create  #增加
     method: POST
+  delete: #增加
+    path: /api/admin/user/delete?id=5  #删除
+    method: POST
+  update: #修改
+    path: /api/admin/user/update
+    method: POST
+  query: #查询
+    path:  /api/admin/user/list #查询全部
+    method: GET
+  get_one: #单个查询
+    path:  /api/admin/user/get?id=3 #查询id /api/admin/user/get?id=3
+    method: GET
