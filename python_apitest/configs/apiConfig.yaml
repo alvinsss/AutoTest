@@ -10,8 +10,8 @@ User: #用户模块
   create: #增加
     path: /api/admin/user/create  #增加
     method: POST
-  delete: #增加
-    path: /api/admin/user/delete?id=5  #删除
+  delete: #删除,读取这里的，不读xls的URI
+    path: /api/admin/user/delete?id=6  #删除
     method: POST
   update: #修改
     path: /api/admin/user/update

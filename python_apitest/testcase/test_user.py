@@ -28,6 +28,7 @@ import os
 @allure.feature('用户模块')
 class TestUser(RequestAssert):
 
+    #创建用户，获取conftest初始化的接口实例，直接使用 libs 封装的接口调用父类一系列（增、删、改）方法即可
     @pytest.mark.parametrize('title,inBody,expData',get_excel_data('用户管理','usercreate','标题','请求参数','响应预期结果') )
     @allure.title("{title}")
     def test_user_create(self,title,inBody,expData,user_init): #user_init初始化 返回实例
@@ -36,6 +37,7 @@ class TestUser(RequestAssert):
         res=user_init.create(inBody)
         self.define_api_assert(res['code'],'=',expData['code'])
 
+    #删除用户
     @pytest.mark.parametrize('title,inBody,expData',get_excel_data('用户管理','userdelete','标题','请求参数','响应预期结果') )
     @allure.title("{title}")
     def test_user_delete(self,title,inBody,expData,user_init): #user_init初始化 返回实例
@@ -44,15 +46,16 @@ class TestUser(RequestAssert):
         res=user_init.delete(inBody)
         self.define_api_assert(res['code'],'=',expData['code'])
 
+    #修改用户
     @pytest.mark.parametrize('title,inBody,expData',get_excel_data('用户管理','userupdate','标题','请求参数','响应预期结果') )
     @allure.title("{title}")
-    def test_user_delete(self,title,inBody,expData,user_init): #user_init初始化 返回实例
+    def test_user_update(self,title,inBody,expData,user_init): #user_init初始化 返回实例
         print("inBody",inBody)
         print("expData",expData)
         res=user_init.update(inBody)
         self.define_api_assert(res['code'],'=',expData['code'])
 
-
+   #查询用户
     @pytest.mark.parametrize('title,inBody,expData',
                              get_excel_data('用户管理','userlist','标题','请求参数','响应预期结果') )
     @allure.title("{title}")

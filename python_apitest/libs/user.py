@@ -13,13 +13,13 @@ class User(BaseRequest):
 if __name__ == '__main__':
     token  = Login().login(NAME_PSW,getToken=True)
     print("token",token)
-    testData_create={"id": 0, "username": "test1", "password": "123456", "base_path": "",
-              "role": 0, "permission": 0}
-    add_user= User(token).create(testData_create)
-    print(add_user)
-    # testData={}
-    # res = User(token).query(testData)
-    # print(res)
+    # testData_create={"id": 0, "username": "test1", "password": "123456", "base_path": "",
+    #           "role": 0, "permission": 0}
+    # add_user= User(token).create(testData_create)
+    # print(add_user)
+    testData={}
+    res = User(token).query(testData)
+    print(res)
     # testData2={"id":"3"}
     # res_one = User(token).get_one(testData)
     # print(res_one)

@@ -79,12 +79,12 @@ class BaseRequest:#基类
     #4- 查询list接口
     def query(self,data):
         return self.request_send(data=data)
-    #5- 查询一个用户
+    #5- 查询一个
     def get_one(self,data):
         return self.request_send(data=data)
 
 class RequestAssert:
-    @classmethod#类方法
+    @classmethod#类方法,不需要实例，直接类名. 方法名调用即可
     def define_api_assert(cls,result,condition,exp_result):
         print("result-->",result,type(result))
         print("exp_result-->",exp_result,type(exp_result))
