@@ -34,6 +34,7 @@ class TestLogin(RequestAssert):
     @pytest.mark.parametrize('title,inBody,expData',
     get_excel_data('登录模块','Login','标题','请求参数','响应预期结果',runCase=['1-3']) )
     @allure.title("{title}")
+    @pytest.mark.userlogin
     def test_login(self,title,inBody,expData):
         res = Login().login(inBody)
         print("res -->",res,type(res))

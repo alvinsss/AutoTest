@@ -4,8 +4,10 @@
 # @File    : user.py
 # @Software: PyCharm
 from common.baseRequest import BaseRequest
+from utils.handle_excel import get_excel_data
 from libs.login import Login
 from configs.config import NAME_PSW
+import allure,pytest
 
 class User(BaseRequest):
     pass
