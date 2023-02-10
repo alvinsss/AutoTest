@@ -1,0 +1,6 @@
+excelDir: alist_System_V1.5.xls
+caseData: ['URL','标题','前置条件']
+sheetName:
+  Login: '登录模块'
+  Shop: '我的店铺'
+#runCase: ['001','004-005','006']

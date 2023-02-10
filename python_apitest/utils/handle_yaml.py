@@ -13,5 +13,5 @@ def get_yaml_data(path):
         return yaml.safe_load(f.read())
 
 if __name__ == '__main__':
-    res = get_yaml_data("../data/apiConfig.yaml")
+    res = get_yaml_data( "../configs/apiConfig.yaml" )
     print(res)

@@ -1,82 +1,158 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2023/2/9 11:04
 # @Author  : alvin
-# @File    : handle_excel_v1.py
+# @File    : handle_excel_v4.py
 # @Software: PyCharm
-'''
-函数：get_excel_data()
-版本： v43.0
-函数功能：1.获取请求的body 与预期响应结果
-        2.可以自定义获取对应的列数据
-        3.需要获取测试用例指定的用例运行
-        4.数据json和字符串转化，如果是普通字符串不需要转化，如果是json需要转化成字典，因为后续接口需要字典格式
-具体：用例筛选
+print()
+"""
+---------------版本 v3.0---------------
+需求：
+    1- 需要对测试用例进行挑选
+        全部：1，2，3，4，5
+        挑选出：优先级高/特定用例bug回归
+分析需求：
+    用例挑选的方式：
+        1- 全部 all
+        2- 只选择某一个用例  tc001
+        3- 连续的用例  tc003-tc005
+        4- 复合型  ['tc003','tc007-tc009','tc010']
+解决方案：
 
-pytest只能定制化执行接口层 --跑某一个接口或不跑某一个接口
-但是 具体的测试用例挑选框架做不了，是靠一个数据驱动装饰器执行 pytest.makr.paramtrize(挑选出来)
-'''
-import xlrd
-import json
+测试反馈：
+    函数调用的参数传递的太多！
+        get_excel_data(fileDir,'登录模块','Login','URL','标题','前置条件')
+版本迭代建议：
 
-#判断是否json
-def is_json(inStr):
-    try:
-        json.loads(inStr) # json转字典
-    except:#只有报错才执行里面代码
-        return  False
-    return True
+"""
+"""
+---------------版本 v4.0---------------
+需求：
+    函数调用的参数传递的太多！
+        get_excel_data(fileDir,'登录模块','Login','URL','标题','前置条件')
+分析需求：
+    配置文件出去
+        ini
+        yaml
+解决方案：
+    尽可能使用代码去识别获取！
 
-#必填  可变  可全缺省
-def get_excel_data(excelDir,sheetName,caseName=None,*colName,selectCase=['all']):
-    resList=[]
-    #加载文件,formatting_info保持样式
-    workBook = xlrd.open_workbook(excelDir,formatting_info=True)
-    workSheets = workBook.sheet_names()#sheet所有名
-    #2获取对应的表
-    workSheet= workBook.sheet_by_name(sheetName)
-    '''
-        把用户传入的colname转化成操作xls的编号
-    '''
-    colIndxList= []
-    for i in colName:
-                                                # xls的编号
-        colIndxList.append(workSheet.row_values(0).index(i))
+测试反馈：
+版本迭代建议：
+"""
+import xlrd #pip  install  xlrd
+from utils.handle_path import testData_path
+import os
 
-    '''
-        挑选用例,all全部，['1','3-7']单个，分段
-    '''
-    selectList =[] #挑选出来的用例
-    if  'all' in selectCase:#全部执行这个接口的用例
-        selectList = workSheet.col_values(0)
-    else: #['1','3-7']
-        for one in selectCase:
-            if '-' in one:#是一段
-                start,end = one.split('-') #3,7
-                for i in range(int(start),int(end)+1): #(3,8)
-                    selectList.append(caseName+f'{i:0>3}')#Login3-->Login003
-            else:
-                selectList.append(caseName+f'{one:0>3}')
-    print("selectList",selectList)
+print()
+def get_excel_data(sheetName,caseName,*args,runCase=['all'],excelDir=None): # 返回值是列表    -> list    def get_excel_data() -> list
+    """
+    :param sheetName: 选择的sheet表
+    :param caseName: 用例名
+    :param args: 获取的数据
+    :param runCase: 筛选的用例
+    :param excelDir: 用例文件路径
+    :return: [(),()]
+    """
+    excelDir = os.path.join(testData_path,'alist_System_V1.5.xls')
+    resList = []#存放结果
+    #1- 打开一个文件:
+    #formatting_info=True 保持原样式
+    workBook = xlrd.open_workbook(excelDir,formatting_info=True)#excel文件
+    # sheets = workBook.sheet_names()获取所有的子表名
+    #2- 获取需要操作的子表
+    workSheet = workBook.sheet_by_name(sheetName)
+    #3- 获取一列数据
+    #print(workSheet.col_values(0))
+    #4- 获取一行数据
+    #print(workSheet.row_values(0))
 
-    idx = 0 #行号初始
-    for data in workSheet.col_values(0):
-        # print("data",data)
-        if caseName in data and data in selectList:
-            # print(caseName)
-            getColData = []#存放一行对应很多列数据
-            for colIdx in colIndxList:
-                res = workSheet.cell_value(idx,colIdx)#单元格数据
-                if is_json(res):#res内容是json转字典
-                    res = json.loads(res)
-                getColData.append(res)
-            resList.append(getColData)
-        idx = idx +1
+    #获取单元格数据-workSheet.cell(行编号,列编号)
+    # print(workSheet.cell(0,0).value)
+
+    #--------v2.0新增功能--------------------
+    #args---元组类型  ('URL'，‘标题’,'请求体')
+    """
+    需求分析：用户传入需要获取的列 ，代码去获取对应的列的单元格数据
+    方案：
+        1- 用户可以这样去调用函数  直接传递列编号 1,3,5,6---> args
+            get_excel_data(excelDir,sheetName,caseName,1,3,5,6)
+            感受：
+                1-代码可读性差
+                2- 你内部代码操作起来是方便的
+        2- 用户可以这样去调用函数  直接传递-'URL'，‘标题’,'请求体'---> args
+            get_excel_data(excelDir,sheetName,caseName,'URL'，‘标题’,'请求体')
+            感受：
+                1-代码可读性好，好理解业务需求
+                2- 你内部代码操作起来是不方便： 需要把列名--转化为---列编号
+    """
+    colIndexList = []#存放用户输入列名对应的列编号
+    for i in args:# ('URL'，‘标题’,'请求体')遍历
+        print("需要获取的args--->",i,workSheet.row_values(0).index(i))
+        colIndexList.append(workSheet.row_values(0).index(i))#获取编号
+    print(colIndexList)
+    #--------------------------------------
+
+    #-----用例筛选-------------------------
+    #runCase = ['all','003','007-009','010']
+    runList = []#运行用例编号列表 ['Login001','Login002']
+    if 'all' in runCase:
+        runList = workSheet.col_values(0)#全部选择
+    else:#筛选
+        for one in runCase:
+            if '-' in one:# 连续  '001-003'--> ['name001','name002','name003']
+                start,end = one.split('-') #001 ,003----字符串类型 -闭区间
+                for i in range(int(start),int(end)+1):
+                    runList.append(caseName+f'{i:0>3}')
+
+            else:# 不连续  6，9
+                runList.append(caseName+f'{one:0>3}')
+
+
+
+
+    #--------------------------------------
+
+    #--------获取对应的需求的数据-----------
+    rowIndex = 0#行编号的初始值
+    for one in workSheet.col_values(0):
+        if caseName in one and one in runList:#筛选下
+            #遍历那个列编号--列表
+            getColData = []
+            for num in colIndexList: #[4,5]
+                tmp = workSheet.cell(rowIndex, num).value
+                print("tmp",tmp,type(tmp))
+                if is_json(tmp): #判断是否是json
+                    tmp = json.loads(tmp)#
+                getColData.append(tmp)
+            resList.append(list(getColData))#[(请求1，响应1),(请求2，响应2)]
+        rowIndex += 1#行编号 加1  下一行操作
+
     return resList
+    # for one in resList:
+    #     print(one)
+    #----------------------------------------
+"""
+版本：v3.0
+测试反馈：
+    1- 业务登录接口需要是请求体数据是 字典格式，但是 get_excel_data返回的是字符串---需要转化  json.loads()
+    2- 其他的数据（URL  标题）本身就是字符串，不需要转化
+优化建议：
+    1- 加判断是否json格式
+
+"""
+import json
+def is_json(inData:str):
+    try:
+        json.loads(inData)
+        return True#是json格式
+    except:
+        return False#不是json格式
+
+
+
 
 if __name__ == '__main__':
-    configData = ['用例编号','标题','URL','请求参数']
-    res=get_excel_data('../data/alist_System_V1.5.xls','登录模块','Login',*configData,selectCase=['3-5'])
+    fileDir = os.path.join(testData_path,'alist_System_V1.5.xls')
+    # res=get_excel_data('登录模块','Login','标题','请求参数',runCase=['all'])
+    res=get_excel_data('登录模块','Login','标题','请求参数','响应预期结果',runCase=['1-3'])
     print(res)
-    for one in res:
-        print(one)
-
