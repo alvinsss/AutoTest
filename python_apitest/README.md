@@ -16,9 +16,11 @@ report:测试报告<br>
 test_case：通过业务层调用基类执行测试断言<br>
 utils:工具类读取yaml和xls文件等<br>
 pytest.ini:配置执行接口或mark，支持allure插件报告等
+-----------
 
 2、使用说明
 -----------
+
 1、 在data下配置接口请求信息文件<br>
 2、 在libs业务层创建接口同名类,继承基类，类似<br>
     class User(BaseRequest):<br>
@@ -28,8 +30,7 @@ pytest.ini:配置执行接口或mark，支持allure插件报告等
 -----------
 
 运行之后结果报告<br>
-![img.png](img.png)
-
+![img.png](docs/img.png)
 
 3、作者信息
 -----------
