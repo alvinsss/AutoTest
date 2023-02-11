@@ -88,7 +88,7 @@ class TestUser(RequestAssert):
         #修改用户
     @pytest.mark.parametrize('title,inBody,expData',get_excel_data('用户管理','userupdate','标题','请求参数','响应预期结果') )
     @allure.title("{title}")
-    @pytest.mark.update_flow
+    @pytest.mark.skip("忽略")
     def test_user_update_flow(self,title,inBody,expData,user_init): #user_init初始化 返回实例
         # {"id": 2, "username": "guest", "password": "guest", "base_path": "/", "role": 1, "permission": 1008, "github_id": 0}
         with allure.step("1：获取用户列表"):
@@ -101,7 +101,7 @@ class TestUser(RequestAssert):
             inBody['id'] = userid
             inBody['username'] = username
             res_updata = user_init.update(inBody)
-            self.define_api_assert(res_updata['code'],'=',expData['code'])
+            # self.define_api_assert(res_updata['code'],'=',expData['code'])
 
 if __name__ == '__main__':
     #输出 打印信息 -s

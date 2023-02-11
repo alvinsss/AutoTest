@@ -1,0 +1,20 @@
+info:
+  - name : qatest
+  - address: "hello\nworld" #需要去转义 需要使用双引号
+  - dirpath: d:\qatest\ta\a #文件路径 不能加引号
+#字典
+info1:  &info1
+  - name: alvin #账户
+  - passwd: "123456"
+
+#变量使用 $定义ac  *使用ac
+testcase1: #测试用例
+  detail: #详情
+  data:
+    <<: *info1
+    tel: 18000000
+testcase2: #测试用例
+  detail: #详情
+  data:
+    <<: *info1
+    tel: 18000001
