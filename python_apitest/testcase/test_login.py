@@ -10,7 +10,8 @@ import time
 import pytest,allure
 from libs.login import  Login
 from utils.handle_excel import get_excel_data
-from utils.handle_path import allure_json_path,allure_report_path
+from utils.handle_path import allure_json_path,testData_path
+from utils.handle_yaml import get_yaml_casedata
 from common.baseRequest import RequestAssert
 import os
 """
@@ -31,16 +32,32 @@ import os
 @allure.epic('alist项目')
 @allure.feature('登录模块')
 class TestLogin(RequestAssert):
-    @pytest.mark.parametrize('title,inBody,expData',
-    get_excel_data('登录模块','Login','标题','请求参数','响应预期结果',runCase=['1-3']) )
+
+    @pytest.mark.parametrize('title,inBody,expData',get_excel_data('登录模块','Login','标题','请求参数','响应预期结果',runCase=['all']) )
+    @pytest.mark.login
     @allure.title("{title}")
-    @pytest.mark.userlogin
+    @allure.feature('excel格式测试用例')
     def test_login(self,title,inBody,expData):
         res = Login().login(inBody)
         print("res -->",res,type(res))
         print("expData -->",expData,type(expData))
     #断言:1-局部关键信息相等  2- 包含关系 in
         self.define_api_assert(res['code'],'=',expData['code'])
+        self.define_api_assert(res['message'],'in',expData['message'])
+
+#('正常情况', {'username': 'admin', 'password': '123456', 'otp_code': ''}, {'code': '200', 'message': 'success'})
+    @pytest.mark.parametrize('title,inBody,expData',get_yaml_casedata(os.path.join(testData_path,'../data/testcase_user.yaml')))
+    @allure.title("{title}")
+    @allure.feature('yaml格式测试用例')
+    @pytest.mark.login
+    def test_login_yamlcase(self,title,inBody,expData):
+        res = Login().login(inBody)
+        print("res -->",res,type(res))
+        print("expData -->",expData,type(expData))
+        #断言:1-局部关键信息相等  2- 包含关系 in
+        self.define_api_assert(res['code'],'=',expData['code'])
+        self.define_api_assert(res['message'],'in',expData['message'])
+
 
 # SHIFT+tab  往前缩进 ，tab  往后缩进
 if __name__ == '__main__':
