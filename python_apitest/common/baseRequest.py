@@ -33,6 +33,8 @@ from utils.handle_yaml import get_yaml_data
 import inspect,json
 from configs.config import HOST
 from utils.handle_path import config_path
+from utils.handle_log import log #函数对象
+import traceback
 import os
 class BaseRequest:#基类
     def __init__(self,inToken=None):#初始化方法
@@ -51,6 +53,7 @@ class BaseRequest:#基类
             methodName = inspect.stack()[1][3]#谁调用了我，他的函数名
             print("request_send methodname --------- : ",methodName)
             print("request_send data      -----------: ",self.data[methodName])
+            log.info(methodName)
             path,method = self.data[methodName].values()#apiConfig.yaml配置的methodName名称
             # 数据---需要剥离对应某一个接口的数据
             print("request_send info --------->",f'{HOST}{path}',method,self.headers,data,type(data))
@@ -94,8 +97,8 @@ class RequestAssert:
             elif condition == 'in':
                 assert  exp_result in result
         except Exception as error:
-            #日志
-            pass
+            #日志 打印详情断言失败信息
+            log.error("traceback info :",traceback.format_exc())
             raise error# 抛出异常---不影响pytest 运行结果！
 
 
