@@ -11,8 +11,10 @@ import pytest,allure
 from libs.login import  Login
 from utils.handle_excel import get_excel_data
 from utils.handle_path import allure_json_path,testData_path
+from utils.handle_showtime import showtime
 from utils.handle_yaml import get_yaml_casedata
 from common.baseRequest import RequestAssert
+from utils.handle_log import  log
 import os
 """
 测试文件执行条件：
@@ -46,9 +48,9 @@ class TestLogin(RequestAssert):
         self.define_api_assert(res['message'],'in',expData['message'])
 
 #('正常情况', {'username': 'admin', 'password': '123456', 'otp_code': ''}, {'code': '200', 'message': 'success'})
-    @pytest.mark.parametrize('title,inBody,expData',get_yaml_casedata(os.path.join(testData_path,'../data/testcase_user.yaml')))
+    @pytest.mark.parametrize('title,inBody,expData',get_yaml_casedata(os.path.join(testData_path,'testcase_user.yaml')))
     @allure.title("{title}")
-    @allure.feature('yaml格式测试用例')
+    @allure.feature('yaml格式测试用例，使用feature')
     @pytest.mark.login
     def test_login_yamlcase(self,title,inBody,expData):
         res = Login().login(inBody)
@@ -66,7 +68,6 @@ if __name__ == '__main__':
     pytest.main(['test_login.py','-s','--alluredir',allure_json_path,'--clean-alluredir'])
     # os.system('allure generate {} -o {}'.format(allure_json_path,allure_report_path))
     # os.system('allure serve {}'.format(allure_json_path))
-
 
 """
 常见问题：在浏览器里出现allure页面显示 NO data
