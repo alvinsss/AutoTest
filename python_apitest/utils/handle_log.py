@@ -6,11 +6,18 @@
 import datetime
 import os.path
 import logging
-from utils.handle_path import log_path
+
+from utils.handle_inifile import get_inifile
+from utils.handle_path import log_path, config_path
+
 
 def logger(flag=True,name=__name__):
+
+    #项目名称
+    path = os.path.join(config_path,"loguru.ini")
+    pname=get_inifile(path,'log',inkey='pname')
     #log 文件名，路径+｛时间｝.log
-    logDir= os.path.join(log_path,("{}.log".format(datetime.datetime.now().strftime('%Y%m%d%H%M'))))
+    logDir= os.path.join(log_path,("{}_{}.log".format(pname,datetime.datetime.now().strftime('%Y%m%d_%H%M'))))
     #1\创建日志对象
     logObject = logging.getLogger(name)
     #2\设置级别
