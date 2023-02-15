@@ -7,8 +7,8 @@ import datetime
 import os.path
 import logging
 
-from utils.handle_inifile import get_inifile
-from utils.handle_path import log_path, config_path
+from python_apitest.utils.handle_inifile import get_inifile
+from python_apitest.utils.handle_path import log_path, config_path
 
 
 def logger(flag=True,name=__name__):

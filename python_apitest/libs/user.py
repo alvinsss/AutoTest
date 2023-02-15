@@ -3,10 +3,10 @@
 # @Author  : alvin
 # @File    : user.py
 # @Software: PyCharm
-from common.baseRequest import BaseRequest
-from utils.handle_excel import get_excel_data
-from libs.login import Login
-from configs.config import NAME_PSW
+from python_apitest.common.baseRequest import BaseRequest
+from python_apitest.utils.handle_excel import get_excel_data
+from python_apitest.libs.login import Login
+from python_apitest.configs.config import NAME_PSW
 import allure,pytest
 
 class User(BaseRequest):

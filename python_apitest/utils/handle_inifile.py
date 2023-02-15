@@ -5,8 +5,7 @@
 # @Software: PyCharm  pip install configparser
 import  configparser
 import os
-
-from utils.handle_path import config_path
+from python_apitest.utils.handle_path import config_path
 
 #path 路径， insections 字段 ，inkey对应的key ，如果没入参返回list
 def get_inifile(path,insections,inkey=None):

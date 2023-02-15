@@ -4,13 +4,12 @@
 # @File    : test_user.py
 # @Software: PyCharm
 import pytest,allure
-from libs.login import  Login
-from utils.handle_excel import get_excel_data
-from utils.handle_path import allure_json_path,allure_report_path
-from common.baseRequest import RequestAssert
-import os
+from python_apitest.utils.handle_excel import get_excel_data
+from python_apitest.utils.handle_path import allure_json_path
+from python_apitest.common.baseRequest import RequestAssert
 """
 测试文件执行条件：
+
     1- 该业务层代码封装ok
     2- 需要自动化测试用例----数据驱动-使用指定文件类型做
         功能用例：人去执行
@@ -34,6 +33,7 @@ class TestUser(RequestAssert):
     @allure.title("{title}")
     @pytest.mark.create
     @pytest.mark.skipif()
+
     @allure.story("新建用户")
     def test_user_create(self,title,inBody,expData,user_init): #user_init初始化 返回实例
         print("inBody",inBody)
@@ -47,7 +47,7 @@ class TestUser(RequestAssert):
     @pytest.mark.delete
     @pytest.mark.skip(reason="没开发完，不做自动化")
     @allure.story("删除用户")
-    def test_user_delete(self,title,inBody,expData,user_init): #user_init初始化 返回实例
+    def test_user_delete(self,title,inBody,expData,user_init):
         print("inBody",inBody)
         print("expData",expData)
         res=user_init.delete(inBody)
@@ -58,7 +58,7 @@ class TestUser(RequestAssert):
     @allure.title("{title}")
     @pytest.mark.update
     @allure.story("用户更新")
-    def test_user_update(self,title,inBody,expData,user_init): #user_init初始化 返回实例
+    def test_user_update(self,title,inBody,expData,user_init):
         print("inBody",inBody)
         print("expData",expData)
         res=user_init.update(inBody)
@@ -69,7 +69,7 @@ class TestUser(RequestAssert):
     @allure.title("{title}")
     @pytest.mark.listall
     @allure.story("查询用户列表")
-    def test_user_list(self,title,inBody,expData,user_init): #user_init初始化 返回实例
+    def test_user_list(self,title,inBody,expData,user_init):
         print("inBody",inBody)
         print("expData",expData)
         res=user_init.query(inBody)
@@ -79,7 +79,7 @@ class TestUser(RequestAssert):
     @pytest.mark.parametrize('title,inBody,expData',get_excel_data('用户管理','userget_one','标题','请求参数','响应预期结果') )
     @allure.title("{title}")
     @pytest.mark.getone
-    def test_user_getone(self,title,inBody,expData,user_init): #user_init初始化 返回实例
+    def test_user_getone(self,title,inBody,expData,user_init):
         print("inBody",inBody)
         print("expData",expData)
         res=user_init.get_one(inBody)

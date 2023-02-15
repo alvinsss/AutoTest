@@ -29,13 +29,14 @@ method, url
         1- 变的是： 接口的描述、接口的用例请求参数、预期的响应
         2- 不变的是: url  请求方法
 """
-from utils.handle_yaml import get_yaml_data
-import inspect,json
-from configs.config import HOST
-from utils.handle_path import config_path
-from utils.handle_log import log #函数对象
+from python_apitest.utils.handle_yaml import get_yaml_data
+from python_apitest.configs.config import HOST
+from python_apitest.utils.handle_path import config_path
+from python_apitest.utils.handle_log import log #函数对象
 import traceback
+import inspect,json
 import os
+
 class BaseRequest:#基类
     def __init__(self,inToken=None):#初始化方法
         if inToken:# 业务接口 传递了token---inToken=有值

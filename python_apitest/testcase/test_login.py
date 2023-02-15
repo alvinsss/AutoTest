@@ -8,13 +8,13 @@
 import time
 
 import pytest,allure
-from libs.login import  Login
-from utils.handle_excel import get_excel_data
-from utils.handle_path import allure_json_path,testData_path
-from utils.handle_showtime import showtime
-from utils.handle_yaml import get_yaml_casedata
-from common.baseRequest import RequestAssert
-from utils.handle_log import  log
+from python_apitest.libs.login import  Login
+from python_apitest.utils.handle_excel import get_excel_data
+from python_apitest.utils.handle_path import allure_json_path,testData_path
+from python_apitest.utils.handle_showtime import showtime
+from python_apitest.utils.handle_yaml import get_yaml_casedata
+from python_apitest.common.baseRequest import RequestAssert
+from python_apitest.utils.handle_log import  log
 import os
 """
 测试文件执行条件：

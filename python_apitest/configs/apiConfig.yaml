@@ -22,3 +22,8 @@ User: #用户模块
   get_one: #单个查询
     path:  /api/admin/user/get?id=3 #查询id /api/admin/user/get?id=3
     method: GET
+
+Storage: #存储模块
+  query: #查询
+    path:  /api/admin/storage/list #查询全部
+    method: GET

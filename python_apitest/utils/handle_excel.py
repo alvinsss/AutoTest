@@ -40,10 +40,11 @@ print()
 版本迭代建议：
 """
 import xlrd #pip  install  xlrd
-from utils.handle_path import testData_path
+from python_apitest.utils.handle_path import testData_path
 import os
 
 print()
+
 def get_excel_data(sheetName,caseName,*args,runCase=['all'],excelDir=None): # 返回值是列表    -> list    def get_excel_data() -> list
     """
     :param sheetName: 选择的sheet表
@@ -86,6 +87,11 @@ def get_excel_data(sheetName,caseName,*args,runCase=['all'],excelDir=None): # �
                 2- 你内部代码操作起来是不方便： 需要把列名--转化为---列编号
     """
     colIndexList = []#存放用户输入列名对应的列编号
+    # sheetName,caseName,*args,runCase=['all'],
+    # print("sheetName",sheetName)
+    # print("caseName",caseName)
+    # print("args",args)
+    # print("runCase",runCase)
     for i in args:# ('URL'，‘标题’,'请求体')遍历
         print("需要获取的args--->",i,workSheet.row_values(0).index(i))
         colIndexList.append(workSheet.row_values(0).index(i))#获取编号
@@ -152,7 +158,9 @@ def is_json(inData:str):
 
 
 if __name__ == '__main__':
-    fileDir = os.path.join(testData_path,'alist_System_V1.5.xls')
+    # def get_excel_data(sheetName,caseName,*args,runCase=['all'],excelDir=None):
+    # fileDir = os.path.join(testData_path,'alist_System_V1.5.xls')
     # res=get_excel_data('登录模块','Login','标题','请求参数',runCase=['all'])
-    res=get_excel_data('登录模块','Login','标题','请求参数','响应预期结果',runCase=['1-3'])
+    # res=get_excel_data('登录模块','Login','标题','请求参数','响应预期结果',runCase=['1-3'])
+    res=get_excel_data('存储管理','storage','标题','请求参数','响应预期结果',runCase=['all'])
     print(res)
