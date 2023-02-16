@@ -30,11 +30,11 @@ def get_inifile(path,insections,inkey=None):
     return datalist
 
 if __name__ == '__main__':
-    path = os.path.join(config_path,"loguru.ini")
+    path = os.path.join(config_path,"dbconfig.ini")
     # res1 = get_inifile(path,'log')
     # print(res1,type(res1))
     # for i in res1:
     #     if  'rotation' in i.keys():
     #         print(i['rotation'])
-    res = get_inifile(path,'log',inkey='pname')
-    print(res )
+    res = get_inifile(path,'mysql')
+    print(res,type(res) )

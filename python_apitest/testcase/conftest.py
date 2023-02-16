@@ -4,6 +4,7 @@
 # @File    : conftest.py
 # @Software: PyCharm
 import pytest
+
 from python_apitest.libs.login import Login
 from python_apitest.configs.config import NAME_PSW
 from python_apitest.libs.user import User
@@ -11,6 +12,10 @@ from python_apitest.libs.storage import Storage
 from python_apitest.utils.handle_log import log
 from python_apitest.utils.handle_file_encode import read_and_convert
 from python_apitest.utils.handle_path import testData_path
+from python_apitest.utils.handle_mysql import mysqlcon
+from python_apitest.utils.handle_apiserver import get_apiserver
+
+
 """
 作用：环境初始化和返回被测试接口实例，方便testcase层直接使用
 ，使用conftest.py进行结合pytest.fixture进行测试环境及变量初始化操作
@@ -43,14 +48,14 @@ def start_init_testdata_convert_encode():
 @pytest.fixture(scope='session')
 def start_init_db():
     log.info('---测试数据库垃圾清理开始')
-    print("标记垃圾数据")
+    mysqlcon.db_init()
     log.info('---测试数据库垃圾清理结束')
 
 @pytest.fixture(scope='session')
 def start_init_env():
     log.info('---Alist项目API自动化初始化开始')
     log.info('---测试环境部署状态检查开始')
-    print("服务是否可用监测")
+    get_apiserver()
     log.info('---测试环境部署状态检查结束')
 
 #--------登录操作-----------
