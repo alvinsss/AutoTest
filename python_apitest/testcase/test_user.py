@@ -23,7 +23,7 @@ from python_apitest.common.baseRequest import RequestAssert
             2- yaml
 """
 
-@pytest.mark.userall
+@pytest.mark.user
 @allure.epic('alist项目')
 @allure.feature('用户模块')
 class TestUser(RequestAssert):

@@ -47,6 +47,7 @@ class BaseRequest:#基类
     #通过模块名去获取对应模块的数据
         self.data = get_yaml_data(os.path.join(config_path,"apiConfig.yaml"))[self.__class__.__name__]
         print("继承基类名称是 --------- : ",self.__class__.__name__)
+        log.info("继承基类名称是 --------- :{} ".format(self.__class__.__name__))
 
     #--------公共的发送方法----------每一个接口方法都会调用这个去发送请求
     def request_send(self,data=None,file=None):
@@ -54,16 +55,19 @@ class BaseRequest:#基类
             methodName = inspect.stack()[1][3]#谁调用了我，他的函数名
             print("request_send methodname --------- : ",methodName)
             print("request_send data      -----------: ",self.data[methodName])
-            log.info(methodName)
+            log.info("request_send methodname --------- :{} ".format(methodName))
+            log.info("request_send data --------- :{} ".format(self.data[methodName]))
             path,method = self.data[methodName].values()#apiConfig.yaml配置的methodName名称
             # 数据---需要剥离对应某一个接口的数据
             print("request_send info --------->",f'{HOST}{path}',method,self.headers,data,type(data))
+            log.info("request_send info --------->path:{},method:{},header:{},data:{}".format(path,method,self.headers,data))
             if file:
                 resp = requests.request(method=method,url= f'{HOST}{path}',files=data,headers=self.headers)
             else:
                 resp = requests.request(method=method,url= f'{HOST}{path}',json=data,headers=self.headers)
                 print(" resp -------->:",resp.json())
-            # resp = requests.request(method=method,url= f'{HOST}{path}',data=data)
+                log.info("resp info --------->{}".format(resp.json()))
+        # resp = requests.request(method=method,url= f'{HOST}{path}',data=data)
             #print(methodName,'---',self.data[methodName])
             return resp.json()
         except:

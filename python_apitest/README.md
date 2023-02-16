@@ -5,7 +5,7 @@ python版的接口自动化框架介绍<br>
 1、目录结构
 -----------
 1、docs:文档<br>
-2、logs:日志记录
+2、logs:日志记录<br>
 3、data:测试数据<br>
 4、report:测试报告<br>
 5、extends:扩展预留<br>
