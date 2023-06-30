@@ -12,7 +12,7 @@
 import os
 
 import yaml
-from utils.handle_path import  config_path
+from python_apitest.utils.handle_path import  config_path
 def get_yaml_data(path):
     # 默认 read模式
     with open (path,encoding='utf-8') as f:

@@ -15,11 +15,11 @@ class mysqlClient():
 
     __pool = None;
 
-    host = get_inifile(os.path.join(config_path,"dbconfig.ini"),'mysql','host')
-    port = int(get_inifile(os.path.join(config_path,"dbconfig.ini"),'mysql','port'))
-    db = get_inifile(os.path.join(config_path,"dbconfig.ini"),'mysql','db')
-    user = get_inifile(os.path.join(config_path,"dbconfig.ini"),'mysql','user')
-    passwd = get_inifile(os.path.join(config_path,"dbconfig.ini"),'mysql','passwd')
+    host = get_inifile(os.path.join(config_path,"config.ini"),'mysql','host')
+    port = int(get_inifile(os.path.join(config_path,"config.ini"),'mysql','port'))
+    db = get_inifile(os.path.join(config_path,"config.ini"),'mysql','db')
+    user = get_inifile(os.path.join(config_path,"config.ini"),'mysql','user')
+    passwd = get_inifile(os.path.join(config_path,"config.ini"),'mysql','passwd')
 
     def __init__(self, mincached=10, maxcached=20, maxshared=10, maxconnections=200, blocking=True,
                      maxusage=100, setsession=None, reset=True,
@@ -118,7 +118,7 @@ class mysqlClient():
 
     def db_init(self):
         log.info("---db_init running.....")
-        sql = "SELECT username, password ,nick_name from user WHERE username='13111111111'"
+        sql = "SELECT * from lf_admin l WHERE l.staff_id='1021' "
         count = self.__execute(sql)
         print("db_init",count)
         return count

@@ -4,9 +4,9 @@
 # @File    : test_user.py
 # @Software: PyCharm
 import pytest,allure
-from python_apitest.utils.handle_excel import get_excel_data
-from python_apitest.utils.handle_path import allure_json_path
-from python_apitest.common.baseRequest import RequestAssert
+from utils.handle_excel import get_excel_data
+from utils.handle_path import allure_json_path
+from common.baseRequest import RequestAssert
 """
 测试文件执行条件：
 
