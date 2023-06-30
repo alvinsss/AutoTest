@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="3" failed="0" ignored="4" total="7" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="xxx项目" duration-ms="120" started-at="2023-06-24T09:45:31 CST" finished-at="2023-06-24T09:45:31 CST">
+    <groups>
+    </groups>
+    <test name="用户模块" duration-ms="120" started-at="2023-06-24T09:45:31 CST" finished-at="2023-06-24T09:45:31 CST">
+      <class name="com.alvin.cases.LoginCase">
+        <test-method status="SKIP" signature="test_LoginCase(com.alvin.pojo.API,com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.LoginCase@23c650a3]" name="test_LoginCase" duration-ms="0" started-at="2023-06-24T09:45:31 CST" data-provider="datas" finished-at="2023-06-24T09:45:31 CST">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:767)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:704)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:70)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:49)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:904)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1249)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.NullPointerException
+at com.alvin.utils.ExcelUtils.getAPIAndCaseByApiId(ExcelUtils.java:120)
+at com.alvin.cases.LoginCase.datas(LoginCase.java:78)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_LoginCase -->
+      </class> <!-- com.alvin.cases.LoginCase -->
+      <class name="com.alvin.cases.RechargeCase">
+        <test-method status="SKIP" signature="test_RechargeCase(com.alvin.pojo.API,com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RechargeCase@742d4e15]" name="test_RechargeCase" duration-ms="0" started-at="2023-06-24T09:45:31 CST" data-provider="datas" finished-at="2023-06-24T09:45:31 CST">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:767)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:704)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:70)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:49)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:904)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1249)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.NullPointerException
+at com.alvin.utils.ExcelUtils.getAPIAndCaseByApiId(ExcelUtils.java:120)
+at com.alvin.cases.RechargeCase.datas(RechargeCase.java:101)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_RechargeCase -->
+      </class> <!-- com.alvin.cases.RechargeCase -->
+      <class name="com.alvin.cases.RegisterCase">
+        <test-method status="FAIL" signature="init()[pri:0, instance:com.alvin.cases.RegisterCase@5d52e3ef]" name="init" is-config="true" duration-ms="2377" started-at="2023-06-24T09:45:29 CST" finished-at="2023-06-24T09:45:31 CST">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.alvin.utils.MysqlUtils.getRandomMember(MysqlUtils.java:78)
+at com.alvin.cases.BaseCase.init(BaseCase.java:140)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:368)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="SKIP" signature="test_RegisterCase(com.alvin.pojo.API,com.alvin.pojo.Case)[pri:0, instance:com.alvin.cases.RegisterCase@5d52e3ef]" name="test_RegisterCase" duration-ms="0" started-at="2023-06-24T09:45:31 CST" description="注册功能测试" data-provider="datas" finished-at="2023-06-24T09:45:31 CST">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:153)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:767)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:704)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:70)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:49)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:904)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1249)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.NullPointerException
+at com.alvin.utils.ExcelUtils.getAPIAndCaseByApiId(ExcelUtils.java:120)
+at com.alvin.cases.RegisterCase.datas(RegisterCase.java:100)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_RegisterCase -->
+        <test-method status="SKIP" signature="finish()[pri:0, instance:com.alvin.cases.RegisterCase@5d52e3ef]" name="finish" is-config="true" duration-ms="0" started-at="2023-06-24T09:45:31 CST" finished-at="2023-06-24T09:45:31 CST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finish -->
+      </class> <!-- com.alvin.cases.RegisterCase -->
+    </test> <!-- 用户模块 -->
+  </suite> <!-- xxx项目 -->
+</testng-results>

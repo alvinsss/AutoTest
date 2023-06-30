@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">xxx项目</th></tr>
+<tr><td><a href="#t0">用户模块</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">0</td><td class="num">120</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">xxx项目</th></tr></tbody><tbody id="t0"><tr><th colspan="4">用户模块 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.alvin.cases.RegisterCase</td><td><a href="#m0">init</a></td><td rowspan="1">1687571129009</td><td rowspan="1">2377</td></tr><tr><th colspan="4">用户模块 &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.alvin.cases.RegisterCase</td><td><a href="#m1">finish</a></td><td rowspan="1">1687571131816</td><td rowspan="1">0</td></tr><tr><th colspan="4">用户模块 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.alvin.cases.LoginCase</td><td><a href="#m2">test_LoginCase</a></td><td rowspan="1">1687571131730</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">com.alvin.cases.RechargeCase</td><td><a href="#m3">test_RechargeCase</a></td><td rowspan="1">1687571131738</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="1">com.alvin.cases.RegisterCase</td><td><a href="#m4">test_RegisterCase</a></td><td rowspan="1">1687571131714</td><td rowspan="1">0</td></tr></tbody>
+</table>
+<h2>用户模块</h2><h3 id="m0">com.alvin.cases.RegisterCase#init</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.alvin.utils.MysqlUtils.getRandomMember(MysqlUtils.java:78)
+	at com.alvin.cases.BaseCase.init(BaseCase.java:140)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.alvin.cases.RegisterCase#finish</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.alvin.cases.LoginCase#test_LoginCase</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+Caused by: java.lang.NullPointerException
+	at com.alvin.utils.ExcelUtils.getAPIAndCaseByApiId(ExcelUtils.java:120)
+	at com.alvin.cases.LoginCase.datas(LoginCase.java:78)
+	... 29 more
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.alvin.cases.RechargeCase#test_RechargeCase</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+Caused by: java.lang.NullPointerException
+	at com.alvin.utils.ExcelUtils.getAPIAndCaseByApiId(ExcelUtils.java:120)
+	at com.alvin.cases.RechargeCase.datas(RechargeCase.java:101)
+	... 29 more
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.alvin.cases.RegisterCase#test_RegisterCase</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+Caused by: java.lang.NullPointerException
+	at com.alvin.utils.ExcelUtils.getAPIAndCaseByApiId(ExcelUtils.java:120)
+	at com.alvin.cases.RegisterCase.datas(RegisterCase.java:100)
+	... 29 more
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

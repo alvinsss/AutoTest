@@ -1,0 +1,168 @@
+2023-02-01 14:19:57 method: com.alvin.cases.BaseCase.init(BaseCase.java:138) - [ INFO ]----=======================项目初始化============================
+2023-02-01 14:19:57 method: com.alvin.utils.MysqlUtils.getRandomMember(MysqlUtils.java:76) - [ INFO ]----getRandomMember->null
+2023-02-01 14:25:27 method: com.alvin.cases.BaseCase.init(BaseCase.java:138) - [ INFO ]----=======================项目初始化============================
+2023-02-01 14:25:28 method: com.alvin.utils.MysqlUtils.getRandomMember(MysqlUtils.java:76) - [ INFO ]----getRandomMember->null
+2023-02-01 14:27:38 method: com.alvin.cases.BaseCase.init(BaseCase.java:138) - [ INFO ]----=======================项目初始化============================
+2023-02-01 14:27:39 method: com.alvin.utils.MysqlUtils.getRandomMember(MysqlUtils.java:76) - [ INFO ]----getRandomMember->null
+2023-02-01 14:29:29 method: com.alvin.cases.BaseCase.init(BaseCase.java:138) - [ INFO ]----=======================项目初始化============================
+2023-02-01 14:29:29 method: com.alvin.utils.MysqlUtils.getRandomMember(MysqlUtils.java:76) - [ INFO ]----getRandomMember->Member [id=2, name=李四, sex=男, addr=上海, age=4, email=lisi@test.com, reg_time=2022-07-22 08:48:07.0, leave_amount=100, mobile_phone=18900011000, password=12345678]
+2023-02-01 14:29:31 method: com.alvin.cases.BaseCase.init(BaseCase.java:157) - [ INFO ]----env info:${amount}-->6300.99
+2023-02-01 14:29:31 method: com.alvin.cases.BaseCase.init(BaseCase.java:157) - [ INFO ]----env info:${login_mobilephone}-->13222222112
+2023-02-01 14:29:31 method: com.alvin.cases.BaseCase.init(BaseCase.java:157) - [ INFO ]----env info:${register_mobilephone}-->13222222112
+2023-02-01 14:29:31 method: com.alvin.cases.BaseCase.init(BaseCase.java:157) - [ INFO ]----env info:${register_password}-->12345678
+2023-02-01 14:29:31 method: com.alvin.cases.BaseCase.init(BaseCase.java:157) - [ INFO ]----env info:${login_password}-->12345678
+2023-02-01 14:29:31 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/register---------params is:{"mobile_phone":"19000000000","pwd":""}
+2023-02-01 14:29:32 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:32 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/register---------params is:{"mobile_phone":"","pwd":"123456"}
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/register---------params is:{"mobile_phone":"${mobile_phone}","pwd":"${pwd}"}
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/register---------params is:{"mobile_phone":"19000000000","pwd":"12345"}
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/register---------params is:{"mobile_phone":"18611000000","pwd":"12345678"}
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/register---------params is:{"mobile_phone":"18900000000","pwd":"12345678"}
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:33 method: com.alvin.utils.MysqlUtils.getSQLSingleReuslt(MysqlUtils.java:49) - [ INFO ]----getSQLSingleReuslt sql->select count(*) from member where mobile_phone = '18900011000'
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/register---------params is:{"mobile_phone":"18900000000","pwd":""}
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:33 method: com.alvin.utils.MysqlUtils.getSQLSingleReuslt(MysqlUtils.java:49) - [ INFO ]----getSQLSingleReuslt sql->select count(*) from member where mobile_phone = '18900011000'
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/login---------params is:{"mobile_phone":"","pwd":"12345678"}
+2023-02-01 14:29:33 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/login---------params is:{"mobile_phone":"18901110001","pwd":"12345678"}
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/login---------params is:{"mobile_phone":"${mobile_phone}","pwd":"12345"}
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/login---------params is:{"mobile_phone":"18900000000","pwd":"12345678"}
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/recharge---------params is:{"member_id":"-1","amount":"6300"}
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:34 method: com.alvin.cases.RechargeCase.test_RechargeCase(RechargeCase.java:61) - [ INFO ]----test_RechargeCase responseAssert 断言响应结果：断言失败
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/recharge---------params is:{"member_id":"7795407","amount":"1116300"}
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:34 method: com.alvin.cases.RechargeCase.test_RechargeCase(RechargeCase.java:61) - [ INFO ]----test_RechargeCase responseAssert 断言响应结果：断言失败
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/recharge---------params is:{"member_id":":"${member_id}","amount":"-6300"}
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:34 method: com.alvin.cases.RechargeCase.test_RechargeCase(RechargeCase.java:61) - [ INFO ]----test_RechargeCase responseAssert 断言响应结果：断言失败
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/recharge---------params is:{"member_id":"7795407","amount":"SSS"}
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:34 method: com.alvin.cases.RechargeCase.test_RechargeCase(RechargeCase.java:61) - [ INFO ]----test_RechargeCase responseAssert 断言响应结果：断言失败
+2023-02-01 14:29:34 method: com.alvin.utils.MysqlUtils.getSQLSingleReuslt(MysqlUtils.java:49) - [ INFO ]----getSQLSingleReuslt sql->select leave_amount from member a where a.mobile_phone = '18900000000';
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:52) - [ INFO ]----call req  url is:http://api.lemonban.com/futureloan/member/recharge---------params is:{"member_id":"7795407","amount":"6300.12"}
+2023-02-01 14:29:34 method: com.alvin.utils.HttpUtils.call(HttpUtils.java:76) - [ INFO ]----call get boby is:<html>
+<head><title>502 Bad Gateway</title></head>
+<body bgcolor="white">
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.4.2</center>
+</body>
+</html>
+
+2023-02-01 14:29:34 method: com.alvin.utils.MysqlUtils.getSQLSingleReuslt(MysqlUtils.java:49) - [ INFO ]----getSQLSingleReuslt sql->select leave_amount from member a where a.mobile_phone = '18900000000';
+2023-02-01 14:29:34 method: com.alvin.cases.RechargeCase.test_RechargeCase(RechargeCase.java:57) - [ INFO ]----test_ RechargeCase数据库断言：false
+2023-02-01 14:29:34 method: com.alvin.cases.RechargeCase.test_RechargeCase(RechargeCase.java:61) - [ INFO ]----test_RechargeCase responseAssert 断言响应结果：断言失败
+2023-02-01 14:29:35 method: com.alvin.cases.BaseCase.finish(BaseCase.java:166) - [ INFO ]----=======================项目结束============================

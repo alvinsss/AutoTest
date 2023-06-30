@@ -1,0 +1,25 @@
+2023-06-30 09:33:01,205 - INFO - conftest.py[56]:---Alist项目API自动化初始化开始
+2023-06-30 09:33:01,205 - INFO - conftest.py[57]:---测试环境部署状态检查开始
+2023-06-30 09:33:01,205 - INFO - handle_apiserver.py[10]:api server is running....
+2023-06-30 09:33:01,205 - INFO - conftest.py[59]:---测试环境部署状态检查结束
+2023-06-30 09:33:01,205 - INFO - conftest.py[50]:---测试数据库垃圾清理开始
+2023-06-30 09:33:01,205 - INFO - handle_mysql.py[120]:---db_init running.....
+2023-06-30 09:33:01,260 - INFO - conftest.py[52]:---测试数据库垃圾清理结束
+2023-06-30 09:33:01,262 - INFO - conftest.py[43]:---测试数据文件编码转换开始
+2023-06-30 09:33:01,262 - INFO - conftest.py[44]:--批量转化,测试数据文件:D:\Sourcetree\letsfly\qa\python_apitest\data进行中...
+2023-06-30 09:33:01,265 - INFO - conftest.py[46]:---测试数据文件编码转换结束
+2023-06-30 09:33:01,266 - INFO - conftest.py[39]:---Alist项目API自动化初始化结束
+2023-06-30 09:33:01,266 - INFO - conftest.py[27]:------------------------------
+2023-06-30 09:33:01,266 - INFO - conftest.py[28]:---Alist项目自动化测试开始执行
+2023-06-30 09:33:01,270 - INFO - baseRequest.py[50]:继承基类名称是 --------- :Login 
+2023-06-30 09:33:01,540 - INFO - baseRequest.py[58]:request_send methodname --------- :login 
+2023-06-30 09:33:01,540 - INFO - baseRequest.py[59]:request_send data --------- :{'path': '/api/auth/login', 'method': 'POST'} 
+2023-06-30 09:33:01,540 - INFO - baseRequest.py[63]:request_send info --------->path:/api/auth/login,method:POST,header:{'Content-Type': 'application/json;charset=UTF-8'},data:{'username': 'admin', 'password': '123456', 'otp_code': ''}
+2023-06-30 09:33:01,543 - INFO - baseRequest.py[69]:resp info --------->{'code': 200, 'message': 'success', 'data': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjg4MjYxNTgxLCJuYmYiOjE2ODgwODg3ODEsImlhdCI6MTY4ODA4ODc4MX0.4zwc5_HPHf3RWv6K5eOMbPMlmAF3qyV22ASD6iuRRww'}}
+2023-06-30 09:33:01,548 - INFO - baseRequest.py[50]:继承基类名称是 --------- :Login 
+2023-06-30 09:33:01,553 - INFO - baseRequest.py[58]:request_send methodname --------- :login 
+2023-06-30 09:33:01,553 - INFO - baseRequest.py[59]:request_send data --------- :{'path': '/api/auth/login', 'method': 'POST'} 
+2023-06-30 09:33:01,553 - INFO - baseRequest.py[63]:request_send info --------->path:/api/auth/login,method:POST,header:{'Content-Type': 'application/json;charset=UTF-8'},data:{'username': 'admin', 'password': '1234567', 'otp_code': ''}
+2023-06-30 09:33:01,556 - INFO - baseRequest.py[69]:resp info --------->{'code': 400, 'message': 'password is incorrect', 'data': None}
+2023-06-30 09:33:01,558 - INFO - conftest.py[30]:---Alist项目自动化测试执行结束
+2023-06-30 09:33:01,558 - INFO - conftest.py[31]:---Alist项目自动化测试执行完成，数据清除完成
