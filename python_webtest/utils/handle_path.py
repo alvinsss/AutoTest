@@ -21,3 +21,5 @@ data_path = os.path.join(project_path,"data")
 #测试用例
 testcase = os.path.join(project_path,"testcase")
 
+if __name__ == '__main__':
+    print(log_path)

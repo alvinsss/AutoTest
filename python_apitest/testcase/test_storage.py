@@ -21,7 +21,7 @@ class Teststorage(RequestAssert):
     @allure.story("获取存储列表")
     @allure.description("获取admin存储列表")
     @allure.testcase("http://127.0.0.1:5244")
-    # @pytest.mark.usefixtures("storage_init")
+    # @pytest.mark.usefixtures("apistorage")
     def test_storage_list(self,title,inBody,expData,storage_init): # 返回实例
         print("title",title)
         print("inBody",inBody)
